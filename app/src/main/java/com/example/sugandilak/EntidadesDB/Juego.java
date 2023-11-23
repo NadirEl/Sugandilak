@@ -1,4 +1,4 @@
-package EntidadesDB;
+package com.example.sugandilak.EntidadesDB;
 
 
 import androidx.annotation.NonNull;

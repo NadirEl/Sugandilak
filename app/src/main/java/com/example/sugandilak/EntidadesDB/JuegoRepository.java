@@ -1,4 +1,4 @@
-package EntidadesDB;
+package com.example.sugandilak.EntidadesDB;
 
 import android.content.Context;
 
@@ -8,7 +8,7 @@ import java.util.List;
 
 public class JuegoRepository {
     private final LiveData<List<Juego>> mJuegos;
-    private final DBDao mJuegoDao;
+    private final JuegoDao mJuegoDao;
 
     public JuegoRepository(Context context) {
         JuegoDatabase db = JuegoDatabase.getInstance(context);
@@ -25,4 +25,6 @@ public class JuegoRepository {
                 () -> mJuegoDao.insert(juego)
         );
     }
+
+
 }

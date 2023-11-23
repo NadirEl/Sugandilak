@@ -1,4 +1,4 @@
-package EntidadesDB;
+package com.example.sugandilak.EntidadesDB;
 
 import android.content.Context;
 
@@ -13,11 +13,11 @@ import java.util.concurrent.Executors;
 public abstract class JuegoDatabase extends RoomDatabase {
 
     // Exposición de DAOs
-    public abstract DBDao JuegoDao();
+    public abstract JuegoDao JuegoDao();
 
     private static final String DATABASE_NAME = "Juego-db";
 
-    private static JuegoDatabase INSTANCE;
+    private static volatile JuegoDatabase INSTANCE;
 
     private static final int THREADS = 4;
 
@@ -30,11 +30,31 @@ public abstract class JuegoDatabase extends RoomDatabase {
                     INSTANCE = Room.databaseBuilder(
                                     context.getApplicationContext(), JuegoDatabase.class,
                                     DATABASE_NAME)
+                            //.addCallback(mRoomCallback)
+                            .allowMainThreadQueries()
                             .build();
                 }
             }
         }
         return INSTANCE;
     }
+
+    // Prepoblar base de datos con callback
+   /* private static final RoomDatabase.Callback mRoomCallback = new Callback() {
+        @Override
+        public void onCreate(@NonNull SupportSQLiteDatabase db) {
+            super.onCreate(db);
+
+            dbExecutor.execute(() -> {
+                JuegoDao dao = INSTANCE.JuegoDao();
+
+                Juego juego1 = new Juego(1, "AAA", "Placeholder1");
+                Juego juego2 = new Juego(2, "BBB", "Placeholder2");
+
+                dao.insert(juego1);
+                dao.insert(juego2);
+            });
+        }
+    };*/
 
 }

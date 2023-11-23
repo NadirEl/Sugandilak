@@ -1,4 +1,4 @@
-package EntidadesDB;
+package com.example.sugandilak.EntidadesDB;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -9,10 +9,14 @@ import androidx.room.Query;
 import java.util.List;
 
 @Dao
-public interface DBDao {
+public interface JuegoDao {
     @Query("SELECT * FROM Juego")
     LiveData<List<Juego>> getAll();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(Juego juego);
+
+
 }
+
+
