@@ -1,88 +1,38 @@
 package com.example.sugandilak;
 
-import static com.example.sugandilak.R.color.green;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
+
+import com.example.sugandilak.EntidadesDB.JuegoDao;
+import com.example.sugandilak.EntidadesDB.Juego;
+import com.example.sugandilak.EntidadesDB.JuegoDatabase;
+
 
 public class MainActivity extends AppCompatActivity {
-    //id_juego1
-    Button id_juego1;
-    Button id_juego2;
-    Button id_juego3;
-    Button id_juego4;
-    Button id_juego5;
+
+    private static JuegoDatabase INSTANCE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        id_juego1 = findViewById(R.id.id_juego1);
-        id_juego2 = findViewById(R.id.id_juego2);
-        id_juego3 = findViewById(R.id.id_juego3);
-        id_juego4 = findViewById(R.id.id_juego4);
-        id_juego5 = findViewById(R.id.id_juego5);
-        id_juego1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
 
+        System.out.println("Pre Dao");
 
-                intent.putExtra("id", "1");
+        INSTANCE=JuegoDatabase.getInstance(this);
+        JuegoDao dao = INSTANCE.JuegoDao();
 
-                id_juego1.setBackgroundResource(R.color.green);
-                startActivity(intent);
+        System.out.println("Post Dao");
 
-            }
-        });
-        id_juego2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        Juego juego1 = new Juego(1, "AAA", "Placeholder1");
+        Juego juego2 = new Juego(2, "BBB", "Placeholder2");
 
+        System.out.println("Post Juegos");
 
-                intent.putExtra("id", "2");
-                startActivity(intent);
-            }
-        });
-        id_juego3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+        dao.insert(juego1);
+        dao.insert(juego2);
 
-
-                intent.putExtra("id", "3");
-                startActivity(intent);
-
-            }
-        });
-        id_juego4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-
-
-                intent.putExtra("id", "4");
-                startActivity(intent);
-
-            }
-        });
-        id_juego5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, MainActivity2.class);
-
-
-                intent.putExtra("id", "5");
-                startActivity(intent);
-
-            }
-        });
-
-
+        System.out.println("Post insert");
     }
 }
