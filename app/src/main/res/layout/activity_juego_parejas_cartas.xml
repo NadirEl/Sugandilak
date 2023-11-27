@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Juego_Parejas_Cartas">
+
+    <LinearLayout
+        android:id="@+id/explicacion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6sp">
+        <TextView
+            android:id="@+id/idTvExplicacionParejas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dale la vuelta a las parejas. Cada pareja acertada, un punto."
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="6sp"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/layoutcartas1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/explicacion"
+        android:layout_marginTop="9sp"
+        android:layout_marginLeft="10sp"
+        android:layout_marginRight="10sp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutcartas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/layoutcartas1"
+        android:layout_marginTop="20sp"
+        android:layout_marginLeft="12sp"
+        android:layout_marginRight="12sp"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"
+            android:layout_marginRight="16sp"/>
+        <ImageView
+            android:layout_width="66sp"
+            android:layout_height="110sp"
+            android:src="@drawable/cartavuelta"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/puntuacion"
+        android:layout_below="@+id/layoutcartas2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8sp">
+        <TextView
+            android:id="@+id/idTvPuntuacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Puntuación: 0"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>
