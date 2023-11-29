@@ -4,14 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.sugandilak.EntidadesDB.JuegoDao;
-import com.example.sugandilak.EntidadesDB.Juego;
-import com.example.sugandilak.EntidadesDB.JuegoDatabase;
+import com.example.sugandilak.EntidadesDB.Database;
+import com.example.sugandilak.EntidadesDB.Explicacion;
+import com.example.sugandilak.EntidadesDB.ExplicacionDao;
+import com.example.sugandilak.EntidadesDB.Pantalla;
+import com.example.sugandilak.EntidadesDB.PantallaDao;
 
 
 public class MainActivity extends AppCompatActivity {
 
-    private static JuegoDatabase INSTANCE;
+    private static Database INSTANCE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,18 +22,24 @@ public class MainActivity extends AppCompatActivity {
 
         System.out.println("Pre Dao");
 
-        INSTANCE=JuegoDatabase.getInstance(this);
-        JuegoDao dao = INSTANCE.JuegoDao();
+        INSTANCE= Database.getInstance(this);
+        ExplicacionDao ExplicacionDao = INSTANCE.ExplicacionDao();
+        PantallaDao PantallaDao = INSTANCE.PantallaDao();
 
         System.out.println("Post Dao");
 
-        Juego juego1 = new Juego(1, "AAA", "Placeholder1");
-        Juego juego2 = new Juego(2, "BBB", "Placeholder2");
+        Explicacion explicacion1 = new Explicacion(1, "AAA", "Placeholder1");
+        Explicacion explicacion2 = new Explicacion(2, "BBB", "Placeholder2");
+        Pantalla pantalla1 = new Pantalla(1, "srcDeImagen1");
+        Pantalla pantalla2= new Pantalla(2, "srcDeImagen2");
 
-        System.out.println("Post Juegos");
+        System.out.println("Post Explicacion");
 
-        dao.insert(juego1);
-        dao.insert(juego2);
+        ExplicacionDao.insert(explicacion1);
+        ExplicacionDao.insert(explicacion2);
+        PantallaDao.insert(pantalla1);
+        PantallaDao.insert(pantalla2);
+
 
         System.out.println("Post insert");
     }
