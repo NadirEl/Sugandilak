@@ -1,8 +1,10 @@
 package com.example.sugandilak;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -24,12 +26,26 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+     /*   MediaPlayer mediaPlayer = MediaPlayer.create(this, R.raw.eliza1);
 
+        mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                int duration = mp.getDuration();
+                int durationInSeconds = duration / 1000;
+
+                System.out.println("Duración del audio: " + durationInSeconds + " segundos");
+                Log.d("MediaPlayer", "Duración del audio: " + durationInSeconds + " segundos");
+            }
+        });
+
+        mediaPlayer.start();
+
+*/
         id_explicaciones = findViewById(R.id.id_explicaciones);
         btn_iniciar = findViewById(R.id.btn_iniciar);
         id_gif = findViewById(R.id.id_gif);
-        // Guarda el texto original
-        ;
+        // Guarda el texto original;
 
         // Oculta el botón al inicio
 
@@ -71,15 +87,15 @@ public class MainActivity2 extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity2.this, juego2.class);
                     startActivity(intent);
                 } else if (id == 3) {
-                    Intent intent = new Intent(MainActivity2.this, jeugo1.class);
+                    Intent intent = new Intent(MainActivity2.this, Pantalla3_SopadeLetras.class);
                     startActivity(intent);
 
                 } else if (id == 4) {
-                    Intent intent = new Intent(MainActivity2.this, jeugo1.class);
+                    Intent intent = new Intent(MainActivity2.this, Juego_Parejas_Cartas.class);
                     startActivity(intent);
 
                 } else if (id == 5) {
-                    Intent intent = new Intent(MainActivity2.this, jeugo1.class);
+                    Intent intent = new Intent(MainActivity2.this, Labriento.class);
                     startActivity(intent);
 
                 }

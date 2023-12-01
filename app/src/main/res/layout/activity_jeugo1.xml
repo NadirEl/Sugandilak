@@ -20,32 +20,32 @@
 
     <Button
         android:id="@+id/btn_respuesta1"
-        android:layout_width="209dp"
-        android:layout_height="132dp"
+        android:layout_width="154dp"
+        android:layout_height="86dp"
         android:text="GOTIKOA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.11"
+        app:layout_constraintHorizontal_bias="0.104"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.903" />
+        app:layout_constraintVertical_bias="0.9" />
 
     <Button
         android:id="@+id/btn_respuesta2"
-        android:layout_width="200dp"
-        android:layout_height="140dp"
+        android:layout_width="184dp"
+        android:layout_height="84dp"
         android:text="ERRENAZENTISTA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.898" />
+        app:layout_constraintVertical_bias="0.904" />
 
     <Button
         android:id="@+id/btn_respuesta3"
-        android:layout_width="230dp"
-        android:layout_height="126dp"
+        android:layout_width="217dp"
+        android:layout_height="87dp"
         android:text="BARROKOA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,4 +53,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.9" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
