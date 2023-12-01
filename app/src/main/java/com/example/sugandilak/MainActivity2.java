@@ -1,10 +1,8 @@
 package com.example.sugandilak;
 
 import android.content.Intent;
-import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -84,7 +82,7 @@ public class MainActivity2 extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity2.this, jeugo1.class);
                     startActivity(intent);
                 } else if (id == 2) {
-                    Intent intent = new Intent(MainActivity2.this, juego2.class);
+                    Intent intent = new Intent(MainActivity2.this, Pantalla2VidaDeSanValentin.class);
                     startActivity(intent);
                 } else if (id == 3) {
                     Intent intent = new Intent(MainActivity2.this, Pantalla3_SopadeLetras.class);
@@ -95,7 +93,7 @@ public class MainActivity2 extends AppCompatActivity {
                     startActivity(intent);
 
                 } else if (id == 5) {
-                    Intent intent = new Intent(MainActivity2.this, Labriento.class);
+                    Intent intent = new Intent(MainActivity2.this, Laberinto.class);
                     startActivity(intent);
 
                 }
