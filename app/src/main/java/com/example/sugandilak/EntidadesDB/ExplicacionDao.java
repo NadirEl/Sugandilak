@@ -9,12 +9,12 @@ import androidx.room.Query;
 import java.util.List;
 
 @Dao
-public interface JuegoDao {
-    @Query("SELECT * FROM Juego")
-    LiveData<List<Juego>> getAll();
+public interface ExplicacionDao {
+    @Query("SELECT * FROM Explicacion")
+    LiveData<List<Explicacion>> getAll();
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    void insert(Juego juego);
+    void insert(Explicacion explicacion);
 
 
 }

@@ -2,33 +2,34 @@ package com.example.sugandilak.EntidadesDB;
 
 import android.content.Context;
 
-import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Juego.class}, version = 1, exportSchema = false)
-public abstract class JuegoDatabase extends RoomDatabase {
+@androidx.room.Database(entities = {Explicacion.class,Pantalla.class},version = 1, exportSchema = false)
+public abstract class Database extends RoomDatabase {
 
     // Exposición de DAOs
-    public abstract JuegoDao JuegoDao();
+    public abstract ExplicacionDao ExplicacionDao();
 
-    private static final String DATABASE_NAME = "Juego-db";
+    public abstract PantallaDao PantallaDao();
 
-    private static volatile JuegoDatabase INSTANCE;
+    private static final String DATABASE_NAME = "Central-db";
+
+    private static volatile Database INSTANCE;
 
     private static final int THREADS = 4;
 
     public static final ExecutorService dbExecutor = Executors.newFixedThreadPool(THREADS);
 
-    public static JuegoDatabase getInstance(final Context context) {
+    public static Database getInstance(final Context context) {
         if (INSTANCE == null) {
-            synchronized (JuegoDatabase.class) {
+            synchronized (Database.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(
-                                    context.getApplicationContext(), JuegoDatabase.class,
+                                    context.getApplicationContext(), Database.class,
                                     DATABASE_NAME)
                             //.addCallback(mRoomCallback)
                             .allowMainThreadQueries()
@@ -48,8 +49,8 @@ public abstract class JuegoDatabase extends RoomDatabase {
             dbExecutor.execute(() -> {
                 JuegoDao dao = INSTANCE.JuegoDao();
 
-                Juego juego1 = new Juego(1, "AAA", "Placeholder1");
-                Juego juego2 = new Juego(2, "BBB", "Placeholder2");
+                Explicacion juego1 = new Explicacion(1, "AAA", "Placeholder1");
+                Explicacion juego2 = new Explicacion(2, "BBB", "Placeholder2");
 
                 dao.insert(juego1);
                 dao.insert(juego2);

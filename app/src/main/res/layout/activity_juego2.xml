@@ -1,282 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".juego2">
+<LinearLayout
+    android:id="@+id/lenao_img"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:layout_gravity="center_horizontal"
-    tools:context=".Pantalla2VidaDeSanValentin">
+    android:gravity="center_horizontal"
+    >
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/snv1"
+        android:layout_marginRight="15dp"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/snv2"
+        android:layout_marginRight="15dp"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/snv3"
+        android:layout_marginRight="15dp"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/snv4"
+        android:layout_marginRight="15dp"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/snv5"
+        android:layout_marginRight="15dp"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/snv6"
+        android:layout_marginRight="15dp"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/snv7"
+        android:layout_marginRight="15dp"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/snv8"
+        android:layout_marginRight="15dp"/>
+    <ImageView
+        android:id="@+id/img_1"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/snv9"
+        android:layout_marginRight="15dp"/>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_vertical"
-        android:padding="10sp">
-
-        <LinearLayout
-            android:id="@+id/idLayoutFotosCamino1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
-
-            <ImageView
-                android:id="@+id/berriotxoa1"
-                android:layout_width="80sp"
-                android:layout_height="80sp"
-                android:src="@drawable/berriotxoa1"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:id="@+id/berriotxoa2"
-                android:layout_width="80sp"
-                android:layout_height="80sp"
-                android:src="@drawable/berriotxoa2"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:id="@+id/berriotxoa3"
-                android:layout_width="80sp"
-                android:layout_height="80sp"
-                android:src="@drawable/berriotxoa3"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/idLayoutFotosCamino2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
-
-            <ImageView
-                android:id="@+id/berriotxoa4"
-                android:layout_width="80sp"
-                android:layout_height="80sp"
-                android:src="@drawable/berriotxoa4"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:id="@+id/berriotxoa5"
-                android:layout_width="80sp"
-                android:layout_height="80sp"
-                android:src="@drawable/berriotxoa5"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:id="@+id/berriotxoa6"
-                android:layout_width="80sp"
-                android:layout_height="80sp"
-                android:src="@drawable/berriotxoa6"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/idLayoutFotosCamino3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="10sp">
-
-            <ImageView
-                android:id="@+id/berriotxoa7"
-                android:layout_width="80sp"
-                android:layout_height="80sp"
-                android:src="@drawable/berriotxoa7"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:id="@+id/berriotxoa8"
-                android:layout_width="80sp"
-                android:layout_height="80sp"
-                android:src="@drawable/berriotxoa8"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:id="@+id/berriotxoa9"
-                android:layout_width="80sp"
-                android:layout_height="80sp"
-                android:src="@drawable/berriotxoa9"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-        </LinearLayout>
-
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center_vertical"
-        android:layout_marginLeft="40sp"
-        android:paddingLeft="20sp">
-
-        <LinearLayout
-            android:id="@+id/idLayoutCaminoFotos1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_vertical"
-            >
-
-            <TextView
-                android:layout_width="90sp"
-                android:layout_height="90sp"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:layout_width="25sp"
-                android:layout_height="25sp"
-                android:layout_marginRight="10sp"
-                android:src="@drawable/flechaderecha"
-                />
-
-            <TextView
-                android:layout_width="90sp"
-                android:layout_height="90sp"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:layout_width="25sp"
-                android:layout_height="25sp"
-                android:layout_marginRight="10sp"
-                android:src="@drawable/flechaderecha"
-                />
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                >
-                <TextView
-                    android:layout_width="90sp"
-                    android:layout_height="90sp"
-                    android:layout_marginRight="10sp"
-                    android:padding="3sp"
-                    android:layout_marginLeft="5sp"
-                    android:background="@drawable/sopa_de_letras_cuadrito"/>
-                <ImageView
-                    android:layout_width="25sp"
-                    android:layout_height="25sp"
-                    android:layout_marginRight="10sp"
-                    android:src="@drawable/flechaderecha"
-                    android:layout_marginTop="8sp"
-                    android:rotation="90"/>
-
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/idLayoutCaminoFotos2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center"
-                android:paddingLeft="5sp">
-                <TextView
-                    android:id="@+id/idtv1"
-                    android:layout_width="90sp"
-                    android:layout_height="90sp"
-                    android:layout_marginRight="10sp"
-                    android:padding="3sp"
-                    android:layout_marginLeft="3sp"
-                    android:background="@drawable/sopa_de_letras_cuadrito"/>
-                <ImageView
-                    android:layout_width="25sp"
-                    android:layout_height="25sp"
-                    android:layout_marginRight="10sp"
-                    android:src="@drawable/flechaderecha"
-                    android:layout_marginTop="8sp"
-                    android:rotation="90"/>
-
-            </LinearLayout>
-            <ImageView
-                android:layout_width="25sp"
-                android:layout_height="25sp"
-                android:layout_marginRight="10sp"
-                android:src="@drawable/flechaderecha"
-                android:rotation="180"
-                />
-
-            <TextView
-                android:layout_width="90sp"
-                android:layout_height="90sp"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:layout_width="25sp"
-                android:layout_height="25sp"
-                android:layout_marginRight="10sp"
-                android:src="@drawable/flechaderecha"
-                android:rotation="180"
-                />
-
-            <TextView
-                android:layout_width="90sp"
-                android:layout_height="90sp"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:id="@+id/idLayoutCaminoFotos3"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center_vertical">
-
-            <TextView
-                android:layout_width="90sp"
-                android:layout_height="90sp"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:layout_width="25sp"
-                android:layout_height="25sp"
-                android:layout_marginRight="10sp"
-                android:src="@drawable/flechaderecha"
-                />
-
-            <TextView
-                android:layout_width="90sp"
-                android:layout_height="90sp"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-            <ImageView
-                android:layout_width="25sp"
-                android:layout_height="25sp"
-                android:layout_marginRight="10sp"
-                android:src="@drawable/flechaderecha"
-                />
-            <TextView
-                android:layout_width="90sp"
-                android:layout_height="90sp"
-                android:layout_marginRight="10sp"
-                android:padding="3sp"
-                android:background="@drawable/sopa_de_letras_cuadrito"/>
-
-        </LinearLayout>
-
-
-    </LinearLayout>
 
 </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lenao_img"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lenao_img"
+            android:id="@+id/lenea1"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@android:drawable/alert_light_frame"
+                android:layout_marginRight="15dp"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@android:drawable/alert_light_frame"
+                android:layout_marginRight="15dp"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@android:drawable/alert_light_frame"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lenea1"
+            android:id="@+id/lenea2"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@android:drawable/alert_light_frame"
+                android:layout_marginRight="15dp"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@android:drawable/alert_light_frame"
+                android:layout_marginRight="15dp"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@android:drawable/alert_light_frame"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lenea2"
+            android:id="@+id/lenea3"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@android:drawable/alert_light_frame"
+                android:layout_marginRight="15dp"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@android:drawable/alert_light_frame"
+                android:layout_marginRight="15dp"/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                app:srcCompat="@android:drawable/alert_light_frame"
+                android:layout_marginRight="15dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
