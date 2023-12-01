@@ -23,6 +23,7 @@
             android:padding="10sp">
 
             <ImageView
+                android:id="@+id/idImagensiu"
                 android:layout_width="80sp"
                 android:layout_height="80sp"
                 android:src="@drawable/berriotxoa1"
@@ -119,6 +120,7 @@
             >
 
             <TextView
+                android:id="@+id/idtv1"
                 android:layout_width="90sp"
                 android:layout_height="90sp"
                 android:layout_marginRight="10sp"
