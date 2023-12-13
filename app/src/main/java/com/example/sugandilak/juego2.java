@@ -42,13 +42,10 @@ public class juego2 extends AppCompatActivity implements View.OnLongClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_juego2);
+        setContentView(R.layout.activity_pantalla2_vida_de_san_valentin);
 
         // Set onTouchListener for each ImageView
-        berriotxoa1=  findViewById(R.id.berriotxoa1);
-        idtv1 = findViewById(R.id.idtv1);
-        idtv1.setOnDragListener(drag);
-        berriotxoa1.setOnLongClickListener(this);
+
     }
         @Override
         public boolean onLongClick (View v){

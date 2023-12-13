@@ -3,7 +3,7 @@ package com.example.sugandilak;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Labriento extends AppCompatActivity {
+public class Laberinto extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

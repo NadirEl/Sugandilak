@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Sugandilak"
         tools:targetApi="31" >
         <activity
-            android:name=".Labriento"
+            android:name=".Laberinto"
             android:exported="false"
             android:screenOrientation="landscape"/>
         <activity
@@ -32,6 +32,7 @@
             android:name=".Pantalla2VidaDeSanValentin"
             android:exported="true"
             android:screenOrientation="landscape" >
+
         </activity>
         <activity
             android:name=".MainActivity"
@@ -39,7 +40,6 @@
             android:screenOrientation="landscape" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

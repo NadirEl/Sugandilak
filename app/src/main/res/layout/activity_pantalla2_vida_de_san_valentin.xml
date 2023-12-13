@@ -32,6 +32,7 @@
                 android:padding="3sp"
                 android:background="@drawable/sopa_de_letras_cuadrito"/>
             <ImageView
+                android:id="@+id/idImagensiu2"
                 android:layout_width="80sp"
                 android:layout_height="80sp"
                 android:src="@drawable/berriotxoa2"

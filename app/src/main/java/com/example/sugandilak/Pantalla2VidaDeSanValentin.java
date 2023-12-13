@@ -8,6 +8,7 @@ import android.content.ClipDescription;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.DragEvent;
 import android.view.View;
 import android.widget.ImageView;
@@ -16,18 +17,23 @@ import android.widget.TextView;
 public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements View.OnLongClickListener {
 
     private ImageView imas;
+    private ImageView imas2;
     private TextView tv;
+    private ImageView recogida;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla2_vida_de_san_valentin);
 
         imas = findViewById(R.id.idImagensiu);
+        imas2 = findViewById(R.id.idImagensiu2);
 
         tv = findViewById(R.id.idtv1);
 
         imas.setOnLongClickListener(this);
+        imas2.setOnLongClickListener(this);
         tv.setOnDragListener(drag);
+
 
 
     }
@@ -37,7 +43,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
         // Create a new ClipData.
         // This is done in two steps to provide clarity. The convenience method
         // ClipData.newPlainText() can create a plain text ClipData in one step.
-
+        recogida = (ImageView) v;
         // Create a new ClipData.Item from the ImageView object's tag.
         ClipData.Item item = new ClipData.Item((CharSequence) v.getTag());
 
@@ -68,9 +74,13 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
         switch (dragEvent){
             case DragEvent.ACTION_DROP:
 
-                    Resources res = getResources();
-                    Drawable drawable = ResourcesCompat.getDrawable(res, R.drawable.berriotxoa1, null);
-                    v.setBackground(drawable);
+                    if(v.getId() == R.id.idtv1){
+                        v.setBackground(recogida.getDrawable());
+                        recogida.setVisibility(View.GONE);
+
+
+                    }
+
 
 
 
