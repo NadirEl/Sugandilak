@@ -14,6 +14,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity2 extends AppCompatActivity {
     TextView id_explicaciones;
     ImageView id_gif;
+    ImageView id_pr;
     Button btn_iniciar;
     Button btn_skipp;
     Handler handler = new Handler();
@@ -131,7 +132,10 @@ public class MainActivity2 extends AppCompatActivity {
                 } else {
                     // Cuando se ha mostrado todo el texto, muestra el botón
                     btn_iniciar.setVisibility(View.VISIBLE);
-                    //  id_gif.setImageResource(0);
+                     id_gif.setImageResource(0);
+                    id_pr .setVisibility(View.VISIBLE);
+
+
                 }
             }
         }, 500);

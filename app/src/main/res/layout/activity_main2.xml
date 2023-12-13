@@ -52,5 +52,14 @@
         android:layout_marginBottom="27dp"
         android:text="Saltar" />
 
+    <ImageView
+        android:id="@+id/id_pr"
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/mujerhb3"
+        android:visibility="invisible"
+        />
+
+
 </RelativeLayout>
 
