@@ -54,7 +54,7 @@ public class jeugo1 extends AppCompatActivity {
                     Intent intent = new Intent(jeugo1.this, MainActivity.class);
                     startActivity(intent);
                 }
-
+                //nota de unax: linea 58 genera error al jugar el mismo juego 2 veces
                 id_img.setBackground(listimg.get(i));
                 System.out.println(listimg.size());
                 i++;
