@@ -6,55 +6,54 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
-    tools:context=".jeugo1">
+    tools:context=".jeugo1"
+    android:background="@color/blue">
 
-        <LinearLayout
-            android:layout_marginTop="20sp"
-            android:id="@+id/layoutimagen"
-            android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_marginTop="20sp"
+        android:id="@+id/layoutimagen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="200sp"
+            android:layout_height="200sp"
+            android:background="@drawable/func1" />
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_respuesta1"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal"
-            >
+            android:text="GOTIKOA" />
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="200sp"
-                android:layout_height="200sp"
-                android:background="@drawable/func1" />
-
-
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_marginTop="20sp"
-            android:layout_width="match_parent"
+        <Button
+            android:id="@+id/btn_respuesta2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:text="ERRENAZENTISTA" />
 
-            <Button
-                android:id="@+id/btn_respuesta1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="GOTIKOA"
-                android:layout_marginRight="20sp"/>
+        <Button
+            android:id="@+id/btn_respuesta3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="BARROKOA" />
 
-            <Button
-                android:id="@+id/btn_respuesta2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ERRENAZENTISTA"
-                android:layout_marginRight="20sp"/>
-
-            <Button
-                android:id="@+id/btn_respuesta3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="BARROKOA"/>
-
-        </LinearLayout>
+    </LinearLayout>
 
 </LinearLayout>

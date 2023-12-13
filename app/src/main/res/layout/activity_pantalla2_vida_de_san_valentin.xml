@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:layout_gravity="center_horizontal"
-    tools:context=".Pantalla2VidaDeSanValentin">
+    tools:context=".Pantalla2VidaDeSanValentin"
+    android:background="@color/green">
 
     <LinearLayout
         android:layout_width="wrap_content"
