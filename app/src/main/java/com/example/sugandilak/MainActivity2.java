@@ -14,11 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity2 extends AppCompatActivity {
     TextView id_explicaciones;
     ImageView id_gif;
-    ImageView id_pr;
     Button btn_iniciar;
+    Button btn_skipp;
     Handler handler = new Handler();
     int currentIndex = 0;
-
     String textoOriginal;
 
     @Override
@@ -41,11 +40,10 @@ public class MainActivity2 extends AppCompatActivity {
         mediaPlayer.start();
 
 */
+        btn_skipp = findViewById(R.id.skippButton);
         id_explicaciones = findViewById(R.id.id_explicaciones);
         btn_iniciar = findViewById(R.id.btn_iniciar);
         id_gif = findViewById(R.id.id_gif);
-        id_pr= findViewById(R.id.id_pr);
-
         // Guarda el texto original;
 
         // Oculta el botón al inicio
@@ -73,8 +71,15 @@ public class MainActivity2 extends AppCompatActivity {
         } else if (id == 5) {
             textoOriginal = "Urkiolako parke naturalean, Anboto mendia aurkitzen dugu, Bizkaiko mendi ikusgarriena eta arriskutsuena. Anboto Bizkaiko mendi garrantzitsuenetako bat da, baina ez bakarrik bertako paisaiengatik, baita euskal mitologian duen garrantziagatik ere. Hemen agertzen da euskal mitologiako pertsonaiarik ezagunena";
             mostrarTextoPorLetras();
-
         }
+
+        btn_skipp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v2) {
+                id_explicaciones.setText(textoOriginal);
+                currentIndex=textoOriginal.length();
+            }
+        });
 
         btn_iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,9 +112,11 @@ public class MainActivity2 extends AppCompatActivity {
 
 
     private void mostrarTextoPorLetras() {
+
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 // Verifica si hay más letras para mostrar
                 if (currentIndex < textoOriginal.length()) {
                     // Obtén la letra actual y agrégala al texto
@@ -124,10 +131,12 @@ public class MainActivity2 extends AppCompatActivity {
                 } else {
                     // Cuando se ha mostrado todo el texto, muestra el botón
                     btn_iniciar.setVisibility(View.VISIBLE);
-                       id_gif.setImageResource(0);
-                    id_pr .setVisibility(View.VISIBLE);
+                    //  id_gif.setImageResource(0);
                 }
             }
         }, 500);
+
+
+
     }
 }

@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import com.example.sugandilak.EntidadesDB.Database;
 
 
 import android.content.Intent;
@@ -15,7 +14,7 @@ import android.widget.Button;
 public class MainActivity extends AppCompatActivity {
 
 
-    private static Database INSTANCE;
+
     Button id_juego1;
     Button id_juego2;
     Button id_juego3;
@@ -92,6 +91,6 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        
     }
 }
