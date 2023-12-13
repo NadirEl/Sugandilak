@@ -11,7 +11,7 @@
         android:id="@+id/id_gif"
         android:layout_width="400dp"
         android:layout_height="match_parent"
-        android:src="@drawable/mujerhablando" />
+        android:src="@drawable/berriotxoa1" />
 
     <TextView
         android:id="@+id/id_explicaciones"
@@ -24,9 +24,7 @@
         android:layout_marginStart="284dp"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="9dp"
-        android:layout_marginBottom="151dp"
-
-        />
+        android:layout_marginBottom="151dp" />
 
     <Button
         android:id="@+id/btn_iniciar"
@@ -37,5 +35,11 @@
         android:layout_marginEnd="152dp"
         android:layout_marginBottom="28dp"
         android:text="Iniciar" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"/>
 </RelativeLayout>
 

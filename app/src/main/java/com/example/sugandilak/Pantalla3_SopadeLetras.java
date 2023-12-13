@@ -2,6 +2,8 @@ package com.example.sugandilak;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -26,6 +28,7 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla3_sopade_letras);
 
+        asignarId(uno_uno, R.id.idSP1_1); asignarId(uno_dos, R.id.idSP1_2); asignarId(uno_tres, R.id.idSP1_3);asignarId(uno_cuatro, R.id.idSP1_4);
 
     }
 
@@ -36,6 +39,7 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
 
     @Override
     public void onClick(View v) {
-
+        Drawable d = getDrawable(R.drawable.berriotxoa1);
+        v.setBackground(d);
     }
 }

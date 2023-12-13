@@ -1,57 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="center_vertical"
     tools:context=".jeugo1">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="193dp"
-        android:layout_height="243dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.12"
-        app:srcCompat="@drawable/func1" />
+        <LinearLayout
+            android:layout_marginTop="20sp"
+            android:id="@+id/layoutimagen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
 
-    <Button
-        android:id="@+id/btn_respuesta1"
-        android:layout_width="154dp"
-        android:layout_height="86dp"
-        android:text="GOTIKOA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.104"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="200sp"
+                android:layout_height="200sp"
+                android:background="@drawable/func1" />
 
-    <Button
-        android:id="@+id/btn_respuesta2"
-        android:layout_width="184dp"
-        android:layout_height="84dp"
-        android:text="ERRENAZENTISTA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.904" />
 
-    <Button
-        android:id="@+id/btn_respuesta3"
-        android:layout_width="217dp"
-        android:layout_height="87dp"
-        android:text="BARROKOA"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.904"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.9" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="20sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_respuesta1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GOTIKOA"
+                android:layout_marginRight="20sp"/>
+
+            <Button
+                android:id="@+id/btn_respuesta2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ERRENAZENTISTA"
+                android:layout_marginRight="20sp"/>
+
+            <Button
+                android:id="@+id/btn_respuesta3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BARROKOA"/>
+
+        </LinearLayout>
+
+</LinearLayout>
