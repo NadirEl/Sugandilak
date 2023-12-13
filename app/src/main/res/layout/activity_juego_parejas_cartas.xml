@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Juego_Parejas_Cartas">
+    tools:context=".Juego_Parejas_Cartas"
+    android:background="@color/gris">
 
     <LinearLayout
         android:id="@+id/explicacion"
