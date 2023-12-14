@@ -11,9 +11,11 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import pl.droidsonroids.gif.GifImageView;
+
 public class MainActivity2 extends AppCompatActivity {
     TextView id_explicaciones;
-    ImageView id_gif;
+    GifImageView id_gif;
     Button btn_iniciar;
     Button btn_skipp;
     Handler handler = new Handler();
@@ -52,8 +54,8 @@ public class MainActivity2 extends AppCompatActivity {
 
 
         // Inicia el proceso de mostrar el texto letra por letra
-        String valor = getIntent().getExtras().getString("id");
-        int id = Integer.valueOf(valor);
+
+        int id = getIntent().getExtras().getInt("id");
         if (id == 1) {
             textoOriginal = "Hasierako azalpena: Kaixo! Elorrioko Sortzez Garbiaren Basilika izenaz ezagutzen den monumentu historikoaren aurrean zaudete! Goazen bere historia ezagutzera!! Elorrioko ondare artistikoko monumentu aipagarriena da. Eraikin oso handia da, ia 50 metroko luzera eta 25 metroko zabalera du. Bere eraikuntzari dagokionez, oro har, hiru fase bereiz ditzakegu";
             mostrarTextoPorLetras();
@@ -84,8 +86,7 @@ public class MainActivity2 extends AppCompatActivity {
         btn_iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String valor = getIntent().getExtras().getString("id");
-                int id = Integer.valueOf(valor);
+                int id   = getIntent().getExtras().getInt("id");
                 if (id == 1) {
                     Intent intent = new Intent(MainActivity2.this, jeugo1.class);
                     startActivity(intent);

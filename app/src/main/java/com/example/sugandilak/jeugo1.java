@@ -23,7 +23,7 @@ public class jeugo1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_jeugo1);
-    //    id_img = findViewById(R.id.id_img);
+        id_img = findViewById(R.id.imageView);
         btn_respuesta1 = findViewById(R.id.btn_respuesta1);
         btn_respuesta2 = findViewById(R.id.btn_respuesta2);
         btn_respuesta3 = findViewById(R.id.btn_respuesta3);
@@ -50,8 +50,9 @@ public class jeugo1 extends AppCompatActivity {
                 toast1.show();
 
 
-                if (i == listimg.size() - 1) {
+                if (i == listimg.size()) {
                     Intent intent = new Intent(jeugo1.this, MainActivity.class);
+                    intent.putExtra("id", 1);
                     startActivity(intent);
                 }
 

@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle b = getIntent().getExtras();
         if (b != null) {
-            datos = b.getInt("a");
+            datos = b.getInt("id");
             primeravez = false;
         }
         but = findViewById(R.id.button);
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    void eliminarPuntos(int datos) {
+    void eliminarPuntos(int datoss) {
         Drawable d = getDrawable(R.drawable.location);
         Drawable d2 = getDrawable(R.drawable.location2);
         if (primeravez) {
@@ -108,12 +108,12 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             for (int i = 0; i < puntos.size(); i++) {
-                puntos.get(i).setMarker(d2);
-            }
-
-            for (int i = datos; i < (puntos.size()-(puntos.size() - datos)); i++) {
                 puntos.get(i).setMarker(d);
             }
+
+            //for (int i = datoss; i < (puntos.size()-(puntos.size() - datoss)); i++) {
+               // puntos.get(i).setMarker(d);
+            //}
         }
     }
 
