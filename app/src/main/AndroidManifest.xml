@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -11,11 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sugandilak"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
             android:name=".Laberinto"
             android:exported="false"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".juego2"
             android:exported="false"
@@ -31,13 +37,12 @@
         <activity
             android:name=".Pantalla2VidaDeSanValentin"
             android:exported="true"
-            android:screenOrientation="landscape" >
-
+            android:screenOrientation="landscape">
         </activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:screenOrientation="landscape" >
+            android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -45,13 +50,13 @@
         </activity>
         <activity
             android:name=".Juego_Parejas_Cartas"
-            android:exported="true"
-            android:screenOrientation="landscape" >
-        </activity>
+            android:exported="false"
+            android:screenOrientation="landscape"></activity>
         <activity
             android:name=".Pantalla3_SopadeLetras"
             android:exported="false"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape">
+        </activity>
     </application>
 
 </manifest>
