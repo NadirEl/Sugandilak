@@ -132,8 +132,8 @@ public class MainActivity2 extends AppCompatActivity {
                 } else {
                     // Cuando se ha mostrado todo el texto, muestra el botón
                     btn_iniciar.setVisibility(View.VISIBLE);
-                     id_gif.setImageResource(0);
-                    id_pr .setVisibility(View.VISIBLE);
+                    id_gif.setImageResource(0);
+                    id_pr.setVisibility(View.VISIBLE);
 
 
                 }
