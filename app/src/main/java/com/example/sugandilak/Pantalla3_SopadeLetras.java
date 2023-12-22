@@ -28,13 +28,13 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla3_sopade_letras);
 
-        asignarId(uno_uno, R.id.idSP1_1); asignarId(uno_dos, R.id.idSP1_2); asignarId(uno_tres, R.id.idSP1_3);asignarId(uno_cuatro, R.id.idSP1_4);
-
+        uno_uno = findViewById(R.id.idSP1_1);
+        uno_uno.setOnClickListener(this);
     }
 
     void asignarId (TextView tv, int id){
         tv = findViewById(id);
-        tv.setOnClickListener(this);
+
     }
 
     @Override

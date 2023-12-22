@@ -5,16 +5,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
-import com.example.sugandilak.EntidadesDB.Database;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.preference.PreferenceManager;
-import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 
 import org.osmdroid.api.IMapController;
 import org.osmdroid.config.Configuration;
@@ -53,9 +49,9 @@ public class MainActivity extends AppCompatActivity {
         mapa = findViewById(R.id.mapaView);
 
 
-        mapa.setMultiTouchControls(true);
-        GeoPoint centro = new GeoPoint(43.135, -2.5391);
 
+        GeoPoint centro = new GeoPoint(43.135, -2.5391);
+        mapa.setMultiTouchControls(true);
         mapController = mapa.getController();
         mapController.setCenter(centro);
         mapController.setZoom(16.0);

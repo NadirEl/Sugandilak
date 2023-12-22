@@ -77,9 +77,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     if(v.getId() == R.id.idtv1){
                         v.setBackground(recogida.getDrawable());
                         recogida.setVisibility(View.GONE);
-
-
-                    }
+                  }
 
 
 

@@ -35,11 +35,24 @@
         android:layout_marginRight="10sp"
         android:gravity="center_horizontal">
 
-        <ImageView
-            android:layout_width="66sp"
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/cambiar"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
+         >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/berriotxoa1" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
         <ImageView
             android:layout_width="66sp"
             android:layout_height="110sp"
