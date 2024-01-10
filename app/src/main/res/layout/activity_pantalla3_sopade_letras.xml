@@ -4,125 +4,134 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:backgroundTint="#FFFFFF"
     tools:context=".Pantalla3_SopadeLetras">
 
     <LinearLayout
+        android:id="@+id/Layout"
         android:layout_width="660sp"
         android:layout_height="330sp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="40sp"
+        android:layout_marginTop="40sp"
+        android:layout_marginEnd="47dp"
+        android:layout_marginBottom="21dp"
         android:gravity="center"
-        android:orientation="vertical"
-        android:layout_margin="40sp">
+        android:orientation="vertical">
 
         <LinearLayout
+            android:id="@+id/linea1"
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/idSP1_1"
-                android:layout_width="60sp"
+                android:layout_width="61dp"
                 android:layout_height="wrap_content"
-                android:text="L"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp"/>
+                android:padding="6sp"
+                android:text="L"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="P"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="P"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="N"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="N"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="T"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="T"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="P"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="P"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="X"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="X"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="P"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="P"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP1_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="D"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="D"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -130,107 +139,107 @@
                 android:id="@+id/idSP2_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="H"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="H"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="L"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="L"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="F"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="F"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="B"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="B"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="S"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="S"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="J"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="J"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP2_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="T"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="T"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -238,107 +247,107 @@
                 android:id="@+id/idSP3_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="Z"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="Z"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="H"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="H"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="P"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="P"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="Z"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="Z"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP3_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="L"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="L"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -346,107 +355,107 @@
                 android:id="@+id/idSP4_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="R"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="R"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="M"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="M"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="B"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="B"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="T"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="T"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="L"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="L"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP4_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="A"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -454,107 +463,107 @@
                 android:id="@+id/idSP5_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="H"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="H"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="R"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="R"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="D"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="D"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="J"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="J"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="F"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="F"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-               />
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="G"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="G"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP5_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="L"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="L"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -562,96 +571,107 @@
                 android:id="@+id/idSP6_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="S"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="S"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="N"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="N"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="B"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="B"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="L"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="L"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="B"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="B"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="Z"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="Z"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="H"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="H"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP6_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="I"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -659,97 +679,107 @@
                 android:id="@+id/idSP7_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="X"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="X"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="P"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="P"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="U"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="U"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="D"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="D"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP7_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="M"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="M"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -757,99 +787,107 @@
                 android:id="@+id/idSP8_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="M"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="M"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="G"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="G"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="N"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="N"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="U"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="U"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="K"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="K"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="R"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="R"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="U"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="U"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="N"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="N"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP8_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="O"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -857,101 +895,107 @@
                 android:id="@+id/idSP9_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="J"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="J"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="D"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="D"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="P"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="P"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="L"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="L"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="P"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="P"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="A"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="U"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="U"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP9_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="T"
                 android:gravity="center"
-                android:textStyle="bold"
-                android:padding="6sp" />
+                android:padding="6sp"
+                android:text="T"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28sp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -959,107 +1003,107 @@
                 android:id="@+id/idSP10_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="L"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="L"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="B"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="B"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="N"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="N"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="O"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="O"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="B"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="B"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="E"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="R"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="R"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="R"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="R"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP10_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="E"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="E"
+                android:textStyle="bold" />
 
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="660sp"
-            android:layout_height="30sp"
+            android:layout_height="28dp"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -1067,101 +1111,100 @@
                 android:id="@+id/idSP11_1"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_2"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="U"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="U"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_3"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="F"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="F"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_4"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="N"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="N"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_5"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="T"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="T"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_6"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="K"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="K"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_7"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="U"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="U"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_8"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="R"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="R"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_9"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="R"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="R"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_10"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="I"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="I"
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/idSP11_11"
                 android:layout_width="60sp"
                 android:layout_height="wrap_content"
-                android:text="A"
                 android:gravity="center"
-                android:textStyle="bold"
                 android:padding="6sp"
-                />
+                android:text="A"
+                android:textStyle="bold" />
 
 
         </LinearLayout>

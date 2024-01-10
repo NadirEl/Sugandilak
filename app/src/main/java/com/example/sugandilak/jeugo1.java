@@ -54,11 +54,12 @@ public class jeugo1 extends AppCompatActivity {
                     Intent intent = new Intent(jeugo1.this, MainActivity.class);
                     intent.putExtra("id", 1);
                     startActivity(intent);
+                }else {
+                    //nota de unax: linea 58 genera error al jugar el mismo juego 2 veces
+                    id_img.setBackground(listimg.get(i));
+                    System.out.println(listimg.size());
+                    i++;
                 }
-                //nota de unax: linea 58 genera error al jugar el mismo juego 2 veces
-                id_img.setBackground(listimg.get(i));
-                System.out.println(listimg.size());
-                i++;
             }
         });
         btn_respuesta2.setOnClickListener(new View.OnClickListener() {
