@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:layout_gravity="center_vertical"
     tools:context=".jeugo1"
-    android:background="@color/blue">
+    android:background="@color/pastelColor">
 
     <LinearLayout
         android:layout_marginTop="20sp"
@@ -55,5 +55,11 @@
             android:text="BARROKOA" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_explicacio"
+        android:layout_width="710dp"
+        android:layout_height="100dp"
+        android:text="Azkenik, epealdi honetako estilo gotikoa basilikaren arrosa-leihoan hauteman dezakegu. Badakizu zer den arrosa lehio bat?  " />
 
 </LinearLayout>

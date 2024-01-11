@@ -1,17 +1,20 @@
 package com.example.sugandilak;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Database;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import com.example.sugandilak.EntidadesDB.Database;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import org.osmdroid.api.IMapController;
 import org.osmdroid.config.Configuration;
@@ -25,7 +28,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private static Database INSTANCE;
 
     MapView mapa;
     FloatingActionButton but;
@@ -50,9 +53,9 @@ public class MainActivity extends AppCompatActivity {
         mapa = findViewById(R.id.mapaView);
 
 
-
-        GeoPoint centro = new GeoPoint(43.135, -2.5391);
         mapa.setMultiTouchControls(true);
+        GeoPoint centro = new GeoPoint(43.135, -2.5391);
+
         mapController = mapa.getController();
         mapController.setCenter(centro);
         mapController.setZoom(16.0);
@@ -81,8 +84,6 @@ public class MainActivity extends AppCompatActivity {
             public boolean onItemLongPress(int index, OverlayItem item) {
                 int id = index+1;
 
-
-
                 Intent i = new Intent(MainActivity.this, MainActivity2.class);
                 i.putExtra("id", id);
                 startActivity(i);
@@ -107,12 +108,12 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             for (int i = 0; i < puntos.size(); i++) {
-                puntos.get(i).setMarker(d2);
-            }
-
-            for (int i = datoss; i < (puntos.size()); i++) {
                 puntos.get(i).setMarker(d);
             }
+
+            //for (int i = datoss; i < (puntos.size()-(puntos.size() - datoss)); i++) {
+               // puntos.get(i).setMarker(d);
+            //}
         }
     }
 

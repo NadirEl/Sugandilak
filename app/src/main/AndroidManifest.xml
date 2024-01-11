@@ -19,11 +19,12 @@
         android:theme="@style/Theme.Sugandilak"
         tools:targetApi="31">
         <activity
+            android:name=".MainActivity3"
+            android:exported="false" />
+        <activity
             android:name=".Laberinto"
-            android:exported="true"
-            android:screenOrientation="landscape" >
-
-        </activity>
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".juego2"
             android:exported="false"
@@ -39,26 +40,25 @@
         <activity
             android:name=".Pantalla2VidaDeSanValentin"
             android:exported="true"
+            android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
             android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="false"
-            android:screenOrientation="landscape">
-        </activity>
-        <activity
             android:name=".Juego_Parejas_Cartas"
             android:exported="false"
-            android:screenOrientation="landscape"></activity>
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Pantalla3_SopadeLetras"
             android:exported="false"
-            android:screenOrientation="landscape">
-        </activity>
+            android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>
