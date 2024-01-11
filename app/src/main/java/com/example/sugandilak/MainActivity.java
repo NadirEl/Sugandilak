@@ -82,14 +82,11 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onItemLongPress(int index, OverlayItem item) {
-                if(datos<=index){
-                    int id = index+1;
+                int id = index+1;
 
-                    Intent i = new Intent(MainActivity.this, MainActivity2.class);
-                    i.putExtra("id", id);
-                    startActivity(i);
-                }
-
+                Intent i = new Intent(MainActivity.this, MainActivity2.class);
+                i.putExtra("id", id);
+                startActivity(i);
 
 
                 return true;
@@ -111,12 +108,12 @@ public class MainActivity extends AppCompatActivity {
             }
         } else {
             for (int i = 0; i < puntos.size(); i++) {
-                puntos.get(i).setMarker(d2);
+                puntos.get(i).setMarker(d);
             }
 
-            for (int i = datoss; i < (puntos.size()); i++) {
-               puntos.get(i).setMarker(d);
-            }
+            //for (int i = datoss; i < (puntos.size()-(puntos.size() - datoss)); i++) {
+               // puntos.get(i).setMarker(d);
+            //}
         }
     }
 
