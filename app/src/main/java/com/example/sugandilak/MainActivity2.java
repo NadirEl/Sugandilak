@@ -16,6 +16,7 @@ import pl.droidsonroids.gif.GifImageView;
 public class MainActivity2 extends AppCompatActivity {
     TextView id_explicaciones;
     GifImageView id_gif;
+    ImageView sinhablar;
     Button btn_iniciar;
     Button btn_skipp;
     Handler handler = new Handler();
@@ -46,6 +47,7 @@ public class MainActivity2 extends AppCompatActivity {
         id_explicaciones = findViewById(R.id.id_explicaciones);
         btn_iniciar = findViewById(R.id.btn_iniciar);
         id_gif = findViewById(R.id.id_gif);
+        sinhablar = findViewById(R.id.imgsinhablar);
         // Guarda el texto original;
 
         // Oculta el botón al inicio
@@ -132,7 +134,8 @@ public class MainActivity2 extends AppCompatActivity {
                 } else {
                     // Cuando se ha mostrado todo el texto, muestra el botón
                     btn_iniciar.setVisibility(View.VISIBLE);
-                    //  id_gif.setImageResource(0);
+                    id_gif.setImageResource(0);
+                    sinhablar.setVisibility(View.VISIBLE);
                 }
             }
         }, 500);
