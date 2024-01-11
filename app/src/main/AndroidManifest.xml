@@ -22,10 +22,7 @@
             android:name=".Laberinto"
             android:exported="true"
             android:screenOrientation="landscape" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity
             android:name=".juego2"
@@ -43,6 +40,10 @@
             android:name=".Pantalla2VidaDeSanValentin"
             android:exported="true"
             android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".MainActivity"
