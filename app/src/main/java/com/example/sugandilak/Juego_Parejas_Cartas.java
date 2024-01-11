@@ -2,6 +2,7 @@ package com.example.sugandilak;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
 import com.wajahatkarim3.easyflipview.EasyFlipView;
@@ -21,7 +22,7 @@ public class Juego_Parejas_Cartas extends AppCompatActivity {
             @Override
             public void onViewFlipCompleted(EasyFlipView easyFlipView, EasyFlipView.FlipState newCurrentSide) {
 
-                easyFlipView.flipTheView();
+
             }
         });
 

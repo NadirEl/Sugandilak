@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static Database INSTANCE;
+
 
     MapView mapa;
     FloatingActionButton but;

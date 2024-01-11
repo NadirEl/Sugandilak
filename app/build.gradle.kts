@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-
+    implementation("com.intuit.sdp:sdp-android:1.1.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.wajahatkarim:EasyFlipView:3.0.3")
     implementation("com.google.android.material:material:1.10.0")
@@ -44,6 +44,7 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     implementation("pl.droidsonroids.gif:android-gif-drawable:1.2.17")
+    implementation("nl.dionsegijn:konfetti:1.2.6")
     val room_version = "2.5.0"
 
     implementation("androidx.room:room-runtime:$room_version")
