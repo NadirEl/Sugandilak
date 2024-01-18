@@ -1,8 +1,10 @@
 package com.example.sugandilak;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.room.Database;
 
+import android.content.DialogInterface;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
@@ -51,11 +53,27 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
         GeoPoint centro = new GeoPoint(43.135, -2.5391);
         mapa.setMultiTouchControls(true);
         mapController = mapa.getController();
         mapController.setCenter(centro);
         mapController.setZoom(16.0);
+
+        new AlertDialog.Builder(this)
+                .setTitle("Bienvenido")
+                .setMessage("Aqui va el tutorial o algo")
+
+
+                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                })
+                .setPositiveButton("Ok" , null)
+                .setIcon(R.drawable.waving_hand)
+                .show();
 
         but.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1212,4 +1212,18 @@
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="578dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="365dp"
+        android:text="_____-ko _____-engo _____-an &quot;_____&quot; izeneko _____ egiten da _____-n _____-ren _____" />
+
 </RelativeLayout>
