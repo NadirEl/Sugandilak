@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
+        mapa.setMultiTouchControls(true);
         GeoPoint centro = new GeoPoint(43.135, -2.5391);
         mapa.setMultiTouchControls(true);
         mapController = mapa.getController();
