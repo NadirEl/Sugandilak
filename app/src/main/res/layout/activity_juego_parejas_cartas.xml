@@ -36,15 +36,69 @@
         android:gravity="center_horizontal">
 
         <com.wajahatkarim3.easyflipview.EasyFlipView
-            android:id="@+id/cambiar"
+            android:id="@+id/cambiar1"
             android:layout_width="86sp"
             android:layout_height="110sp"
-         >
+            >
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta1" />
 
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/berriotxoa1" />
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/cambiar2"
+            android:layout_width="86sp"
+            android:layout_height="110sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/cambiar3"
+            android:layout_width="86sp"
+            android:layout_height="110sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta3" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/cambiar4"
+            android:layout_width="86sp"
+            android:layout_height="110sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta4" />
+
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -53,40 +107,92 @@
         </com.wajahatkarim3.easyflipview.EasyFlipView>
 
 
-        <ImageView
-            android:layout_width="66sp"
+
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/cambiar5"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/berriotxoa1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/cambiar6"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta6" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/cambiar7"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta7" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/cambiar8"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
-            android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
-            android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
-            android:layout_height="110sp"
-            android:src="@drawable/cartavuelta" />
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta8" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+
+
+
+
+
+
+
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -99,46 +205,154 @@
         android:layout_marginLeft="12sp"
         android:layout_marginRight="12sp"
         android:gravity="center_horizontal">
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/vuelta1"
+            android:layout_width="86sp"
+            android:layout_height="110sp"
+            >
 
-        <ImageView
-            android:layout_width="66sp"
+            <ImageView
+                android:id="@+id/imgn1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/vuelta2"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta2" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/vuelta3"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta3" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/vuelta4"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta4" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/vuelta5"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/berriotxoa1" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/vuelta6"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta6" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/vuelta7"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta7" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+        <com.wajahatkarim3.easyflipview.EasyFlipView
+            android:id="@+id/vuelta8"
+            android:layout_width="86sp"
             android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"
-            android:layout_marginRight="16sp"/>
-        <ImageView
-            android:layout_width="66sp"
-            android:layout_height="110sp"
-            android:src="@drawable/cartavuelta"/>
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/carta8" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/cartavuelta" />
+
+        </com.wajahatkarim3.easyflipview.EasyFlipView>
+
     </LinearLayout>
 
     <LinearLayout
