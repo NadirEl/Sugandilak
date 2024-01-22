@@ -63,6 +63,7 @@ public class MainActivity extends AppCompatActivity {
 
         new AlertDialog.Builder(this)
                 .setTitle("Bienvenido")
+                .setIcon(R.drawable.waving_hand)
                 .setMessage("Aqui va el tutorial o algo")
 
 

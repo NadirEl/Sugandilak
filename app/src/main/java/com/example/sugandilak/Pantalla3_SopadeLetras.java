@@ -21,12 +21,13 @@ import org.osmdroid.views.overlay.ItemizedOverlayWithFocus;
 import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.views.overlay.simplefastpoint.SimpleFastPointOverlay;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.OnClickListener {
+public class Pantalla3_SopadeLetras extends AppCompatActivity implements Serializable,View.OnClickListener {
 
     int contarRojo = 0;
     boolean lepanto=false;
@@ -90,20 +91,19 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
 
         public void onClick(View view) {
 
-            if(((ColorDrawable) view.getBackground()).getColor()==parseColor("#FFFFFFFF")){
+            if (((ColorDrawable) view.getBackground()).getColor() == parseColor("#FFFFFFFF")) {
                 view.setBackgroundColor(parseColor("#FA8072"));
                 contarRojo++;
-                Log.d("Suma","Valor es: "+contarRojo);
-            } else{
+                Log.d("Suma", "Valor es: " + contarRojo);
+            } else {
                 view.setBackgroundColor(parseColor("#FFFFFFFF"));
                 contarRojo--;
-                Log.d("Resta","Valor es: "+contarRojo);
+                Log.d("Resta", "Valor es: " + contarRojo);
             }
 
             comprobarPalabras();
 
-            }
-
+        }
 
     };
 
