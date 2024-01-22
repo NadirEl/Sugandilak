@@ -1,10 +1,11 @@
 package com.example.sugandilak;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
-
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -28,8 +29,6 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-
-
     MapView mapa;
     FloatingActionButton but;
     ArrayList<OverlayItem> puntos = new ArrayList<>();
@@ -48,7 +47,13 @@ public class MainActivity extends AppCompatActivity {
         if (b != null) {
             datos = b.getInt("id");
             primeravez = false;
+        }else{
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+            fragmentTransaction.add(R.id.fragmentBienvenida, FragmentBienvenida.newInstance());
+            fragmentTransaction.commit();
         }
+
         but = findViewById(R.id.button);
         mapa = findViewById(R.id.mapaView);
 
@@ -83,12 +88,11 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongPress(int index, OverlayItem item) {
                 int id = index+1;
-
-                Intent i = new Intent(MainActivity.this, MainActivity2.class);
-                i.putExtra("id", id);
-                startActivity(i);
-
-
+                if(index == datos){
+                    Intent i = new Intent(MainActivity.this, MainActivity2.class);
+                    i.putExtra("id", id);
+                    startActivity(i);
+                }
                 return true;
             }
         });
@@ -111,9 +115,9 @@ public class MainActivity extends AppCompatActivity {
                 puntos.get(i).setMarker(d);
             }
 
-            //for (int i = datoss; i < (puntos.size()-(puntos.size() - datoss)); i++) {
-               // puntos.get(i).setMarker(d);
-            //}
+            for (int i = 0; i < (puntos.size()-(puntos.size() - datoss)); i++) {
+               puntos.get(i).setMarker(d2);
+            }
         }
     }
 

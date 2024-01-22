@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/azulfondo"
+    tools:context=".FragmentPreguntaImagen">
+
+    <ImageView
+        android:id="@+id/idImElec"
+        android:layout_width="@dimen/_240sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/idButMorado"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/botonmorado"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:text="Gotikoa"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/idButAzul"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/botonazul"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:text="Errenazentista"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/idButVerde"
+            android:layout_width="@dimen/_150sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:background="@drawable/botonverde"
+            android:text="Barrokoa"
+            android:textStyle="bold"
+            android:textSize="@dimen/_14sdp"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

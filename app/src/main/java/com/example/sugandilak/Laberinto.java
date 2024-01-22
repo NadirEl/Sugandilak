@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
@@ -23,6 +25,7 @@ public class Laberinto extends AppCompatActivity {
     KonfettiView con;
     int principio = 0;
     int casillas = 0;
+    Handler handler = new Handler();
 
 
     @Override
@@ -50,7 +53,7 @@ public class Laberinto extends AppCompatActivity {
                         casillas++;
                         Pregunta enviar = hayPregunta();
                         if (casillas > principio && enviar!= null) {
-                            if (casillas % 10 == 0) {
+                            if (casillas % 8 == 0) {
                                 arriba.setEnabled(false);
                                 abajo.setEnabled(false);
                                 derecha.setEnabled(false);
@@ -77,7 +80,7 @@ public class Laberinto extends AppCompatActivity {
                         casillas++;
                         Pregunta enviar = hayPregunta();
                         if (casillas > principio && enviar!= null) {
-                            if (casillas % 10 == 0) {
+                            if (casillas % 8 == 0) {
                                 arriba.setEnabled(false);
                                 abajo.setEnabled(false);
                                 derecha.setEnabled(false);
@@ -103,7 +106,7 @@ public class Laberinto extends AppCompatActivity {
                         casillas++;
                         Pregunta enviar = hayPregunta();
                         if (casillas > principio && enviar!= null) {
-                            if (casillas % 10 == 0) {
+                            if (casillas % 8 == 0) {
                                 arriba.setEnabled(false);
                                 abajo.setEnabled(false);
                                 derecha.setEnabled(false);
@@ -129,7 +132,7 @@ public class Laberinto extends AppCompatActivity {
                         casillas++;
                         Pregunta enviar = hayPregunta();
                         if (casillas > principio && enviar!= null) {
-                            if (casillas % 10 == 0) {
+                            if (casillas % 8 == 0) {
                                 arriba.setEnabled(false);
                                 abajo.setEnabled(false);
                                 derecha.setEnabled(false);
@@ -174,7 +177,7 @@ public class Laberinto extends AppCompatActivity {
             casillas = 0;
         } else {
             preguntas.get(id - 1).setContestada(true);
-            principio = 10 * id;
+            principio = 8 * id;
         }
         arriba.setEnabled(true);
         abajo.setEnabled(true);
@@ -210,6 +213,17 @@ public class Laberinto extends AppCompatActivity {
         abajo.setEnabled(false);
         derecha.setEnabled(false);
         izquierda.setEnabled(false);
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent i = new Intent(Laberinto.this, MainActivity.class);
+                i.putExtra("id", 5);
+                startActivity(i);
+            }
+        }, 5000);
+
+
     }
 
 }
