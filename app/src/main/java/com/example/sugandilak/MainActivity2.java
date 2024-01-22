@@ -104,7 +104,7 @@ public class MainActivity2 extends AppCompatActivity {
                     startActivity(intent);
 
                 } else if (id == 5) {
-                    Intent intent = new Intent(MainActivity2.this, Laberinto.class);
+                    Intent intent = new Intent(MainActivity2.this, Video.class);
                     startActivity(intent);
 
                 }

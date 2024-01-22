@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
-import com.example.sugandilak.EntidadesDB.Database;
+
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
@@ -28,7 +28,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    private static Database INSTANCE;
+
 
     MapView mapa;
     FloatingActionButton but;
