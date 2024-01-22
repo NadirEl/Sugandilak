@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -20,12 +21,24 @@ import org.osmdroid.views.overlay.ItemizedOverlayWithFocus;
 import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.views.overlay.simplefastpoint.SimpleFastPointOverlay;
 
+import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.OnClickListener {
+public class Pantalla3_SopadeLetras extends AppCompatActivity implements Serializable,View.OnClickListener {
+
+    int contarRojo = 0;
+    boolean lepanto=false;
+    boolean elorrio=false;
+    boolean igandea=false;
+    boolean jaia=false;
+    boolean bataila=false;
+    boolean sinbolo=false;
+    boolean lehen=false;
+    boolean errebonbilo=false;
+    boolean urria=false;
 
 
     TextView uno_uno, uno_dos, uno_tres, uno_cuatro, uno_cinco, uno_seis, uno_siete, uno_ocho, uno_nueve, uno_diez, uno_once;
@@ -60,6 +73,8 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pantalla3_sopade_letras);
 
+        int contarRojo=0;
+
         Field [] fields = R.id.class.getFields();
 
         idAllViews();
@@ -76,16 +91,19 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
 
         public void onClick(View view) {
 
-            if(((ColorDrawable) view.getBackground()).getColor()==parseColor("#FFFFFFFF")){
-                view.setBackgroundColor(parseColor("#F14545"));
-            } else{
+            if (((ColorDrawable) view.getBackground()).getColor() == parseColor("#FFFFFFFF")) {
+                view.setBackgroundColor(parseColor("#FA8072"));
+                contarRojo++;
+                Log.d("Suma", "Valor es: " + contarRojo);
+            } else {
                 view.setBackgroundColor(parseColor("#FFFFFFFF"));
+                contarRojo--;
+                Log.d("Resta", "Valor es: " + contarRojo);
             }
 
             comprobarPalabras();
 
-            }
-
+        }
 
     };
 
@@ -95,7 +113,7 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
 
 
 
-        for(int i=0; i<120;i++){
+        for(int i=0; i<=120;i++){
 
             tv = listaTv[i];
             tv.setOnClickListener(onClickListener);
@@ -111,6 +129,7 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
 
             //palabara: LEPANTO 1_!-1_7
         if(
+                (lepanto==false&&
                 ((ColorDrawable) uno_uno.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                 ((ColorDrawable) uno_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                 ((ColorDrawable) uno_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
@@ -118,6 +137,19 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
                 ((ColorDrawable) uno_cinco.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                 ((ColorDrawable) uno_seis.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                 ((ColorDrawable) uno_siete.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+
+                 )&&(
+
+                (
+                        (contarRojo==7)
+                )||
+                        (
+                                (elorrio==true)&&
+                                (contarRojo==6)
+                        )
+
+        )
+
         ){
             uno_uno.setBackgroundColor(parseColor("#00ff00"));
             uno_uno.setClickable(false);
@@ -133,17 +165,38 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
             uno_seis.setClickable(false);
             uno_siete.setBackgroundColor(parseColor("#00ff00"));
             uno_siete.setClickable(false);
+
+            contarRojo=0;
+            lepanto=true;
         }
 
         //palabara: ELORRIO 1_2-7_2
         if(
-                ((ColorDrawable) uno_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) dos_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) tres_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) cuatro_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) cinco_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) seis_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) siete_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+
+                       (elorrio==false&&
+                           ((ColorDrawable) uno_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                           ((ColorDrawable) dos_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                           ((ColorDrawable) tres_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                           ((ColorDrawable) cuatro_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                            ((ColorDrawable) cinco_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                            ((ColorDrawable) seis_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                            ((ColorDrawable) siete_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+                       )&&(
+                               (
+                                     (contarRojo==7)
+                               )||
+                               (
+
+                                               (lepanto==true&&sinbolo==true)&&
+                                                       (contarRojo==5)
+
+                               )||(
+                                       (lepanto==true||sinbolo==true)&&
+                                               (contarRojo==6)
+
+                               )
+        )
+
         ){
             uno_dos.setBackgroundColor(parseColor("#00ff00"));
             uno_dos.setClickable(false);
@@ -159,14 +212,30 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
             seis_dos.setClickable(false);
             siete_dos.setBackgroundColor(parseColor("#00ff00"));
             siete_dos.setClickable(false);
+
+            elorrio=true;
+            contarRojo=0;
         }
 
         //palabara: JAIA 2_9-5_9
         if(
+                (jaia==false&&
                 ((ColorDrawable) dos_nueve.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) tres_nueve.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) cuatro_nueve.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) cinco_nueve.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+        )&&(
+                (
+                        (contarRojo==4)
+                )||
+                        (
+                                (bataila==true)&&
+                                (contarRojo==3)
+                        )
+
+
+        )
+
         ){
             dos_nueve.setBackgroundColor(parseColor("#00ff00"));
             dos_nueve.setClickable(false);
@@ -176,10 +245,13 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
             cuatro_nueve.setClickable(false);
             cinco_nueve.setBackgroundColor(parseColor("#00ff00"));
             cinco_nueve.setClickable(false);
+
+            jaia=true;
+            contarRojo=0;
         }
 
         //palabara: IGANDEA 3_3-9_3
-        if(
+        if((igandea==false&&
                 ((ColorDrawable) tres_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) cuatro_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) cinco_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
@@ -187,6 +259,18 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
                         ((ColorDrawable) siete_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) ocho_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) nueve_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+
+        )&&(
+                (
+                        (contarRojo==7)
+                )||
+                        (
+                                (sinbolo==true)&&
+                                        (contarRojo==6)
+                        )
+
+
+        )
         ){
             tres_tres.setBackgroundColor(parseColor("#00ff00"));
             tres_tres.setClickable(false);
@@ -202,10 +286,13 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
             ocho_tres.setClickable(false);
             nueve_tres.setBackgroundColor(parseColor("#00ff00"));
             nueve_tres.setClickable(false);
+
+            igandea=true;
+            contarRojo=0;
         }
 
         //palabara: BATAILA 4_5-4_11
-        if(
+        if((bataila==false&&
                 ((ColorDrawable) cuatro_cinco.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) cuatro_seis.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) cuatro_siete.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
@@ -213,7 +300,19 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
                         ((ColorDrawable) cuatro_nueve.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) cuatro_diez.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) cuatro_once.getBackground()).getColor()!=parseColor("#FFFFFFFF")
-        ){
+        )&&(
+                (
+                        (contarRojo==7)
+                )||
+                        (
+                                (jaia==true&&lehen==true)&&
+                                        (contarRojo==5)
+                        )||(
+                        (jaia==true||lehen==true)&&
+                                (contarRojo==6)
+                )
+
+        ) ){
             cuatro_cinco.setBackgroundColor(parseColor("#00ff00"));
             cuatro_cinco.setClickable(false);
             cuatro_seis.setBackgroundColor(parseColor("#00ff00"));
@@ -228,15 +327,27 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
             cuatro_diez.setClickable(false);
             cuatro_once.setBackgroundColor(parseColor("#00ff00"));
             cuatro_once.setClickable(false);
+
+            bataila=true;
+            contarRojo=0;
         }
 
         //palabara: LEHEN 4_10-8_10
-        if(
+        if((lehen==false&&
                 ((ColorDrawable) cuatro_diez.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) cinco_diez.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) seis_diez.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) siete_diez.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) ocho_diez.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+        )&&(
+                (
+                        (contarRojo==5)
+                )||
+                        (
+                                (bataila==true)&&
+                                        (contarRojo==4)
+                        )
+        )
         ){
             cuatro_diez.setBackgroundColor(parseColor("#00ff00"));
             cuatro_diez.setClickable(false);
@@ -248,84 +359,126 @@ public class Pantalla3_SopadeLetras extends AppCompatActivity implements View.On
             siete_diez.setClickable(false);
             ocho_diez.setBackgroundColor(parseColor("#00ff00"));
             ocho_diez.setClickable(false);
+
+            lehen=true;
+            contarRojo=0;
         }
 
-        //palabara: SINBOLO 6_1-6_7 to do
-        if(
-                ((ColorDrawable) tres_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) cuatro_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) cinco_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+        //palabara: SINBOLO 6_1-6_7
+        if((sinbolo==false&&
+                ((ColorDrawable) seis_uno.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) seis_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) seis_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) siete_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) ocho_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) nueve_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+                        ((ColorDrawable) seis_cuatro.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) seis_cinco.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) seis_seis.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) seis_siete.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+        )&&(
+                (
+                        (contarRojo==7)
+                )||
+                        (
+                                (igandea==true&&elorrio==true)&&
+                                        (contarRojo==5)
+                        )||(
+                        (igandea==true||elorrio==true)&&
+                                (contarRojo==6)
+                )
+
+        )                 
         ){
-            tres_tres.setBackgroundColor(parseColor("#00ff00"));
-            tres_tres.setClickable(false);
-            cuatro_tres.setBackgroundColor(parseColor("#00ff00"));
-            cuatro_tres.setClickable(false);
-            cinco_tres.setBackgroundColor(parseColor("#00ff00"));
-            cinco_tres.setClickable(false);
+            seis_uno.setBackgroundColor(parseColor("#00ff00"));
+            seis_uno.setClickable(false);
+            seis_dos.setBackgroundColor(parseColor("#00ff00"));
+            seis_dos.setClickable(false);
             seis_tres.setBackgroundColor(parseColor("#00ff00"));
             seis_tres.setClickable(false);
-            siete_tres.setBackgroundColor(parseColor("#00ff00"));
-            siete_tres.setClickable(false);
-            ocho_tres.setBackgroundColor(parseColor("#00ff00"));
-            ocho_tres.setClickable(false);
-            nueve_tres.setBackgroundColor(parseColor("#00ff00"));
-            nueve_tres.setClickable(false);
+            seis_cuatro.setBackgroundColor(parseColor("#00ff00"));
+            seis_cuatro.setClickable(false);
+            seis_cinco.setBackgroundColor(parseColor("#00ff00"));
+            seis_cinco.setClickable(false);
+            seis_seis.setBackgroundColor(parseColor("#00ff00"));
+            seis_seis.setClickable(false);
+            seis_siete.setBackgroundColor(parseColor("#00ff00"));
+            seis_siete.setClickable(false);
+
+            sinbolo=true;
+            contarRojo=0;
         }
 
-        //palabara: ERREBONBILO 10_1-10_11 to do
-        if(
-                ((ColorDrawable) tres_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) cuatro_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) cinco_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) seis_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) siete_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) ocho_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) nueve_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+        //palabara: ERREBONBILO 10_1-10_11
+        if(errebonbilo==false&&
+                ((ColorDrawable) diez_uno.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_cuatro.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_cinco.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_seis.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_siete.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_ocho.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_nueve.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_diez.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) diez_once.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        (contarRojo==11)
         ){
-            tres_tres.setBackgroundColor(parseColor("#00ff00"));
-            tres_tres.setClickable(false);
-            cuatro_tres.setBackgroundColor(parseColor("#00ff00"));
-            cuatro_tres.setClickable(false);
-            cinco_tres.setBackgroundColor(parseColor("#00ff00"));
-            cinco_tres.setClickable(false);
-            seis_tres.setBackgroundColor(parseColor("#00ff00"));
-            seis_tres.setClickable(false);
-            siete_tres.setBackgroundColor(parseColor("#00ff00"));
-            siete_tres.setClickable(false);
-            ocho_tres.setBackgroundColor(parseColor("#00ff00"));
-            ocho_tres.setClickable(false);
-            nueve_tres.setBackgroundColor(parseColor("#00ff00"));
-            nueve_tres.setClickable(false);
+            diez_uno.setBackgroundColor(parseColor("#00ff00"));
+            diez_uno.setClickable(false);
+            diez_dos.setBackgroundColor(parseColor("#00ff00"));
+            diez_dos.setClickable(false);
+            diez_tres.setBackgroundColor(parseColor("#00ff00"));
+            diez_tres.setClickable(false);
+            diez_cuatro.setBackgroundColor(parseColor("#00ff00"));
+            diez_cuatro.setClickable(false);
+            diez_cinco.setBackgroundColor(parseColor("#00ff00"));
+            diez_cinco.setClickable(false);
+            diez_seis.setBackgroundColor(parseColor("#00ff00"));
+            diez_seis.setClickable(false);
+            diez_siete.setBackgroundColor(parseColor("#00ff00"));
+            diez_siete.setClickable(false);
+            diez_ocho.setBackgroundColor(parseColor("#00ff00"));
+            diez_ocho.setClickable(false);
+            diez_nueve.setBackgroundColor(parseColor("#00ff00"));
+            diez_nueve.setClickable(false);
+            diez_diez.setBackgroundColor(parseColor("#00ff00"));
+            diez_diez.setClickable(false);
+            diez_once.setBackgroundColor(parseColor("#00ff00"));
+            diez_once.setClickable(false);
+
+            errebonbilo=true;
+            contarRojo=0;
         }
 
-        //palabara: URRIA 11_7-11_11 to do
-        if(
-                ((ColorDrawable) tres_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) cuatro_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) cinco_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) seis_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) siete_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) ocho_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
-                        ((ColorDrawable) nueve_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")
+        //palabara: URRIA 11_7-11_11
+        if(urria==false&&
+                ((ColorDrawable) once_siete.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) once_ocho.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) once_nueve.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) once_diez.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        ((ColorDrawable) once_once.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
+                        (contarRojo==5)
         ){
-            tres_tres.setBackgroundColor(parseColor("#00ff00"));
-            tres_tres.setClickable(false);
-            cuatro_tres.setBackgroundColor(parseColor("#00ff00"));
-            cuatro_tres.setClickable(false);
-            cinco_tres.setBackgroundColor(parseColor("#00ff00"));
-            cinco_tres.setClickable(false);
-            seis_tres.setBackgroundColor(parseColor("#00ff00"));
-            seis_tres.setClickable(false);
-            siete_tres.setBackgroundColor(parseColor("#00ff00"));
-            siete_tres.setClickable(false);
-            ocho_tres.setBackgroundColor(parseColor("#00ff00"));
-            ocho_tres.setClickable(false);
-            nueve_tres.setBackgroundColor(parseColor("#00ff00"));
-            nueve_tres.setClickable(false);
+            once_siete.setBackgroundColor(parseColor("#00ff00"));
+            once_siete.setClickable(false);
+            once_ocho.setBackgroundColor(parseColor("#00ff00"));
+            once_ocho.setClickable(false);
+            once_nueve.setBackgroundColor(parseColor("#00ff00"));
+            once_nueve.setClickable(false);
+            once_diez.setBackgroundColor(parseColor("#00ff00"));
+            once_diez.setClickable(false);
+            once_once.setBackgroundColor(parseColor("#00ff00"));
+            once_once.setClickable(false);
+
+            urria=true;
+            contarRojo=0;
+        }
+
+        if(
+            lepanto==true&&elorrio==true&&igandea==true&&jaia==true&&bataila==true&&
+            sinbolo==true&&lehen==true&&errebonbilo==true&&urria==true
+        ){
+            Intent intent = new Intent(Pantalla3_SopadeLetras.this, MainActivity.class);
+            intent.putExtra("id", 3);
+            startActivity(intent);
         }
 
 
