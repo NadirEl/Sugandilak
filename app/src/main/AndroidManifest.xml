@@ -12,21 +12,14 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/sugandilla"
+        android:label="Sugandillak"
+        android:roundIcon="@drawable/sugandilla"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sugandilak"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity3"
-            android:exported="false" />
-        <activity
             android:name=".Laberinto"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".juego2"
             android:exported="false"
             android:screenOrientation="landscape" />
         <activity

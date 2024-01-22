@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/orange1"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".Juego2Fragment">
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardOp1"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgOp1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                android:src="@drawable/berriotxoa1" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardOp2"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgOp2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                android:src="@drawable/berriotxoa2" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardOp3"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgOp3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                android:src="@drawable/berriotxoa3" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardOp4"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgOp4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                android:src="@drawable/berriotxoa4" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardOp5"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgOp5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                android:src="@drawable/berriotxoa5" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardOp6"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgOp6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                android:src="@drawable/berriotxoa6" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardOp7"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgOp7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                android:src="@drawable/berriotxoa7" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardOp8"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgOp8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                android:src="@drawable/berriotxoa8" />
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardOp9"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgOp9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                android:src="@drawable/berriotxoa9" />
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_18sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardCam1"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgCam1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardCam2"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgCam2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardCam3"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgCam3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            />
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardCam4"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgCam4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_28sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            android:rotation="90"
+            />
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardCam9"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgCam9"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            android:rotation="180"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardCam8"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgCam8"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            android:rotation="180"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardCam7"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgCam7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            android:rotation="180"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardCam6"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgCam6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                />
+
+        </com.google.android.material.card.MaterialCardView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            android:rotation="180"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/idCardCam5"
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+            <ImageView
+                android:id="@+id/idImgCam5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/_16sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_8sdp">
+            <TextView
+                android:id="@+id/idTvPrin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:00"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:layout_marginRight="@dimen/_10sdp"/>
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_10sdp"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/idTvFin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0:00"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:layout_marginLeft="@dimen/_10sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_gravity="center">
+            <ImageButton
+                android:id="@+id/idButMenos10"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/botonborde"
+                android:src="@drawable/menos10"
+                android:layout_marginRight="@dimen/_20sdp"
+                />
+            <ImageButton
+                android:id="@+id/idButPlay"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/botonborde"
+                android:src="@drawable/pause"/>
+            <ImageButton
+                android:id="@+id/idButMas10"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/botonborde"
+                android:src="@drawable/mas10"
+                android:layout_marginLeft="@dimen/_20sdp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

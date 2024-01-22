@@ -6,6 +6,7 @@ import androidx.core.content.res.ResourcesCompat;
 
 import android.content.ClipData;
 import android.content.ClipDescription;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
@@ -34,6 +35,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
     private Handler handler = new Handler();
     private ImageButton play, next10, back10;
     TextView minPrin, minFinal;
+    int contador = 0;
 
 
 
@@ -239,6 +241,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     MaterialCardView cardCamino = findViewById(R.id.idCardCam1);
                     int colorCorrecta = getColor(R.color.green);
                     cardCamino.setStrokeColor(colorCorrecta);
+                    contador++;
 
                 } else if (v.getId() == R.id.idImgCam2 && recogida.getId() == R.id.idCardOp2) {
                     ImageView imagenSoltar = findViewById(R.id.idImgOp2);
@@ -248,6 +251,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     MaterialCardView cardCamino = findViewById(R.id.idCardCam2);
                     int colorCorrecta = getColor(R.color.green);
                     cardCamino.setStrokeColor(colorCorrecta);
+                    contador++;
 
                 } else if (v.getId() == R.id.idImgCam3 && recogida.getId() == R.id.idCardOp3) {
                     ImageView imagenSoltar = findViewById(R.id.idImgOp3);
@@ -257,6 +261,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     MaterialCardView cardCamino = findViewById(R.id.idCardCam3);
                     int colorCorrecta = getColor(R.color.green);
                     cardCamino.setStrokeColor(colorCorrecta);
+                    contador++;
 
                 } else if (v.getId() == R.id.idImgCam4 && recogida.getId() == R.id.idCardOp4) {
                     ImageView imagenSoltar = findViewById(R.id.idImgOp4);
@@ -266,6 +271,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     MaterialCardView cardCamino = findViewById(R.id.idCardCam4);
                     int colorCorrecta = getColor(R.color.green);
                     cardCamino.setStrokeColor(colorCorrecta);
+                    contador++;
 
                 } else if (v.getId() == R.id.idImgCam5 && recogida.getId() == R.id.idCardOp5) {
                     ImageView imagenSoltar = findViewById(R.id.idImgOp5);
@@ -275,6 +281,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     MaterialCardView cardCamino = findViewById(R.id.idCardCam5);
                     int colorCorrecta = getColor(R.color.green);
                     cardCamino.setStrokeColor(colorCorrecta);
+                    contador++;
 
                 } else if (v.getId() == R.id.idImgCam6 && recogida.getId() == R.id.idCardOp6) {
                     ImageView imagenSoltar = findViewById(R.id.idImgOp6);
@@ -284,6 +291,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     MaterialCardView cardCamino = findViewById(R.id.idCardCam6);
                     int colorCorrecta = getColor(R.color.green);
                     cardCamino.setStrokeColor(colorCorrecta);
+                    contador++;
 
                 } else if (v.getId() == R.id.idImgCam7 && recogida.getId() == R.id.idCardOp7) {
                     ImageView imagenSoltar = findViewById(R.id.idImgOp7);
@@ -293,6 +301,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     MaterialCardView cardCamino = findViewById(R.id.idCardCam7);
                     int colorCorrecta = getColor(R.color.green);
                     cardCamino.setStrokeColor(colorCorrecta);
+                    contador++;
 
                 } else if (v.getId() == R.id.idImgCam8 && recogida.getId() == R.id.idCardOp8) {
                     ImageView imagenSoltar = findViewById(R.id.idImgOp8);
@@ -302,6 +311,7 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     MaterialCardView cardCamino = findViewById(R.id.idCardCam8);
                     int colorCorrecta = getColor(R.color.green);
                     cardCamino.setStrokeColor(colorCorrecta);
+                    contador++;
 
                 } else if (v.getId() == R.id.idImgCam9 && recogida.getId() == R.id.idCardOp9) {
                     ImageView imagenSoltar = findViewById(R.id.idImgOp9);
@@ -311,11 +321,22 @@ public class Pantalla2VidaDeSanValentin extends AppCompatActivity implements Vie
                     MaterialCardView cardCamino = findViewById(R.id.idCardCam9);
                     int colorCorrecta = getColor(R.color.green);
                     cardCamino.setStrokeColor(colorCorrecta);
+                    contador++;
 
                 } else {
 
                 }
         }
+        comprobar();
         return true;
     };
+
+    void comprobar(){
+        if(contador == 9){
+            audioVidaBerriotxoa.stop();
+            Intent i = new Intent(Pantalla2VidaDeSanValentin.this, MainActivity.class);
+            i.putExtra("id", 2);
+            startActivity(i);
+        }
+    }
 }

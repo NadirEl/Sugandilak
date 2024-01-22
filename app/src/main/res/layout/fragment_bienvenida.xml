@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bordebienvenida"
+    android:paddingLeft="@dimen/_30sdp"
+    android:paddingRight="@dimen/_30sdp"
+    tools:context=".FragmentBienvenida">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Ongi etorri Elorriora"
+            android:textSize="@dimen/_24sdp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="@dimen/_15sdp"
+            android:text="Aplikazio honetan, Elorrioko historia ezagutuko duzu. Ordena jarraituz, bost kokapenetatik igaroko gara, eta hainbat jarduera egin beharko ditugu. Jarraitu mapa, entzun arretaz jarraibideak eta primeran pasatuko duzu. Aurrera!"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/idButSalirBienvenida"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:gravity="center"
+            android:background="@drawable/botonbienvenida"
+            android:text="Hasi!"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp"
+            />
+
+    </LinearLayout>
+
+</FrameLayout>

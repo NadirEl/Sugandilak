@@ -1,84 +1,171 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/fondolaberinto"
     tools:context=".Laberinto">
 
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="horizontal"
+      android:gravity="center"
+      android:background="@color/fondolaberinto"
+      android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="@dimen/_24sdp"
+        >
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginLeft="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_10sdp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToOutline="true"
+              android:layout_margin="@dimen/_3sdp"
+              android:src="@drawable/mari"
+              />
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            android:layout_marginTop="@dimen/_10sdp"
+            />
+
+
+      </LinearLayout>
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/button2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/arrow_shape"
+          android:rotation="180"
+          android:layout_marginTop="@dimen/_45sdp"
+          android:layout_marginRight="@dimen/_8sdp"
+          android:layout_marginBottom="@dimen/_60sdp"/>
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/button3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/arrow_shape"
+          android:layout_marginRight="@dimen/_8sdp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+      <com.example.sugandilak.GameView
+          android:id="@+id/laberinto"
+          android:layout_width="@dimen/_360sdp"
+          android:layout_height="match_parent" />
+
+      <androidx.fragment.app.FragmentContainerView
+          android:id="@+id/fragment"
+          android:layout_width="@dimen/_360sdp"
+          android:layout_height="match_parent" />
+    </RelativeLayout>
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/button4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/arrow_shape"
+          android:rotation="270"
+          android:layout_marginTop="@dimen/_16sdp"
+          android:layout_marginBottom="@dimen/_60sdp"
+          android:layout_marginLeft="@dimen/_8sdp"/>
+
+      <androidx.appcompat.widget.AppCompatButton
+          android:id="@+id/button5"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:background="@drawable/arrow_shape"
+          android:rotation="90"
+          android:layout_marginBottom="@dimen/_20sdp"
+          android:layout_marginLeft="@dimen/_8sdp"/>
+
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:orientation="horizontal"
+          android:layout_marginRight="@dimen/_10sdp"
+          android:layout_marginTop="@dimen/_35sdp">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clipToOutline="true"
+            android:src="@drawable/flecha"
+            android:rotation="180"
+            android:layout_marginTop="@dimen/_40sdp"
+            />
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="@dimen/_54sdp"
+            android:layout_height="@dimen/_54sdp"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            app:strokeWidth="3dp"
+            app:strokeColor="@color/orange3"
+            >
+
+          <ImageView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:clipToOutline="true"
+              android:layout_margin="@dimen/_3sdp"
+              android:src="@drawable/mendia"
+              />
+        </com.google.android.material.card.MaterialCardView>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+  </LinearLayout>
   <nl.dionsegijn.konfetti.KonfettiView
       android:id="@+id/viewconfeti"
       android:layout_width="match_parent"
       android:layout_height="match_parent"/>
 
-  <com.example.sugandilak.GameView
-      android:id="@+id/laberinto"
-      android:layout_width="@dimen/_360sdp"
-      android:layout_height="match_parent"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-  <androidx.fragment.app.FragmentContainerView
-      android:id="@+id/fragment"
-      android:layout_width="@dimen/_360sdp"
-      android:layout_height="match_parent"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent" />
-
-  <androidx.appcompat.widget.AppCompatButton
-      android:id="@+id/button2"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:background="@drawable/arrow_shape"
-      android:rotation="180"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.041"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.338" />
-
-  <androidx.appcompat.widget.AppCompatButton
-      android:id="@+id/button3"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:background="@drawable/arrow_shape"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.041"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.734" />
-
-  <androidx.appcompat.widget.AppCompatButton
-      android:id="@+id/button4"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:background="@drawable/arrow_shape"
-      android:rotation="270"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.929"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.176" />
-
-  <androidx.appcompat.widget.AppCompatButton
-      android:id="@+id/button5"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:background="@drawable/arrow_shape"
-      android:rotation="90"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintHorizontal_bias="0.929"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:layout_constraintVertical_bias="0.674" />
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>
