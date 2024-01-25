@@ -110,7 +110,7 @@ public class ExplicacionFragment extends Fragment {
                     case 2:  ((MainActivity2) getActivity()).abrirFragmentJuego2();
                         break;
 
-                    case 3:
+                    case 3: ((MainActivity2) getActivity()).abrirFragmentSopaDeLetras();
                         break;
                     case 4:
                         break;

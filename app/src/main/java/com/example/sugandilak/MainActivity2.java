@@ -179,6 +179,12 @@ public class MainActivity2 extends AppCompatActivity {
         fragmentTransaction4.commit();
     }
 
+    void abrirFragmentSopaDeLetras() {
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.idfragment, SopaDeLetrasFragment.getInstance());
+        fragmentTransaction.commit();
+    }
+
 
 
     ArrayList<PreguntaImagen> recogerPreguntasImagen(){
