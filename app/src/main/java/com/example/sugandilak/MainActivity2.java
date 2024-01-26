@@ -175,10 +175,14 @@ public class MainActivity2 extends AppCompatActivity {
 
     void abrirFragmentJuego4(){
         FragmentTransaction fragmentTransaction4 = fragmentManager.beginTransaction();
-        fragmentTransaction4.add(R.id.idfragment, Juego2Fragment.getInstance());
+        fragmentTransaction4.add(R.id.idfragment, PrimerFragment.getInstance());
         fragmentTransaction4.commit();
     }
-
+    void abrirFragmentJuego3(){
+        FragmentTransaction fragmentTransaction3 = fragmentManager.beginTransaction();
+        fragmentTransaction3.add(R.id.idfragment, SopaDeLetrasFragment.getInstance());
+        fragmentTransaction3.commit();
+    }
 
 
     ArrayList<PreguntaImagen> recogerPreguntasImagen(){

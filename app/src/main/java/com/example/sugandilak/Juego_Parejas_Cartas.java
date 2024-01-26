@@ -31,7 +31,8 @@ public class Juego_Parejas_Cartas extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
 
-        fragmentTransaction.add(R.id.idFragment,PrimerFragment.getInstance());
+        fragmentTransaction
+                .add(R.id.idFragment,PrimerFragment.getInstance());
         fragmentTransaction.commit();
     }
 
