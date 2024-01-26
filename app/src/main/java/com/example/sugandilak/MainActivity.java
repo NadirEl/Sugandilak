@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton but;
     ArrayList<OverlayItem> puntos = new ArrayList<>();
     IMapController mapController;
-    int datos = 0;
+    int datos = 2;
     boolean primeravez = true;
 
 

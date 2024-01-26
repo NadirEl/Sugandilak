@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f0e5e5"
-    tools:context=".Pantalla3_SopadeLetras">
-
+    tools:context=".SopaDeLetrasFragment">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -16,12 +15,10 @@
         android:layout_marginLeft="@dimen/_20sdp"
         android:layout_centerVertical="true">
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -31,7 +28,6 @@
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginRight="@dimen/_10sdp"/>
 
-
             <ImageView
                 android:id="@+id/idImJaia"
                 android:layout_width="@dimen/_25sdp"
@@ -40,12 +36,10 @@
                 android:visibility="invisible"/>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -55,7 +49,6 @@
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginRight="@dimen/_10sdp"/>
 
-
             <ImageView
                 android:id="@+id/idImLepanto"
                 android:layout_width="@dimen/_25sdp"
@@ -64,12 +57,10 @@
                 android:visibility="invisible"/>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -79,7 +70,6 @@
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginRight="@dimen/_10sdp"/>
 
-
             <ImageView
                 android:id="@+id/idImEhen"
                 android:layout_width="@dimen/_25sdp"
@@ -88,12 +78,10 @@
                 android:visibility="invisible"/>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -103,7 +91,6 @@
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginRight="@dimen/_10sdp"/>
 
-
             <ImageView
                 android:id="@+id/idImErrebonbilo"
                 android:layout_width="@dimen/_25sdp"
@@ -112,12 +99,10 @@
                 android:visibility="invisible"/>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -127,7 +112,6 @@
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginRight="@dimen/_10sdp"/>
 
-
             <ImageView
                 android:id="@+id/idImElorrio"
                 android:layout_width="@dimen/_25sdp"
@@ -136,12 +120,10 @@
                 android:visibility="invisible"/>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -151,7 +133,6 @@
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginRight="@dimen/_10sdp"/>
 
-
             <ImageView
                 android:id="@+id/idImIgandea"
                 android:layout_width="@dimen/_25sdp"
@@ -160,12 +141,10 @@
                 android:visibility="invisible"/>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -175,7 +154,6 @@
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginRight="@dimen/_10sdp"/>
 
-
             <ImageView
                 android:id="@+id/idImSinbolo"
                 android:layout_width="@dimen/_25sdp"
@@ -184,12 +162,10 @@
                 android:visibility="invisible"/>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -199,7 +175,6 @@
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginRight="@dimen/_10sdp"/>
 
-
             <ImageView
                 android:id="@+id/idImBataila"
                 android:layout_width="@dimen/_25sdp"
@@ -208,12 +183,10 @@
                 android:visibility="invisible"/>
         </LinearLayout>
 
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center">
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -222,7 +195,6 @@
                 android:textStyle="bold"
                 android:textSize="@dimen/_14sdp"
                 android:layout_marginRight="@dimen/_10sdp"/>
-
 
             <ImageView
                 android:id="@+id/idImUrria"
@@ -233,10 +205,7 @@
         </LinearLayout>
 
 
-
-
     </LinearLayout>
-
 
     <LinearLayout
         android:id="@+id/Layout"
@@ -249,14 +218,12 @@
         android:layout_marginRight="@dimen/_20sdp"
         android:padding="@dimen/_5sdp">
 
-
         <LinearLayout
             android:id="@+id/linea1"
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP1_1"
@@ -267,7 +234,6 @@
                 android:text="L"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP1_2"
                 android:layout_width="@dimen/_30sdp"
@@ -276,7 +242,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="E"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP1_3"
@@ -287,7 +252,6 @@
                 android:text="P"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP1_4"
                 android:layout_width="@dimen/_30sdp"
@@ -296,7 +260,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="A"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP1_5"
@@ -307,7 +270,6 @@
                 android:text="N"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP1_6"
                 android:layout_width="@dimen/_30sdp"
@@ -316,7 +278,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="T"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP1_7"
@@ -327,7 +288,6 @@
                 android:text="O"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP1_8"
                 android:layout_width="@dimen/_30sdp"
@@ -336,7 +296,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="P"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP1_9"
@@ -347,7 +306,6 @@
                 android:text="X"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP1_10"
                 android:layout_width="@dimen/_30sdp"
@@ -357,7 +315,6 @@
                 android:text="P"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP1_11"
                 android:layout_width="@dimen/_30sdp"
@@ -366,7 +323,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="D"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_1"
@@ -378,17 +334,13 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP2_1"
@@ -399,7 +351,6 @@
                 android:text="H"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP2_2"
                 android:layout_width="@dimen/_30sdp"
@@ -408,7 +359,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="L"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP2_3"
@@ -419,7 +369,6 @@
                 android:text="F"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP2_4"
                 android:layout_width="@dimen/_30sdp"
@@ -428,7 +377,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="I"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP2_5"
@@ -439,7 +387,6 @@
                 android:text="B"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP2_6"
                 android:layout_width="@dimen/_30sdp"
@@ -448,7 +395,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="S"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP2_7"
@@ -459,7 +405,6 @@
                 android:text="E"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP2_8"
                 android:layout_width="@dimen/_30sdp"
@@ -468,7 +413,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="I"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP2_9"
@@ -479,7 +423,6 @@
                 android:text="J"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP2_10"
                 android:layout_width="@dimen/_30sdp"
@@ -489,7 +432,6 @@
                 android:text="A"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP2_11"
                 android:layout_width="@dimen/_30sdp"
@@ -498,7 +440,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="T"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_2"
@@ -510,17 +451,13 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP3_1"
@@ -531,7 +468,6 @@
                 android:text="I"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP3_2"
                 android:layout_width="@dimen/_30sdp"
@@ -540,7 +476,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="O"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP3_3"
@@ -551,7 +486,6 @@
                 android:text="A"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP3_4"
                 android:layout_width="@dimen/_30sdp"
@@ -560,7 +494,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="Z"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP3_5"
@@ -571,7 +504,6 @@
                 android:text="H"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP3_6"
                 android:layout_width="@dimen/_30sdp"
@@ -580,7 +512,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="P"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP3_7"
@@ -591,7 +522,6 @@
                 android:text="I"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP3_8"
                 android:layout_width="@dimen/_30sdp"
@@ -600,7 +530,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="Z"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP3_9"
@@ -611,7 +540,6 @@
                 android:text="A"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP3_10"
                 android:layout_width="@dimen/_30sdp"
@@ -621,7 +549,6 @@
                 android:text="O"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP3_11"
                 android:layout_width="@dimen/_30sdp"
@@ -630,7 +557,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="L"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_3"
@@ -642,17 +568,13 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP4_1"
@@ -663,7 +585,6 @@
                 android:text="E"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP4_2"
                 android:layout_width="@dimen/_30sdp"
@@ -672,7 +593,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="R"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP4_3"
@@ -683,7 +603,6 @@
                 android:text="E"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP4_4"
                 android:layout_width="@dimen/_30sdp"
@@ -692,7 +611,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="M"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP4_5"
@@ -703,7 +621,6 @@
                 android:text="B"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP4_6"
                 android:layout_width="@dimen/_30sdp"
@@ -712,7 +629,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="A"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP4_7"
@@ -723,7 +639,6 @@
                 android:text="T"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP4_8"
                 android:layout_width="@dimen/_30sdp"
@@ -732,7 +647,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="A"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP4_9"
@@ -743,7 +657,6 @@
                 android:text="I"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP4_10"
                 android:layout_width="@dimen/_30sdp"
@@ -753,7 +666,6 @@
                 android:text="L"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP4_11"
                 android:layout_width="@dimen/_30sdp"
@@ -762,7 +674,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="A"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_4"
@@ -774,17 +685,13 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP5_1"
@@ -795,7 +702,6 @@
                 android:text="H"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP5_2"
                 android:layout_width="@dimen/_30sdp"
@@ -804,7 +710,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="R"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP5_3"
@@ -815,7 +720,6 @@
                 android:text="D"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP5_4"
                 android:layout_width="@dimen/_30sdp"
@@ -824,7 +728,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="J"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP5_5"
@@ -835,7 +738,6 @@
                 android:text="F"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP5_6"
                 android:layout_width="@dimen/_30sdp"
@@ -844,7 +746,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="I"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP5_7"
@@ -855,7 +756,6 @@
                 android:text="E"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP5_8"
                 android:layout_width="@dimen/_30sdp"
@@ -864,7 +764,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="G"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP5_9"
@@ -875,7 +774,6 @@
                 android:text="A"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP5_10"
                 android:layout_width="@dimen/_30sdp"
@@ -885,7 +783,6 @@
                 android:text="E"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP5_11"
                 android:layout_width="@dimen/_30sdp"
@@ -894,7 +791,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="L"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_7"
@@ -906,17 +802,13 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP6_1"
@@ -927,7 +819,6 @@
                 android:text="S"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP6_2"
                 android:layout_width="@dimen/_30sdp"
@@ -936,7 +827,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="I"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP6_3"
@@ -947,7 +837,6 @@
                 android:text="N"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP6_4"
                 android:layout_width="@dimen/_30sdp"
@@ -956,7 +845,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="B"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP6_5"
@@ -967,7 +855,6 @@
                 android:text="O"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP6_6"
                 android:layout_width="@dimen/_30sdp"
@@ -976,7 +863,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="L"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP6_7"
@@ -987,7 +873,6 @@
                 android:text="O"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP6_8"
                 android:layout_width="@dimen/_30sdp"
@@ -996,7 +881,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="B"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP6_9"
@@ -1007,7 +891,6 @@
                 android:text="Z"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP6_10"
                 android:layout_width="@dimen/_30sdp"
@@ -1017,7 +900,6 @@
                 android:text="H"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP6_11"
                 android:layout_width="@dimen/_30sdp"
@@ -1026,7 +908,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="I"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_8"
@@ -1038,17 +919,13 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP7_1"
@@ -1059,7 +936,6 @@
                 android:text="X"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP7_2"
                 android:layout_width="@dimen/_30sdp"
@@ -1068,7 +944,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="O"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP7_3"
@@ -1079,7 +954,6 @@
                 android:text="A"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP7_4"
                 android:layout_width="@dimen/_30sdp"
@@ -1088,7 +962,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="P"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP7_5"
@@ -1099,7 +972,6 @@
                 android:text="I"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP7_6"
                 android:layout_width="@dimen/_30sdp"
@@ -1108,7 +980,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="A"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP7_7"
@@ -1119,7 +990,6 @@
                 android:text="U"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP7_8"
                 android:layout_width="@dimen/_30sdp"
@@ -1128,7 +998,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="E"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP7_9"
@@ -1139,7 +1008,6 @@
                 android:text="D"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP7_10"
                 android:layout_width="@dimen/_30sdp"
@@ -1149,7 +1017,6 @@
                 android:text="E"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP7_11"
                 android:layout_width="@dimen/_30sdp"
@@ -1158,7 +1025,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="M"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_9"
@@ -1170,17 +1036,13 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP8_1"
@@ -1191,7 +1053,6 @@
                 android:text="M"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP8_2"
                 android:layout_width="@dimen/_30sdp"
@@ -1200,7 +1061,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="E"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP8_3"
@@ -1211,7 +1071,6 @@
                 android:text="G"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP8_4"
                 android:layout_width="@dimen/_30sdp"
@@ -1220,7 +1079,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="N"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP8_5"
@@ -1231,7 +1089,6 @@
                 android:text="U"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP8_6"
                 android:layout_width="@dimen/_30sdp"
@@ -1240,7 +1097,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="K"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP8_7"
@@ -1251,7 +1107,6 @@
                 android:text="I"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP8_8"
                 android:layout_width="@dimen/_30sdp"
@@ -1260,7 +1115,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="R"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP8_9"
@@ -1271,7 +1125,6 @@
                 android:text="U"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP8_10"
                 android:layout_width="@dimen/_30sdp"
@@ -1281,7 +1134,6 @@
                 android:text="N"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP8_11"
                 android:layout_width="@dimen/_30sdp"
@@ -1290,7 +1142,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="O"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_10"
@@ -1302,17 +1153,13 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP9_1"
@@ -1323,7 +1170,6 @@
                 android:text="J"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP9_2"
                 android:layout_width="@dimen/_30sdp"
@@ -1332,7 +1178,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="D"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP9_3"
@@ -1343,7 +1188,6 @@
                 android:text="I"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP9_4"
                 android:layout_width="@dimen/_30sdp"
@@ -1352,7 +1196,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="P"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP9_5"
@@ -1363,7 +1206,6 @@
                 android:text="O"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP9_6"
                 android:layout_width="@dimen/_30sdp"
@@ -1372,7 +1214,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="L"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP9_7"
@@ -1383,7 +1224,6 @@
                 android:text="O"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP9_8"
                 android:layout_width="@dimen/_30sdp"
@@ -1392,7 +1232,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="P"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP9_9"
@@ -1403,7 +1242,6 @@
                 android:text="A"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP9_10"
                 android:layout_width="@dimen/_30sdp"
@@ -1413,7 +1251,6 @@
                 android:text="U"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP9_11"
                 android:layout_width="@dimen/_30sdp"
@@ -1422,7 +1259,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="T"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_11"
@@ -1434,17 +1270,13 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
-
 
         <LinearLayout
             android:layout_width="@dimen/_360sdp"
             android:layout_height="@dimen/_27sdp"
             android:gravity="center"
             android:orientation="horizontal">
-
 
             <TextView
                 android:id="@+id/idSP10_1"
@@ -1455,7 +1287,6 @@
                 android:text="O"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP10_2"
                 android:layout_width="@dimen/_30sdp"
@@ -1464,7 +1295,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="L"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP10_3"
@@ -1475,7 +1305,6 @@
                 android:text="I"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP10_4"
                 android:layout_width="@dimen/_30sdp"
@@ -1484,7 +1313,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="B"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP10_5"
@@ -1495,7 +1323,6 @@
                 android:text="N"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP10_6"
                 android:layout_width="@dimen/_30sdp"
@@ -1504,7 +1331,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="O"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP10_7"
@@ -1515,7 +1341,6 @@
                 android:text="B"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP10_8"
                 android:layout_width="@dimen/_30sdp"
@@ -1524,7 +1349,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="E"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP10_9"
@@ -1535,7 +1359,6 @@
                 android:text="R"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP10_10"
                 android:layout_width="@dimen/_30sdp"
@@ -1545,7 +1368,6 @@
                 android:text="R"
                 android:textStyle="bold" />
 
-
             <TextView
                 android:id="@+id/idSP10_11"
                 android:layout_width="@dimen/_30sdp"
@@ -1554,7 +1376,6 @@
                 android:padding="@dimen/_5sdp"
                 android:text="E"
                 android:textStyle="bold" />
-
 
             <TextView
                 android:id="@+id/idSP11_6"
@@ -1566,1602 +1387,11 @@
                 android:textStyle="bold" />
 
 
-
-
         </LinearLayout>
 
 
 
 
-
-
-
-
     </LinearLayout>
-
 
 </RelativeLayout>
-    <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="#f0e5e5"
-tools:context=".Pantalla3_SopadeLetras">
-
-
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:layout_alignParentLeft="true"
-    android:layout_marginLeft="@dimen/_20sdp"
-    android:layout_centerVertical="true">
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="JAIA"
-            android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginRight="@dimen/_10sdp"/>
-
-
-        <ImageView
-            android:id="@+id/idImJaia"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="invisible"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LEPANTO"
-            android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginRight="@dimen/_10sdp"/>
-
-
-        <ImageView
-            android:id="@+id/idImLepanto"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="invisible"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="LEHEN"
-            android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginRight="@dimen/_10sdp"/>
-
-
-        <ImageView
-            android:id="@+id/idImEhen"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="invisible"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ERREBONBILO"
-            android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginRight="@dimen/_10sdp"/>
-
-
-        <ImageView
-            android:id="@+id/idImErrebonbilo"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="invisible"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="ELORRIO"
-            android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginRight="@dimen/_10sdp"/>
-
-
-        <ImageView
-            android:id="@+id/idImElorrio"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="invisible"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="IGANDEA"
-            android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginRight="@dimen/_10sdp"/>
-
-
-        <ImageView
-            android:id="@+id/idImIgandea"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="invisible"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="SINBOLO"
-            android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginRight="@dimen/_10sdp"/>
-
-
-        <ImageView
-            android:id="@+id/idImSinbolo"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="invisible"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="BATAILA"
-            android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginRight="@dimen/_10sdp"/>
-
-
-        <ImageView
-            android:id="@+id/idImBataila"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="invisible"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center">
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="URRIA"
-            android:textStyle="bold"
-            android:textSize="@dimen/_14sdp"
-            android:layout_marginRight="@dimen/_10sdp"/>
-
-
-        <ImageView
-            android:id="@+id/idImUrria"
-            android:layout_width="@dimen/_25sdp"
-            android:layout_height="@dimen/_25sdp"
-            android:src="@drawable/ic_check"
-            android:visibility="invisible"/>
-    </LinearLayout>
-
-
-
-
-</LinearLayout>
-
-
-<LinearLayout
-    android:id="@+id/Layout"
-    android:layout_width="@dimen/_370sdp"
-    android:layout_height="@dimen/_280sdp"
-    android:gravity="center"
-    android:orientation="vertical"
-    android:layout_alignParentRight="true"
-    android:layout_centerVertical="true"
-    android:layout_marginRight="@dimen/_20sdp"
-    android:padding="@dimen/_5sdp">
-
-
-    <LinearLayout
-        android:id="@+id/linea1"
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP1_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="L"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="P"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="N"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="T"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="P"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="X"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="P"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP1_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="D"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP2_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="H"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="L"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="F"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="B"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="S"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="J"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP2_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="T"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="U"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP3_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="Z"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="H"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="P"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="Z"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP3_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="L"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="F"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP4_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="R"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="M"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="B"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="T"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="L"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP4_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="N"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP5_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="H"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="R"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="D"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="J"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="F"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="G"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP5_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="L"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="U"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP6_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="S"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="N"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="B"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="L"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="B"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="Z"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="H"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP6_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="R"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP7_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="X"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="P"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="U"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="D"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP7_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="M"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="R"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP8_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="M"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="G"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="N"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="U"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="K"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="R"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="U"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="N"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP8_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP9_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="J"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="D"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="P"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="L"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="P"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="U"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP9_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="T"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="A"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="@dimen/_360sdp"
-        android:layout_height="@dimen/_27sdp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/idSP10_1"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_2"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="L"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_3"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="I"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_4"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="B"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_5"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="N"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="O"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_7"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="B"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_8"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_9"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="R"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_10"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="R"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP10_11"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="E"
-            android:textStyle="bold" />
-
-
-        <TextView
-            android:id="@+id/idSP11_6"
-            android:layout_width="@dimen/_30sdp"
-            android:layout_height="@dimen/_27sdp"
-            android:gravity="center"
-            android:padding="@dimen/_5sdp"
-            android:text="K"
-            android:textStyle="bold" />
-
-
-
-
-    </LinearLayout>
-
-
-
-
-
-
-
-
-</LinearLayout>
-
-
-</RelativeLayout>
-

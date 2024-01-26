@@ -1,16 +1,12 @@
 package com.example.sugandilak;
 
-
 import static android.graphics.Color.parseColor;
-
 
 import android.content.Intent;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 
-
 import androidx.fragment.app.Fragment;
-
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -19,14 +15,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-
 import java.lang.reflect.Field;
 
 
-
-
 public class SopaDeLetrasFragment extends Fragment {
-
 
     int contarRojo = 0;
     boolean lepanto=false;
@@ -39,13 +31,9 @@ public class SopaDeLetrasFragment extends Fragment {
     boolean errebonbilo=false;
     boolean urria=false;
 
-
     TextView [] listaTv;
 
-
     ImageView imjaia, imerrebonbiloa, imlepanto, imehen, imurria, imigandea, imsinbolo, imelorrio, imbataila;
-
-
 
 
     TextView uno_uno, uno_dos, uno_tres, uno_cuatro, uno_cinco, uno_seis, uno_siete, uno_ocho, uno_nueve, uno_diez, uno_once;
@@ -65,17 +53,9 @@ public class SopaDeLetrasFragment extends Fragment {
 
 
 
-
-
-
-
-
-
     public SopaDeLetrasFragment() {
         // Required empty public constructor
     }
-
-
 
 
     // TODO: Rename and change types and number of parameters
@@ -83,35 +63,27 @@ public class SopaDeLetrasFragment extends Fragment {
         SopaDeLetrasFragment fragment = new SopaDeLetrasFragment();
         Bundle args = new Bundle();
 
-
         fragment.setArguments(args);
         return fragment;
     }
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
 
-
         }
 
-
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_sopa_de_letras, container, false);
 
-
         //int contarRojo=0;
 
-
         //Field[] fields = R.id.class.getFields();
-
 
         imehen = view.findViewById(R.id.idImEhen);
         imjaia = view.findViewById(R.id.idImJaia);
@@ -124,26 +96,18 @@ public class SopaDeLetrasFragment extends Fragment {
         imsinbolo = view.findViewById(R.id.idImSinbolo);
 
 
-
-
         idAllViews(view);
-
 
         listaTv = toArrayAllViews();
 
-
         setAllOnClick(listaTv);
-
 
         return view;
     }
 
-
     private View.OnClickListener onClickListener = new View.OnClickListener() {
 
-
         public void onClick(View view) {
-
 
             if (((ColorDrawable) view.getBackground()).getColor() == parseColor("#FFFFFFFF")) {
                 view.setBackgroundColor(parseColor("#ff6961"));
@@ -155,37 +119,27 @@ public class SopaDeLetrasFragment extends Fragment {
                 Log.d("Resta", "Valor es: " + contarRojo);
             }
 
-
             comprobarPalabras();
-
 
         }
 
-
     };
 
-
     public void setAllOnClick(TextView [] listatv) {
-
 
         TextView [] lista = listatv;
         TextView tv;
         for(int i=0; i<lista.length;i++){
 
-
             tv = lista[i];
             tv.setOnClickListener(onClickListener);
             tv.setBackgroundColor(parseColor("#FFFFFFFF"));
 
-
         }
-
 
     }
 
-
     public void comprobarPalabras(){
-
 
         //palabara: LEPANTO 1_!-1_7
         if(
@@ -198,9 +152,7 @@ public class SopaDeLetrasFragment extends Fragment {
                         ((ColorDrawable) uno_seis.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                         ((ColorDrawable) uno_siete.getBackground()).getColor()!=parseColor("#FFFFFFFF")
 
-
                 )&&(
-
 
                         (
                                 (contarRojo==7)
@@ -210,9 +162,7 @@ public class SopaDeLetrasFragment extends Fragment {
                                                 (contarRojo==6)
                                 )
 
-
                 )
-
 
         ){
             uno_uno.setBackgroundColor(parseColor("#77dd77"));
@@ -230,16 +180,13 @@ public class SopaDeLetrasFragment extends Fragment {
             uno_siete.setBackgroundColor(parseColor("#77dd77"));
             uno_siete.setClickable(false);
 
-
             imlepanto.setVisibility(View.VISIBLE);
             contarRojo=0;
             lepanto=true;
         }
 
-
         //palabara: ELORRIO 1_2-7_2
         if(
-
 
                 (elorrio==false&&
                         ((ColorDrawable) uno_dos.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
@@ -255,19 +202,15 @@ public class SopaDeLetrasFragment extends Fragment {
                         )||
                                 (
 
-
                                         (lepanto==true&&sinbolo==true)&&
                                                 (contarRojo==5)
-
 
                                 )||(
                                 (lepanto==true||sinbolo==true)&&
                                         (contarRojo==6)
 
-
                         )
                 )
-
 
         ){
             uno_dos.setBackgroundColor(parseColor("#77dd77"));
@@ -289,7 +232,6 @@ public class SopaDeLetrasFragment extends Fragment {
             contarRojo=0;
         }
 
-
         //palabara: JAIA 2_9-5_9
         if(
                 (jaia==false&&
@@ -307,10 +249,7 @@ public class SopaDeLetrasFragment extends Fragment {
                                 )
 
 
-
-
                 )
-
 
         ){
             dos_nueve.setBackgroundColor(parseColor("#77dd77"));
@@ -326,7 +265,6 @@ public class SopaDeLetrasFragment extends Fragment {
             contarRojo=0;
         }
 
-
         //palabara: IGANDEA 3_3-9_3
         if((igandea==false&&
                 ((ColorDrawable) tres_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
@@ -337,7 +275,6 @@ public class SopaDeLetrasFragment extends Fragment {
                 ((ColorDrawable) ocho_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
                 ((ColorDrawable) nueve_tres.getBackground()).getColor()!=parseColor("#FFFFFFFF")
 
-
         )&&(
                 (
                         (contarRojo==7)
@@ -346,8 +283,6 @@ public class SopaDeLetrasFragment extends Fragment {
                                 (sinbolo==true)&&
                                         (contarRojo==6)
                         )
-
-
 
 
         )
@@ -371,7 +306,6 @@ public class SopaDeLetrasFragment extends Fragment {
             contarRojo=0;
         }
 
-
         //palabara: BATAILA 4_5-4_11
         if((bataila==false&&
                 ((ColorDrawable) cuatro_cinco.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
@@ -393,7 +327,6 @@ public class SopaDeLetrasFragment extends Fragment {
                                 (contarRojo==6)
                 )
 
-
         ) ){
             cuatro_cinco.setBackgroundColor(parseColor("#77dd77"));
             cuatro_cinco.setClickable(false);
@@ -413,7 +346,6 @@ public class SopaDeLetrasFragment extends Fragment {
             bataila=true;
             contarRojo=0;
         }
-
 
         //palabara: LEHEN 4_10-8_10
         if((lehen==false&&
@@ -447,7 +379,6 @@ public class SopaDeLetrasFragment extends Fragment {
             contarRojo=0;
         }
 
-
         //palabara: SINBOLO 6_1-6_7
         if((sinbolo==false&&
                 ((ColorDrawable) seis_uno.getBackground()).getColor()!=parseColor("#FFFFFFFF")&&
@@ -469,7 +400,6 @@ public class SopaDeLetrasFragment extends Fragment {
                                 (contarRojo==6)
                 )
 
-
         )
         ){
             seis_uno.setBackgroundColor(parseColor("#77dd77"));
@@ -490,7 +420,6 @@ public class SopaDeLetrasFragment extends Fragment {
             sinbolo=true;
             contarRojo=0;
         }
-
 
         //palabara: ERREBONBILO 10_1-10_11
         if(errebonbilo==false&&
@@ -531,11 +460,9 @@ public class SopaDeLetrasFragment extends Fragment {
             diez_once.setClickable(false);
             imerrebonbiloa.setVisibility(View.VISIBLE);
 
-
             errebonbilo=true;
             contarRojo=0;
         }
-
 
         //palabara: URRIA 11_7-11_11
         if(urria==false&&
@@ -561,25 +488,18 @@ public class SopaDeLetrasFragment extends Fragment {
             contarRojo=0;
         }
 
-
         if(
                 lepanto==true&&elorrio==true&&igandea==true&&jaia==true&&bataila==true&&
                         sinbolo==true&&lehen==true&&errebonbilo==true&&urria==true
         ){
-            //Intent intent = new Intent(SopaDeLetrasFragment.this, MainActivity.class);
-            //intent.putExtra("id", 3);
-            // startActivity(intent);
+            getActivity().getSupportFragmentManager().beginTransaction().remove(SopaDeLetrasFragment.this).commit();
+            ((MainActivity2) getActivity()).volverMapa(3);
         }
 
 
 
 
-
-
-
-
     }
-
 
     public TextView[] toArrayAllViews () {
         TextView[]listaTv={uno_uno, uno_dos, uno_tres, uno_cuatro, uno_cinco, uno_seis, uno_siete, uno_ocho, uno_nueve, uno_diez, uno_once,
@@ -594,10 +514,8 @@ public class SopaDeLetrasFragment extends Fragment {
                 diez_uno, diez_dos, diez_tres, diez_cuatro, diez_cinco, diez_seis, diez_siete, diez_ocho, diez_nueve, diez_diez, diez_once,
                 once_uno, once_dos, once_tres, once_cuatro, once_seis, once_siete, once_ocho, once_nueve, once_diez, once_once};
 
-
         return listaTv;
     }
-
 
     public void idAllViews(View v) {
         uno_uno = v.findViewById(R.id.idSP1_1);
@@ -612,7 +530,6 @@ public class SopaDeLetrasFragment extends Fragment {
         uno_diez = v.findViewById(R.id.idSP1_10);
         uno_once = v.findViewById(R.id.idSP1_11);
 
-
         dos_uno = v.findViewById(R.id.idSP2_1);
         dos_dos = v.findViewById(R.id.idSP2_2);
         dos_tres = v.findViewById(R.id.idSP2_3);
@@ -624,7 +541,6 @@ public class SopaDeLetrasFragment extends Fragment {
         dos_nueve = v.findViewById(R.id.idSP2_9);
         dos_diez = v.findViewById(R.id.idSP2_10);
         dos_once = v.findViewById(R.id.idSP2_11);
-
 
         tres_uno = v.findViewById(R.id.idSP3_1);
         tres_dos = v.findViewById(R.id.idSP3_2);
@@ -638,7 +554,6 @@ public class SopaDeLetrasFragment extends Fragment {
         tres_diez = v.findViewById(R.id.idSP3_10);
         tres_once = v.findViewById(R.id.idSP3_11);
 
-
         cuatro_uno = v.findViewById(R.id.idSP4_1);
         cuatro_dos = v.findViewById(R.id.idSP4_2);
         cuatro_tres = v.findViewById(R.id.idSP4_3);
@@ -650,7 +565,6 @@ public class SopaDeLetrasFragment extends Fragment {
         cuatro_nueve = v.findViewById(R.id.idSP4_9);
         cuatro_diez = v.findViewById(R.id.idSP4_10);
         cuatro_once = v.findViewById(R.id.idSP4_11);
-
 
         cinco_uno = v.findViewById(R.id.idSP5_1);
         cinco_dos = v.findViewById(R.id.idSP5_2);
@@ -664,7 +578,6 @@ public class SopaDeLetrasFragment extends Fragment {
         cinco_diez = v.findViewById(R.id.idSP5_10);
         cinco_once = v.findViewById(R.id.idSP5_11);
 
-
         seis_uno = v.findViewById(R.id.idSP6_1);
         seis_dos = v.findViewById(R.id.idSP6_2);
         seis_tres = v.findViewById(R.id.idSP6_3);
@@ -676,7 +589,6 @@ public class SopaDeLetrasFragment extends Fragment {
         seis_nueve = v.findViewById(R.id.idSP6_9);
         seis_diez = v.findViewById(R.id.idSP6_10);
         seis_once = v.findViewById(R.id.idSP6_11);
-
 
         siete_uno = v.findViewById(R.id.idSP7_1);
         siete_dos = v.findViewById(R.id.idSP7_2);
@@ -690,7 +602,6 @@ public class SopaDeLetrasFragment extends Fragment {
         siete_diez = v.findViewById(R.id.idSP7_10);
         siete_once = v.findViewById(R.id.idSP7_11);
 
-
         ocho_uno = v.findViewById(R.id.idSP8_1);
         ocho_dos = v.findViewById(R.id.idSP8_2);
         ocho_tres = v.findViewById(R.id.idSP8_3);
@@ -702,7 +613,6 @@ public class SopaDeLetrasFragment extends Fragment {
         ocho_nueve = v.findViewById(R.id.idSP8_9);
         ocho_diez = v.findViewById(R.id.idSP8_10);
         ocho_once = v.findViewById(R.id.idSP8_11);
-
 
         nueve_uno = v.findViewById(R.id.idSP9_1);
         nueve_dos = v.findViewById(R.id.idSP9_2);
@@ -716,7 +626,6 @@ public class SopaDeLetrasFragment extends Fragment {
         nueve_diez = v.findViewById(R.id.idSP9_10);
         nueve_once = v.findViewById(R.id.idSP9_11);
 
-
         diez_uno = v.findViewById(R.id.idSP10_1);
         diez_dos = v.findViewById(R.id.idSP10_2);
         diez_tres = v.findViewById(R.id.idSP10_3);
@@ -729,7 +638,6 @@ public class SopaDeLetrasFragment extends Fragment {
         diez_diez = v.findViewById(R.id.idSP10_10);
         diez_once = v.findViewById(R.id.idSP10_11);
 
-
         once_uno = v.findViewById(R.id.idSP11_1);
         once_dos = v.findViewById(R.id.idSP11_2);
         once_tres = v.findViewById(R.id.idSP11_3);
@@ -741,7 +649,5 @@ public class SopaDeLetrasFragment extends Fragment {
         once_diez = v.findViewById(R.id.idSP11_10);
         once_once = v.findViewById(R.id.idSP11_11);
 
-
     }
 }
-

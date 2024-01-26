@@ -19,11 +19,6 @@ import java.util.Collections;
 
 public class PrimerFragment extends Fragment {
 
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    private String mParam1;
-    private String mParam2;
     private ImageButton el0, el1, el2, el3, el4, el5, el6, el7, el8, el9, el10, el11, el12, el13, el14, el15;
     private Button reiniciar, salir;
     private int imagenes[];
@@ -121,7 +116,8 @@ public class PrimerFragment extends Fragment {
                 textoPuntuacion.setText("Puntuación: " + puntuacion);
                 //al llegar a8 aciertos se ha ganado el juego
                 if(aciertos==8){
-                    System.out.println("Has ganado");
+                    getActivity().getSupportFragmentManager().beginTransaction().remove(PrimerFragment.this).commit();
+                    ((MainActivity2) getActivity()).volverMapa(4);
 
                 }
             }else{//si NO coincide el valor los volvemos a tapar al cabo de un segundo
@@ -145,7 +141,7 @@ public class PrimerFragment extends Fragment {
                             textoPuntuacion.setText("Puntuación: " + puntuacion);
                         }
                     }
-                }, 1000);//al cabo de un segundo
+                }, 800);//al cabo de un segundo
             }
         }
 
@@ -169,7 +165,7 @@ public class PrimerFragment extends Fragment {
                     botonera[i].setImageResource(fondo);
                 }
             }
-        }, 1000);
+        }, 0);
 
         //AÑADIMOS LOS EVENTOS A LOS BOTONES DEL JUEGO
         for(int i=0; i <arrayBarajado.size(); i++){
