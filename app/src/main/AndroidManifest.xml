@@ -29,10 +29,6 @@
             android:screenOrientation="landscape" />
 
         <activity
-            android:name=".jeugo1"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
             android:name=".MainActivity2"
             android:exported="false"
             android:screenOrientation="landscape" />
