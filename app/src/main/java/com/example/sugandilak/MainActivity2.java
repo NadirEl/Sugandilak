@@ -168,14 +168,22 @@ public class MainActivity2 extends AppCompatActivity {
         fragmentTransaction2.commit();
     }
 
-    void abrirFragmentJuego5(){
+
+
+    void abrirFragmentVideo(){
         Intent i = new Intent(MainActivity2.this, Video.class);
         startActivity(i);
     }
 
-    void abrirFragmentJuego4(){
+    void abrirUser(){
         FragmentTransaction fragmentTransaction4 = fragmentManager.beginTransaction();
-        fragmentTransaction4.add(R.id.idfragment, PrimerFragment.getInstance());
+        fragmentTransaction4.add(R.id.idfragment, UserFragment.getInstance());
+        fragmentTransaction4.commit();
+    }
+
+    void abrirFragmentJuego4(String user){
+        FragmentTransaction fragmentTransaction4 = fragmentManager.beginTransaction();
+        fragmentTransaction4.add(R.id.idfragment, PrimerFragment.getInstance(user));
         fragmentTransaction4.commit();
     }
     void abrirFragmentJuego3(){

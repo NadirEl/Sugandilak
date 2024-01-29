@@ -4,35 +4,37 @@ import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.room.Database;
+import androidx.room.DatabaseConfiguration;
+import androidx.room.InvalidationTracker;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.room.migration.Migration;
-import androidx.sqlite.db.SupportSQLiteDatabase;
+import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
-@Database(entities = {Ubicacion.class, Record.class, Video.class, Pregunta.class, Texto.class, Audios.class, Imagenes.class}, version = 2)
-public abstract class ElorrioDatabase extends RoomDatabase {
+import com.example.sugandilak.EntidadesDB.Ubicacion;
+import com.example.sugandilak.EntidadesDB.UbicacionDAO;
 
-    private static ElorrioDatabase instance;
+@Database(entities = {Ubicacion.class}, version=1, exportSchema = false)
+public abstract class ElorrioDatabase extends RoomDatabase{
 
     public abstract UbicacionDAO ubicacionDAO();
 
-    public static synchronized ElorrioDatabase getInstance(Context context) {
-        if (instance == null) {
-            instance = Room.databaseBuilder(context.getApplicationContext(),
-                            ElorrioDatabase.class, "elorrio_database")
-                    .fallbackToDestructiveMigration()
-                    .addMigrations(MIGRATION_1_2)
-                    .build();
-        }
-        return instance;
-    }
+    private static final String DATABASE_NAME = "elorrio-db";
 
-    public static final Migration MIGRATION_1_2 = new Migration(1, 2) {
-        @Override
-        public void migrate(@NonNull SupportSQLiteDatabase database) {
-            // Aquí es donde puedes escribir código para realizar la migración
-            // Por ejemplo, puedes ejecutar consultas SQL para modificar la estructura de la base de datos.
-            // database.execSQL("ALTER TABLE tu_tabla ADD COLUMN nueva_columna TEXT");
+    private static ElorrioDatabase INSTANCE;
+
+
+    public static ElorrioDatabase getInstance(final Context context) {
+        if (INSTANCE == null) {
+            synchronized (ElorrioDatabase.class) {
+                if (INSTANCE == null) {
+                    INSTANCE = Room.databaseBuilder(
+                                    context.getApplicationContext(), ElorrioDatabase.class,
+                                    DATABASE_NAME)
+                            .allowMainThreadQueries()
+                            .build();
+                }
+            }
         }
-    };
+        return INSTANCE;
+    }
 }

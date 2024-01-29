@@ -112,9 +112,9 @@ public class ExplicacionFragment extends Fragment {
 
                     case 3:((MainActivity2) getActivity()).abrirFragmentJuego3();
                         break;
-                    case 4:((MainActivity2) getActivity()).abrirFragmentJuego4();
+                    case 4:((MainActivity2) getActivity()).abrirUser();
                         break;
-                    case 5: ((MainActivity2) getActivity()).abrirFragmentJuego5();
+                    case 5:
                         break;
 
                 }
