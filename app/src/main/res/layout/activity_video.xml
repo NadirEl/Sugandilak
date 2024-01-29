@@ -4,7 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Video">
+    tools:context=".Video"
+
+ android:background="@color/orange1">
 
     <VideoView
         android:id="@+id/videoView"
@@ -17,11 +19,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.747" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bnt_v"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ir a juego"
+        android:layout_width="240dp"
+        android:layout_height="45dp"
+        android:background="@drawable/botonbienvenida"
+        android:text="Ir a juego"
+        android:textColor="@color/white"
+        android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.142"
