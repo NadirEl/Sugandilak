@@ -7,58 +7,23 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "Ubicacion")
 public class Ubicacion {
 
+    @PrimaryKey
     @ColumnInfo(name = "id_ubicacion")
-    @PrimaryKey(autoGenerate = true)
-    int id;
-    @ColumnInfo(name = "name_ubicacion")
-    String nombre;
+    public int id_ubicacion;
+
+    @ColumnInfo(name = "nombre_ubicacion")
+    public String nombre_ubicacion;
+
+    @ColumnInfo(name = "latitud")
+    public double latitud;
 
     @ColumnInfo(name = "longitud")
-    int longitud;
-    @ColumnInfo(name = "latitud")
-    int latitud;
+    public double longitud;
 
-    public Ubicacion() {
-    }
-
-    public Ubicacion(int id, String nombre, int longitud, int latitud) {
-        this.id = id;
-        this.nombre = nombre;
-        this.longitud = longitud;
+    public Ubicacion(int id_ubicacion, String nombre_ubicacion, double latitud, double longitud) {
+        this.id_ubicacion = id_ubicacion;
+        this.nombre_ubicacion = nombre_ubicacion;
         this.latitud = latitud;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int i) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public int getLongitud() {
-        return longitud;
-    }
-
-    public void setLongitud(int longitud) {
         this.longitud = longitud;
     }
-
-    public int getLatitud() {
-        return latitud;
-    }
-
-    public void setLatitud(int latitud) {
-        this.latitud = latitud;
-    }
-
-
 }

@@ -32,10 +32,7 @@
             android:name=".MainActivity2"
             android:exported="false"
             android:screenOrientation="landscape" />
-        <activity
-            android:name=".Pantalla2VidaDeSanValentin"
-            android:exported="true"
-            android:screenOrientation="landscape" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -46,14 +43,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".Juego_Parejas_Cartas"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".Pantalla3_SopadeLetras"
-            android:exported="false"
-            android:screenOrientation="landscape" />
+
     </application>
 
 </manifest>

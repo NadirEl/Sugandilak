@@ -169,7 +169,7 @@ public class MainActivity2 extends AppCompatActivity {
     }
 
     void abrirFragmentJuego5(){
-        Intent i = new Intent(MainActivity2.this, Laberinto.class);
+        Intent i = new Intent(MainActivity2.this, Video.class);
         startActivity(i);
     }
 
