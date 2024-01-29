@@ -32,16 +32,17 @@ public class PrimerFragment extends Fragment {
     private int aciertos = 0;
     private int puntuacion = 0;
     private TextView textoPuntuacion;
+    String usuario;
 
     public PrimerFragment() {
         // Required empty public constructor
     }
 
 
-    public static PrimerFragment getInstance() {
+    public static PrimerFragment getInstance(String user) {
         PrimerFragment fragment = new PrimerFragment();
         Bundle args = new Bundle();
-
+        args.putString("user", user);
         fragment.setArguments(args);
         return fragment;
     }
@@ -49,6 +50,9 @@ public class PrimerFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            usuario = getArguments().getString("user");
+        }
         cargarImagenes();
 
     }

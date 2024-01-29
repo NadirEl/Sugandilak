@@ -1,31 +1,38 @@
 package com.example.sugandilak.EntidadesDB;
 
+import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
+
+import org.jetbrains.annotations.NotNull;
 
 @Entity(tableName = "Ubicacion")
 public class Ubicacion {
 
     @ColumnInfo(name = "id_ubicacion")
     @PrimaryKey(autoGenerate = true)
+    @NonNull
     int id;
     @ColumnInfo(name = "name_ubicacion")
     String nombre;
 
     @ColumnInfo(name = "longitud")
-    int longitud;
+    float longitud;
     @ColumnInfo(name = "latitud")
-    int latitud;
+    float latitud;
 
-    public Ubicacion() {
-    }
 
-    public Ubicacion(int id, String nombre, int longitud, int latitud) {
+    @Ignore
+    public Ubicacion(int id, String nombre, float longitud, float latitud) {
         this.id = id;
         this.nombre = nombre;
         this.longitud = longitud;
         this.latitud = latitud;
+    }
+
+    public Ubicacion() {
     }
 
     public int getId() {
@@ -44,19 +51,19 @@ public class Ubicacion {
         this.nombre = nombre;
     }
 
-    public int getLongitud() {
+    public float getLongitud() {
         return longitud;
     }
 
-    public void setLongitud(int longitud) {
+    public void setLongitud(float longitud) {
         this.longitud = longitud;
     }
 
-    public int getLatitud() {
+    public float getLatitud() {
         return latitud;
     }
 
-    public void setLatitud(int latitud) {
+    public void setLatitud(float latitud) {
         this.latitud = latitud;
     }
 

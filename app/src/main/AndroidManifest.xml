@@ -9,33 +9,33 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/sugandilla"
+        android:label="Sugandillak"
+        android:roundIcon="@drawable/sugandilla"
         android:supportsRtl="true"
         android:theme="@style/Theme.Sugandilak"
         tools:targetApi="31">
         <activity
+            android:name=".ActivityBBDD"
+            android:exported="true" >
+
+        </activity>
+        <activity
             android:name=".Video"
             android:exported="false"
-            android:screenOrientation="landscape"/>
-
+            android:screenOrientation="landscape" />
         <activity
             android:name=".Laberinto"
             android:exported="false"
             android:screenOrientation="landscape" />
-
         <activity
             android:name=".MainActivity2"
             android:exported="false"
             android:screenOrientation="landscape" />
-        <activity
-            android:name=".Pantalla2VidaDeSanValentin"
-            android:exported="true"
-            android:screenOrientation="landscape" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -45,15 +45,9 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity
-            android:name=".Juego_Parejas_Cartas"
-            android:exported="false"
-            android:screenOrientation="landscape" />
-        <activity
-            android:name=".Pantalla3_SopadeLetras"
-            android:exported="false"
-            android:screenOrientation="landscape" />
+
     </application>
 
 </manifest>
