@@ -1,71 +1,64 @@
 package com.example.sugandilak.EntidadesDB;
 
-import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
-import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
-
-import org.jetbrains.annotations.NotNull;
 
 @Entity(tableName = "Ubicacion")
 public class Ubicacion {
 
+    @PrimaryKey
     @ColumnInfo(name = "id_ubicacion")
-    @PrimaryKey(autoGenerate = true)
-    @NonNull
-    int id;
-    @ColumnInfo(name = "name_ubicacion")
-    String nombre;
+    public int id_ubicacion;
+
+    @ColumnInfo(name = "nombre_ubicacion")
+    public String nombre_ubicacion;
+
+    @ColumnInfo(name = "latitud")
+    public double latitud;
 
     @ColumnInfo(name = "longitud")
-    float longitud;
-    @ColumnInfo(name = "latitud")
-    float latitud;
+    public double longitud;
 
-
-    @Ignore
-    public Ubicacion(int id, String nombre, float longitud, float latitud) {
-        this.id = id;
-        this.nombre = nombre;
-        this.longitud = longitud;
+    public Ubicacion(int id_ubicacion, String nombre_ubicacion, double latitud, double longitud) {
+        this.id_ubicacion = id_ubicacion;
+        this.nombre_ubicacion = nombre_ubicacion;
         this.latitud = latitud;
-    }
-
-    public Ubicacion() {
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int i) {
-        this.id = id;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public float getLongitud() {
-        return longitud;
-    }
-
-    public void setLongitud(float longitud) {
         this.longitud = longitud;
     }
+    public Ubicacion() {
 
-    public float getLatitud() {
+    }
+
+    public int getId_ubicacion() {
+        return id_ubicacion;
+    }
+
+    public void setId_ubicacion(int id_ubicacion) {
+        this.id_ubicacion = id_ubicacion;
+    }
+
+    public String getNombre_ubicacion() {
+        return nombre_ubicacion;
+    }
+
+    public void setNombre_ubicacion(String nombre_ubicacion) {
+        this.nombre_ubicacion = nombre_ubicacion;
+    }
+
+    public double getLatitud() {
         return latitud;
     }
 
-    public void setLatitud(float latitud) {
+    public void setLatitud(double latitud) {
         this.latitud = latitud;
     }
 
+    public double getLongitud() {
+        return longitud;
+    }
 
+    public void setLongitud(double longitud) {
+        this.longitud = longitud;
+    }
 }
