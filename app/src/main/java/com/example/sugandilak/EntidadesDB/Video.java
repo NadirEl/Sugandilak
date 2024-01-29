@@ -22,4 +22,24 @@ public class Video {
         this.id_ubicacion = id_ubicacion;
         this.id_video = id_video;
     }
+
+    public int getId_ubicacion() {
+        return id_ubicacion;
+    }
+
+    public void setId_ubicacion(int id_ubicacion) {
+        this.id_ubicacion = id_ubicacion;
+    }
+
+    public int getId_video() {
+        return id_video;
+    }
+
+    public void setId_video(int id_video) {
+        this.id_video = id_video;
+    }
+
+    public Video() {
+
+    }
 }

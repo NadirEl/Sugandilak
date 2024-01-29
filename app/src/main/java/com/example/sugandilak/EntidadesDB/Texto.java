@@ -22,4 +22,22 @@ public class Texto {
         this.id_ubicacion = id_ubicacion;
         this.texto = texto;
     }
+    public Texto() {
+
+    }
+    public int getId_ubicacion() {
+        return id_ubicacion;
+    }
+
+    public void setId_ubicacion(int id_ubicacion) {
+        this.id_ubicacion = id_ubicacion;
+    }
+
+    public String getTexto() {
+        return texto;
+    }
+
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
 }

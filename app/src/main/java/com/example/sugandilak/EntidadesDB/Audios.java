@@ -22,4 +22,23 @@ public class Audios {
         this.id_ubicacion = id_ubicacion;
         this.id_audio = id_audio;
     }
+    public Audios() {
+
+    }
+
+    public int getId_ubicacion() {
+        return id_ubicacion;
+    }
+
+    public void setId_ubicacion(int id_ubicacion) {
+        this.id_ubicacion = id_ubicacion;
+    }
+
+    public int getId_audio() {
+        return id_audio;
+    }
+
+    public void setId_audio(int id_audio) {
+        this.id_audio = id_audio;
+    }
 }

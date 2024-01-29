@@ -26,4 +26,31 @@ public class Record {
         this.nombre = nombre;
         this.record = record;
     }
+    public Record() {
+
+    }
+
+    public int getId_ubicacion() {
+        return id_ubicacion;
+    }
+
+    public void setId_ubicacion(int id_ubicacion) {
+        this.id_ubicacion = id_ubicacion;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getRecord() {
+        return record;
+    }
+
+    public void setRecord(int record) {
+        this.record = record;
+    }
 }

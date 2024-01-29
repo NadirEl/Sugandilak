@@ -30,6 +30,62 @@ public class Pregunta {
     @ColumnInfo(name = "opcion3")
     public String opcion3;
 
+    public int getId_ubicacion() {
+        return id_ubicacion;
+    }
+
+    public void setId_ubicacion(int id_ubicacion) {
+        this.id_ubicacion = id_ubicacion;
+    }
+
+    public int getId_pregunta() {
+        return id_pregunta;
+    }
+
+    public void setId_pregunta(int id_pregunta) {
+        this.id_pregunta = id_pregunta;
+    }
+
+    public String getRespuesta() {
+        return respuesta;
+    }
+
+    public void setRespuesta(String respuesta) {
+        this.respuesta = respuesta;
+    }
+
+    public String getOpcion1() {
+        return opcion1;
+    }
+
+    public void setOpcion1(String opcion1) {
+        this.opcion1 = opcion1;
+    }
+
+    public String getOpcion2() {
+        return opcion2;
+    }
+
+    public void setOpcion2(String opcion2) {
+        this.opcion2 = opcion2;
+    }
+
+    public String getOpcion3() {
+        return opcion3;
+    }
+
+    public void setOpcion3(String opcion3) {
+        this.opcion3 = opcion3;
+    }
+
+    public boolean isContestada() {
+        return contestada;
+    }
+
+    public void setContestada(boolean contestada) {
+        this.contestada = contestada;
+    }
+
     @ColumnInfo(name = "contestada")
     public boolean contestada;
 
@@ -41,5 +97,8 @@ public class Pregunta {
         this.opcion2 = opcion2;
         this.opcion3 = opcion3;
         this.contestada = contestada;
+    }
+    public Pregunta() {
+
     }
 }

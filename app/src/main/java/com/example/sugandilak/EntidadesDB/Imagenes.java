@@ -22,4 +22,24 @@ public class Imagenes {
         this.id_ubicacion = id_ubicacion;
         this.id_imagen = id_imagen;
     }
+
+    public int getId_ubicacion() {
+        return id_ubicacion;
+    }
+
+    public void setId_ubicacion(int id_ubicacion) {
+        this.id_ubicacion = id_ubicacion;
+    }
+
+    public int getId_imagen() {
+        return id_imagen;
+    }
+
+    public void setId_imagen(int id_imagen) {
+        this.id_imagen = id_imagen;
+    }
+
+    public Imagenes( ) {
+
+    }
 }

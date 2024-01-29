@@ -26,4 +26,39 @@ public class Ubicacion {
         this.latitud = latitud;
         this.longitud = longitud;
     }
+    public Ubicacion() {
+
+    }
+
+    public int getId_ubicacion() {
+        return id_ubicacion;
+    }
+
+    public void setId_ubicacion(int id_ubicacion) {
+        this.id_ubicacion = id_ubicacion;
+    }
+
+    public String getNombre_ubicacion() {
+        return nombre_ubicacion;
+    }
+
+    public void setNombre_ubicacion(String nombre_ubicacion) {
+        this.nombre_ubicacion = nombre_ubicacion;
+    }
+
+    public double getLatitud() {
+        return latitud;
+    }
+
+    public void setLatitud(double latitud) {
+        this.latitud = latitud;
+    }
+
+    public double getLongitud() {
+        return longitud;
+    }
+
+    public void setLongitud(double longitud) {
+        this.longitud = longitud;
+    }
 }
