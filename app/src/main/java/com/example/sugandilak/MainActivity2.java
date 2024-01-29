@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.example.sugandilak.EntidadesDB.RecordCartas;
+
 import java.util.ArrayList;
 
 import pl.droidsonroids.gif.GifImageView;
@@ -178,6 +180,15 @@ public class MainActivity2 extends AppCompatActivity {
     void abrirUser(){
         FragmentTransaction fragmentTransaction4 = fragmentManager.beginTransaction();
         fragmentTransaction4.add(R.id.idfragment, UserFragment.getInstance());
+        fragmentTransaction4.commit();
+    }
+
+    void abrirClasificacion(RecordCartas r){
+        ArrayList<RecordCartas> records = new ArrayList<>();
+        records.add(r);
+
+        FragmentTransaction fragmentTransaction4 = fragmentManager.beginTransaction();
+        fragmentTransaction4.add(R.id.idfragment, RecordFragment.getInstance(records));
         fragmentTransaction4.commit();
     }
 

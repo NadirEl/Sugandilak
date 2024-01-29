@@ -114,7 +114,7 @@ public class ExplicacionFragment extends Fragment {
                         break;
                     case 4:((MainActivity2) getActivity()).abrirUser();
                         break;
-                    case 5:
+                    case 5:((MainActivity2) getActivity()).abrirFragmentVideo();
                         break;
 
                 }

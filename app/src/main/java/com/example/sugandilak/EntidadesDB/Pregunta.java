@@ -5,11 +5,13 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity(tableName = "Pregunta",
         foreignKeys = @ForeignKey(entity = Ubicacion.class,
                 parentColumns = "id_ubicacion",
                 childColumns = "id_ubicacion"))
-public class Pregunta {
+public class Pregunta implements Serializable {
 
     @PrimaryKey
     @ColumnInfo(name = "id_ubicacion")
@@ -29,6 +31,9 @@ public class Pregunta {
 
     @ColumnInfo(name = "opcion3")
     public String opcion3;
+
+    @ColumnInfo(name = "contestada")
+    public boolean contestada;
 
     public int getId_ubicacion() {
         return id_ubicacion;
@@ -86,8 +91,7 @@ public class Pregunta {
         this.contestada = contestada;
     }
 
-    @ColumnInfo(name = "contestada")
-    public boolean contestada;
+
 
     public Pregunta(int id_ubicacion, int id_pregunta, String respuesta, String opcion1, String opcion2, String opcion3, boolean contestada) {
         this.id_ubicacion = id_ubicacion;

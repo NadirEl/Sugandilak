@@ -14,6 +14,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import com.example.sugandilak.EntidadesDB.RecordCartas;
+
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -119,9 +121,13 @@ public class PrimerFragment extends Fragment {
                 puntuacion++;
                 textoPuntuacion.setText("Puntuación: " + puntuacion);
                 //al llegar a8 aciertos se ha ganado el juego
+
                 if(aciertos==8){
+                    RecordCartas r = new RecordCartas(4, 1, usuario, puntuacion);
+
+
                     getActivity().getSupportFragmentManager().beginTransaction().remove(PrimerFragment.this).commit();
-                    ((MainActivity2) getActivity()).volverMapa(4);
+                    ((MainActivity2) getActivity()).abrirClasificacion(r);
 
                 }
             }else{//si NO coincide el valor los volvemos a tapar al cabo de un segundo
