@@ -17,6 +17,7 @@ import com.example.sugandilak.EntidadesDB.UbicacionDAO;
 public abstract class ElorrioDatabase extends RoomDatabase{
 
     public abstract UbicacionDAO ubicacionDAO();
+    public abstract AudiosDAO audioDAO();
 
     public abstract TextoDAO textoDAO();
 

@@ -3,15 +3,10 @@ package com.example.sugandilak;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.room.Room;
 
 import com.example.sugandilak.EntidadesDB.ElorrioDatabase;
-import com.example.sugandilak.EntidadesDB.Texto;
-import com.example.sugandilak.EntidadesDB.TextoDAO;
 
-import java.util.List;
-
-public class InsertandoDatosMuñeca extends AppCompatActivity {
+public class InsertBaseDeDatos extends AppCompatActivity {
 
     String s1 = "Kaixo! Elorrioko Sortzez Garbiaren Basilika izenaz ezagutzen den monumentu historikoaren aurrean zaudete! Goazen bere historia ezagutzera!! Elorrioko ondare artistikoko monumentu aipagarriena da. Eraikin oso handia da, ia 50 metroko luzera eta 25 metroko zabalera du. Bere eraikuntzari dagokionez, oro har, hiru fase bereiz ditzakegu:";
     String s2 = "Lehendabizi, etapa gotikoa daukagu, 1464tik 1530ra doana. Historiako etapa honetan basilika eraikitzeko lehenengo urratsak eman zituzten. Epealdi honetan aurreko portada eta atzeko portada egin zituzten. Basilikari begira, identifikatu ditzakezue?";
@@ -51,32 +46,107 @@ public class InsertandoDatosMuñeca extends AppCompatActivity {
 
         db.textoDAO().insertarTexto(s1);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s2);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s3);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s4);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s5);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s6);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s7);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s8);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s9);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s10);
         db.textoDAO().insertarUbicacion(1);
+
         db.textoDAO().insertarTexto(s);
         db.textoDAO().insertarUbicacion(2);
+
         db.textoDAO().insertarTexto(ssss);
         db.textoDAO().insertarUbicacion(3);
+
         db.textoDAO().insertarTexto(sss);
         db.textoDAO().insertarUbicacion(4);
+
         db.textoDAO().insertarTexto(ss);
         db.textoDAO().insertarUbicacion(5);
+
+
+        int audio1 = R.raw.eliza1;
+        int audio2 = R.raw.eliza2;
+        int audio3 = R.raw.eliza3;
+        int audio4 = R.raw.eliza4;
+        int audio5 = R.raw.eliza5;
+        int audio6 = R.raw.eliza6;
+        int audio7 = R.raw.eliza7;
+        int audio8 = R.raw.eliza8;
+        int audio9 = R.raw.eliza9;
+        int audio10 = R.raw.eliza10;
+
+        int audio = R.raw.balentin1;
+        int audiossss = R.raw.rebonbiloak;
+        int audiosss = R.raw.argineta;
+        int audioss = R.raw.mari1;
+
+
+        db.audioDAO().insertarAudio(audio1);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio2);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio3);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio4);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio5);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio6);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio7);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio8);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio9);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio10);
+        db.textoDAO().insertarUbicacion(1);
+
+        db.audioDAO().insertarAudio(audio);
+        db.textoDAO().insertarUbicacion(2);
+
+        db.audioDAO().insertarAudio(audiossss);
+        db.textoDAO().insertarUbicacion(3);
+
+        db.audioDAO().insertarAudio(audiosss);
+        db.textoDAO().insertarUbicacion(4);
+
+        db.audioDAO().insertarAudio(audioss);
+        db.textoDAO().insertarUbicacion(5);
+
+
 
 
 
