@@ -7,6 +7,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
+import com.example.sugandilak.EntidadesDB.ElorrioDatabase;
+import com.example.sugandilak.EntidadesDB.Ubicacion;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
@@ -26,6 +28,7 @@ import org.osmdroid.views.overlay.ItemizedOverlayWithFocus;
 import org.osmdroid.views.overlay.OverlayItem;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -33,8 +36,10 @@ public class MainActivity extends AppCompatActivity {
     FloatingActionButton but;
     ArrayList<OverlayItem> puntos = new ArrayList<>();
     IMapController mapController;
-    int datos = 4;
+    int datos = 3;
     boolean primeravez = true;
+
+    ElorrioDatabase ddbb;
 
 
     @Override
@@ -53,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
             fragmentTransaction.add(R.id.fragmentBienvenida, FragmentBienvenida.newInstance());
             fragmentTransaction.commit();
         }
-
+        ddbb = ElorrioDatabase.getInstance(this);
         but = findViewById(R.id.button);
         mapa = findViewById(R.id.mapaView);
 
@@ -122,21 +127,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void añadirPuntos(){
-        GeoPoint geo1 = new GeoPoint(43.1302778, -2.5425);
-        GeoPoint geo2 = new GeoPoint(43.12994, -2.5423);
-        GeoPoint geo3 = new GeoPoint(43.13019, -2.54200);
-        GeoPoint geo4 = new GeoPoint(43.14, -2.536);
-        GeoPoint geo5 = new GeoPoint(43.1397, -2.53545);
-        OverlayItem punto1 = new OverlayItem("BASÍLICA DE LA PURA CREACIÓN", "Número 1", geo1);
-        OverlayItem punto2 = new OverlayItem("SAN VALENTÍN BERRIOTXOA", "Número 2", geo2);
-        OverlayItem punto3 = new OverlayItem("REBOMBILLOAS", "Número 3", geo3);
-        OverlayItem punto4 = new OverlayItem("NECRÓPOLIS DE ARGIÑETA", "Número 4", geo4);
-        OverlayItem punto5 = new OverlayItem("ANBOTOKO MARI", "Número 5", geo5);
-        puntos.add(punto1);
-        puntos.add(punto2);
-        puntos.add(punto3);
-        puntos.add(punto4);
-        puntos.add(punto5);
+
+        List<Ubicacion> lista = ddbb.ubicacionDAO().conseguirTodasUbicaciones();
+
+        for(int i = 0; i<lista.size(); i++){
+            GeoPoint geo1 = new GeoPoint(lista.get(i).getLatitud(), lista.get(i).longitud);
+            OverlayItem punto1 = new OverlayItem(lista.get(i).getNombre_ubicacion(), "Número "+lista.get(i).getId_ubicacion(), geo1);
+            puntos.add(punto1);
+        }
     }
 
     @Override

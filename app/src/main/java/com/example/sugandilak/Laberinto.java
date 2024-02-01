@@ -11,6 +11,8 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.sugandilak.EntidadesDB.Pregunta;
+
 import java.util.ArrayList;
 
 import nl.dionsegijn.konfetti.KonfettiView;
@@ -152,13 +154,13 @@ public class Laberinto extends AppCompatActivity {
     }
 
     private void llenarArray() {
-        Pregunta p1 = new Pregunta(1, "Nondik mugitzen da Mari?", "Mendietatik", "Itsasotik", "Zerutik", "Mendietatik");
-        Pregunta p2 = new Pregunta(2, "Ze mendietan ibiltzen da Mari?", "Udalaitz", "Hiru erregeen maila", "Pirineos", "Udalaitz");
-        Pregunta p3 = new Pregunta(3, "Non dago Anboto?", "Bizkaia", "Araba", "Gipuzkoa", "Bizkaia");
-        Pregunta p4 = new Pregunta(4, "Zenbat urtez bizi da aukeratzen duen gailurrean?", "5 urte", "8 urte", "7 urte", "7 urte");
-        Pregunta p5 = new Pregunta(5, "Zeren antza hartzen du Marik zerutik mugitzeko?", "Suzko higitai eta euriaren edo kaskabarraren antza", "Txorien antza", "Trumoi eta tximisten antza", "Suzko higitai eta euriaren edo kaskabarraren antza");
-        Pregunta p6 = new Pregunta(6, "Zeri buruz daki asko Marik?", "Eguraldia", "Ekonomia", "Informatika", "Eguraldia");
-        Pregunta p7 = new Pregunta(7, "Zer ustea dago Mariren ingururuan?", "Gizakiak sortu zituela", "Planetak sortu zituela", "Planetak sortu zituela", "Planetak sortu zituela");
+        Pregunta p1 = new Pregunta(5, 1, "Nondik mugitzen da Mari?", "Mendietatik", "Itsasotik", "Zerutik", "Mendietatik");
+        Pregunta p2 = new Pregunta(5, 2, "Ze mendietan ibiltzen da Mari?", "Udalaitz", "Hiru erregeen maila", "Pirineos", "Udalaitz");
+        Pregunta p3 = new Pregunta(5, 3, "Non dago Anboto?", "Bizkaia", "Araba", "Gipuzkoa", "Bizkaia");
+        Pregunta p4 = new Pregunta(5, 4, "Zenbat urtez bizi da aukeratzen duen gailurrean?", "5 urte", "8 urte", "7 urte", "7 urte");
+        Pregunta p5 = new Pregunta(5, 5, "Zeren antza hartzen du Marik zerutik mugitzeko?", "Suzko higitai eta euriaren edo kaskabarraren antza", "Txorien antza", "Trumoi eta tximisten antza", "Suzko higitai eta euriaren edo kaskabarraren antza");
+        Pregunta p6 = new Pregunta(5, 6, "Zeri buruz daki asko Marik?", "Eguraldia", "Ekonomia", "Informatika", "Eguraldia");
+        Pregunta p7 = new Pregunta(5, 7, "Zer ustea dago Mariren ingururuan?", "Gizakiak sortu zituela", "Planetak sortu zituela", "Planetak sortu zituela", "Planetak sortu zituela");
 
         preguntas.add(p1);
         preguntas.add(p2);

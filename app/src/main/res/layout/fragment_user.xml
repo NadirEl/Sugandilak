@@ -23,6 +23,7 @@
         android:layout_height="@dimen/_35sdp"
         android:background="@drawable/customedittext"
         android:maxLength="20"
+        android:textStyle="bold"
         android:layout_marginBottom="@dimen/_50sdp"
         android:paddingLeft="@dimen/_10sdp"/>
 
