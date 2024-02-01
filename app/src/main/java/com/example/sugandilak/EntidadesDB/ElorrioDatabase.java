@@ -13,7 +13,7 @@ import androidx.sqlite.db.SupportSQLiteOpenHelper;
 import com.example.sugandilak.EntidadesDB.Ubicacion;
 import com.example.sugandilak.EntidadesDB.UbicacionDAO;
 
-@Database(entities = {Ubicacion.class}, version=1, exportSchema = false)
+@Database(entities = {Ubicacion.class, Video.class}, version=1, exportSchema = false)
 public abstract class ElorrioDatabase extends RoomDatabase{
 
     public abstract UbicacionDAO ubicacionDAO();
@@ -21,9 +21,11 @@ public abstract class ElorrioDatabase extends RoomDatabase{
 
     public abstract TextoDAO textoDAO();
 
+    public abstract VideoDAO videoDAO();
+
     private static final String DATABASE_NAME = "elorrio-db";
 
-    private static ElorrioDatabase INSTANCE;
+    private static volatile ElorrioDatabase INSTANCE;
 
 
     public static ElorrioDatabase getInstance(final Context context) {

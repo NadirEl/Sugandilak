@@ -20,6 +20,9 @@ public class Pregunta implements Serializable {
     @ColumnInfo(name = "id_pregunta")
     public int id_pregunta;
 
+    @ColumnInfo(name = "pregunta")
+    public String pregunta;
+
     @ColumnInfo(name = "respuesta")
     public String respuesta;
 
@@ -92,15 +95,23 @@ public class Pregunta implements Serializable {
     }
 
 
+    public String getPregunta() {
+        return pregunta;
+    }
 
-    public Pregunta(int id_ubicacion, int id_pregunta, String respuesta, String opcion1, String opcion2, String opcion3, boolean contestada) {
+    public void setPregunta(String pregunta) {
+        this.pregunta = pregunta;
+    }
+
+    public Pregunta(int id_ubicacion, int id_pregunta, String pregunta, String opcion1, String opcion2, String opcion3,String respuesta) {
         this.id_ubicacion = id_ubicacion;
         this.id_pregunta = id_pregunta;
         this.respuesta = respuesta;
         this.opcion1 = opcion1;
         this.opcion2 = opcion2;
         this.opcion3 = opcion3;
-        this.contestada = contestada;
+        this.pregunta = pregunta;
+        this.contestada = false;
     }
     public Pregunta() {
 

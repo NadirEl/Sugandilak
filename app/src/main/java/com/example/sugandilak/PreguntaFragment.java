@@ -11,6 +11,8 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.sugandilak.EntidadesDB.Pregunta;
+
 public class PreguntaFragment extends Fragment implements View.OnClickListener{
     private Pregunta pregunta;
     RadioGroup grupo;
@@ -66,11 +68,11 @@ public class PreguntaFragment extends Fragment implements View.OnClickListener{
         boolean acertar = false;
         if(grupo.getCheckedRadioButtonId() !=-1){
             RadioButton select = getView().findViewById(grupo.getCheckedRadioButtonId());
-            if(select.getText() == this.pregunta.getCorrecta()){
+            if(select.getText() == this.pregunta.getRespuesta()){
                 acertar = true;
             }
             getActivity().getSupportFragmentManager().beginTransaction().remove(PreguntaFragment.this).commit();
-            ((Laberinto) getActivity()).hola(acertar, this.pregunta.getId());
+            ((Laberinto) getActivity()).hola(acertar, this.pregunta.getId_pregunta());
         }
     }
 }
