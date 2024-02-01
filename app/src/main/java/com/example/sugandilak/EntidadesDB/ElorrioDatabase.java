@@ -18,6 +18,8 @@ public abstract class ElorrioDatabase extends RoomDatabase{
 
     public abstract UbicacionDAO ubicacionDAO();
 
+    public abstract TextoDAO textoDAO();
+
     private static final String DATABASE_NAME = "elorrio-db";
 
     private static ElorrioDatabase INSTANCE;
