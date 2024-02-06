@@ -68,11 +68,11 @@ public class PreguntaFragment extends Fragment implements View.OnClickListener{
         boolean acertar = false;
         if(grupo.getCheckedRadioButtonId() !=-1){
             RadioButton select = getView().findViewById(grupo.getCheckedRadioButtonId());
-            if(select.getText() == this.pregunta.getRespuesta()){
+            if(select.getText().equals(this.pregunta.getRespuesta())){
                 acertar = true;
             }
             getActivity().getSupportFragmentManager().beginTransaction().remove(PreguntaFragment.this).commit();
-            ((Laberinto) getActivity()).hola(acertar, this.pregunta.getId_pregunta());
+            ((LaberintoActivity) getActivity()).preguntaAcertada(acertar, this.pregunta.getId_pregunta());
         }
     }
 }

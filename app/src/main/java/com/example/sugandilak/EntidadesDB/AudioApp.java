@@ -5,22 +5,29 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "Imagenes",
+import java.io.Serializable;
+
+@Entity(tableName = "AudioApp",
         foreignKeys = @ForeignKey(entity = Ubicacion.class,
                 parentColumns = "id_ubicacion",
                 childColumns = "id_ubicacion"))
-public class Imagenes {
+public class AudioApp implements Serializable {
 
-    @PrimaryKey
+
     @ColumnInfo(name = "id_ubicacion")
     public int id_ubicacion;
+    @PrimaryKey(autoGenerate = true)
+    public int id_audio;
 
-    @ColumnInfo(name = "id_imagen")
-    public int id_imagen;
+    @ColumnInfo(name = "audio")
+    public int audio;
 
-    public Imagenes(int id_ubicacion, int id_imagen) {
+    public AudioApp(int id_ubicacion, int audio) {
         this.id_ubicacion = id_ubicacion;
-        this.id_imagen = id_imagen;
+        this.audio = audio;
+    }
+    public AudioApp() {
+
     }
 
     public int getId_ubicacion() {
@@ -31,15 +38,19 @@ public class Imagenes {
         this.id_ubicacion = id_ubicacion;
     }
 
-    public int getId_imagen() {
-        return id_imagen;
+    public int getId_audio() {
+        return id_audio;
     }
 
-    public void setId_imagen(int id_imagen) {
-        this.id_imagen = id_imagen;
+    public void setId_audio(int id_audio) {
+        this.id_audio = id_audio;
     }
 
-    public Imagenes( ) {
+    public int getAudio() {
+        return audio;
+    }
 
+    public void setAudio(int audio) {
+        this.audio = audio;
     }
 }

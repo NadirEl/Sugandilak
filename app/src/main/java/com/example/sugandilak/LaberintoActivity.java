@@ -11,29 +11,35 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.sugandilak.EntidadesDB.ElorrioDatabase;
 import com.example.sugandilak.EntidadesDB.Pregunta;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import nl.dionsegijn.konfetti.KonfettiView;
 import nl.dionsegijn.konfetti.models.Shape;
 import nl.dionsegijn.konfetti.models.Size;
 
-public class Laberinto extends AppCompatActivity {
+public class LaberintoActivity extends AppCompatActivity {
 
     GameView game;
     Button arriba, abajo, derecha, izquierda;
-    ArrayList<Pregunta> preguntas = new ArrayList<>();
+    List<Pregunta> preguntas = new ArrayList<>();
     KonfettiView con;
     int principio = 0;
     int casillas = 0;
     Handler handler = new Handler();
+
+    ElorrioDatabase ddbb;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_labriento);
+
+        ddbb = ElorrioDatabase.getInstance(this);
 
         game = findViewById(R.id.laberinto);
         con = findViewById(R.id.viewconfeti);
@@ -154,26 +160,10 @@ public class Laberinto extends AppCompatActivity {
     }
 
     private void llenarArray() {
-        Pregunta p1 = new Pregunta(5, 1, "Nondik mugitzen da Mari?", "Mendietatik", "Itsasotik", "Zerutik", "Mendietatik");
-        Pregunta p2 = new Pregunta(5, 2, "Ze mendietan ibiltzen da Mari?", "Udalaitz", "Hiru erregeen maila", "Pirineos", "Udalaitz");
-        Pregunta p3 = new Pregunta(5, 3, "Non dago Anboto?", "Bizkaia", "Araba", "Gipuzkoa", "Bizkaia");
-        Pregunta p4 = new Pregunta(5, 4, "Zenbat urtez bizi da aukeratzen duen gailurrean?", "5 urte", "8 urte", "7 urte", "7 urte");
-        Pregunta p5 = new Pregunta(5, 5, "Zeren antza hartzen du Marik zerutik mugitzeko?", "Suzko higitai eta euriaren edo kaskabarraren antza", "Txorien antza", "Trumoi eta tximisten antza", "Suzko higitai eta euriaren edo kaskabarraren antza");
-        Pregunta p6 = new Pregunta(5, 6, "Zeri buruz daki asko Marik?", "Eguraldia", "Ekonomia", "Informatika", "Eguraldia");
-        Pregunta p7 = new Pregunta(5, 7, "Zer ustea dago Mariren ingururuan?", "Gizakiak sortu zituela", "Planetak sortu zituela", "Planetak sortu zituela", "Planetak sortu zituela");
-
-        preguntas.add(p1);
-        preguntas.add(p2);
-        preguntas.add(p3);
-        preguntas.add(p4);
-        preguntas.add(p5);
-        preguntas.add(p6);
-        preguntas.add(p7);
-
-
+        preguntas = ddbb.preguntaDAO().conseguirTodasPreguntas();
     }
 
-    void hola(boolean acertar, int id) {
+    void preguntaAcertada(boolean acertar, int id) {
         if (!acertar) {
             game.movePlayer(GameView.Direction.OTRAVEZ);
             casillas = 0;
@@ -219,7 +209,7 @@ public class Laberinto extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(Laberinto.this, MainActivity.class);
+                Intent i = new Intent(LaberintoActivity.this, MainActivity.class);
                 i.putExtra("id", 5);
                 startActivity(i);
             }

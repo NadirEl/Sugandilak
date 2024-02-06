@@ -13,10 +13,10 @@ import java.io.Serializable;
                 childColumns = "id_ubicacion"))
 public class Pregunta implements Serializable {
 
-    @PrimaryKey
+
     @ColumnInfo(name = "id_ubicacion")
     public int id_ubicacion;
-
+    @PrimaryKey
     @ColumnInfo(name = "id_pregunta")
     public int id_pregunta;
 

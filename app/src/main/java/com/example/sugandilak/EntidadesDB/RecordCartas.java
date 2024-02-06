@@ -7,27 +7,24 @@ import androidx.room.PrimaryKey;
 
 import java.io.Serializable;
 
-@Entity(tableName = "Record",
+@Entity(tableName = "RecordCartas",
         foreignKeys = @ForeignKey(entity = Ubicacion.class,
                 parentColumns = "id_ubicacion",
                 childColumns = "id_ubicacion"))
 public class RecordCartas implements Serializable {
 
-
     @ColumnInfo(name = "id_ubicacion")
     public int id_ubicacion;
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = true)
     public int id_user;
-
     @ColumnInfo(name = "nombre")
     public String nombre;
 
     @ColumnInfo(name = "record")
     public int record;
 
-    public RecordCartas(int id_ubicacion, int id_user, String nombre, int record) {
+    public RecordCartas(int id_ubicacion, String nombre, int record) {
         this.id_ubicacion = id_ubicacion;
-        this.id_user = id_user;
         this.nombre = nombre;
         this.record = record;
     }

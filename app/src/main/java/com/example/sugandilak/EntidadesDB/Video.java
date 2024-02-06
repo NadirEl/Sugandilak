@@ -5,22 +5,25 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity(tableName = "Video",
         foreignKeys = @ForeignKey(entity = Ubicacion.class,
                 parentColumns = "id_ubicacion",
                 childColumns = "id_ubicacion"))
-public class Video {
+public class Video implements Serializable {
 
-    @PrimaryKey
     @ColumnInfo(name = "id_ubicacion")
     public int id_ubicacion;
-
-    @ColumnInfo(name = "id_video")
+    @PrimaryKey(autoGenerate = true)
     public int id_video;
 
-    public Video(int id_ubicacion, int id_video) {
+    @ColumnInfo(name = "video")
+    public int video;
+
+    public Video(int id_ubicacion, int video) {
         this.id_ubicacion = id_ubicacion;
-        this.id_video = id_video;
+        this.video = video;
     }
 
     public int getId_ubicacion() {
@@ -41,5 +44,12 @@ public class Video {
 
     public Video() {
 
+    }
+    public int getVideo() {
+        return video;
+    }
+
+    public void setVideo(int video) {
+        this.video = video;
     }
 }

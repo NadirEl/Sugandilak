@@ -16,9 +16,14 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.sugandilak.EntidadesDB.AudioApp;
+import com.example.sugandilak.EntidadesDB.Imagen;
+import com.example.sugandilak.EntidadesDB.Texto;
 import com.google.android.material.card.MaterialCardView;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 import pl.droidsonroids.gif.GifImageView;
 
@@ -35,9 +40,9 @@ public class ExplicacionFragment extends Fragment {
     MediaPlayer mediaPlayer;
     MaterialCardView mc;
     int contador = 0;
-    ArrayList<String> textos = new ArrayList<>();
-    ArrayList<Integer> img = new ArrayList<>();
-    ArrayList<Integer> audios = new ArrayList<>();
+    List<Texto> textos = new ArrayList<>();
+    List<Imagen> img = new ArrayList<>();
+    List<AudioApp> audios = new ArrayList<>();
     int id;
 
 
@@ -45,13 +50,13 @@ public class ExplicacionFragment extends Fragment {
         // Required empty public constructor
     }
 
-    public static ExplicacionFragment getInstance(ArrayList<String> textos, ArrayList<Integer> img, ArrayList<Integer> audios, int id) {
+    public static ExplicacionFragment getInstance(List<Texto> textos, List<Imagen> img, List<AudioApp> audios, int id) {
         ExplicacionFragment fragment = new ExplicacionFragment();
         Bundle args = new Bundle();
         args.putInt("id", id);
-        args.putSerializable("textos", textos);
-        args.putSerializable("img", img);
-        args.putSerializable("audios", audios);
+        args.putSerializable("textos", (Serializable) textos);
+        args.putSerializable("img", (Serializable) img);
+        args.putSerializable("audios", (Serializable) audios);
         fragment.setArguments(args);
         return fragment;
     }
@@ -75,13 +80,13 @@ public class ExplicacionFragment extends Fragment {
             public void onClick(View v2) {
                 mediaPlayer.stop();
                 if(img.size() == 0){
-                    id_explicaciones.setText(textos.get(contador));
-                    currentIndex=textos.get(contador).length();
+                    id_explicaciones.setText(textos.get(contador).getTexto());
+                    currentIndex=textos.get(contador).getTexto().length();
                     btn_iniciar.setVisibility(View.VISIBLE);
                     btn_skipp.setEnabled(false);
                 }else {
-                    if (img.get(contador) != null) {
-                        Drawable d = ContextCompat.getDrawable(getActivity().getApplicationContext(), img.get(contador));
+                    if (img.get(contador).getImagen() != 0) {
+                        Drawable d = ContextCompat.getDrawable(getActivity().getApplicationContext(), img.get(contador).getImagen());
                         imgview.setImageDrawable(d);
                         mc.setVisibility(View.VISIBLE);
                         id_explicaciones.setVisibility(View.INVISIBLE);
@@ -160,9 +165,9 @@ public class ExplicacionFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            textos = (ArrayList<String>) getArguments().getSerializable("textos");
-            img = (ArrayList<Integer>) getArguments().getSerializable("img");
-            audios = (ArrayList<Integer>) getArguments().getSerializable("audios");
+            textos = (ArrayList<Texto>) getArguments().getSerializable("textos");
+            img = (ArrayList<Imagen>) getArguments().getSerializable("img");
+            audios = (ArrayList<AudioApp>) getArguments().getSerializable("audios");
             id = getArguments().getInt("id");
         }
 
@@ -172,11 +177,11 @@ public class ExplicacionFragment extends Fragment {
 
     void mostrarTexto(){
         id_explicaciones.setText("");
-        id_explicaciones.setText(textos.get(contador));
+        id_explicaciones.setText(textos.get(contador).getTexto());
     }
 
     void empezarAudio(){
-        mediaPlayer = MediaPlayer.create(getActivity(), audios.get(contador));
+        mediaPlayer = MediaPlayer.create(getActivity(), audios.get(contador).getAudio());
         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
@@ -193,7 +198,7 @@ public class ExplicacionFragment extends Fragment {
                     btn_skipp.setEnabled(false);
                 }else {
                     if (img.get(contador) != null) {
-                        Drawable d = ContextCompat.getDrawable(getActivity(), img.get(contador));
+                        Drawable d = ContextCompat.getDrawable(getActivity(), img.get(contador).getImagen());
                         imgview.setImageDrawable(d);
                         mc.setVisibility(View.VISIBLE);
                         id_explicaciones.setVisibility(View.INVISIBLE);
@@ -214,7 +219,7 @@ public class ExplicacionFragment extends Fragment {
 
     void mostrarTextoPorLetras() {
 
-        String texto = textos.get(contador);
+        String texto = textos.get(contador).getTexto();
 
         handler.postDelayed(new Runnable() {
             @Override

@@ -5,16 +5,19 @@ import androidx.room.Entity;
 import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
+import java.io.Serializable;
+
 @Entity(tableName = "Texto",
         foreignKeys = @ForeignKey(entity = Ubicacion.class,
                 parentColumns = "id_ubicacion",
                 childColumns = "id_ubicacion"))
-public class Texto {
+public class Texto implements Serializable {
 
-    @PrimaryKey
+
     @ColumnInfo(name = "id_ubicacion")
     public int id_ubicacion;
-
+    @PrimaryKey(autoGenerate = true)
+    public int id_texto;
     @ColumnInfo(name = "texto")
     public String texto;
 
@@ -39,5 +42,13 @@ public class Texto {
 
     public void setTexto(String texto) {
         this.texto = texto;
+    }
+
+    public int getId_texto() {
+        return id_texto;
+    }
+
+    public void setId_texto(int id_texto) {
+        this.id_texto = id_texto;
     }
 }

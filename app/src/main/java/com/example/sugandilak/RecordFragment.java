@@ -12,12 +12,14 @@ import android.widget.TextView;
 
 import com.example.sugandilak.EntidadesDB.RecordCartas;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class RecordFragment extends Fragment {
 
-    ArrayList<RecordCartas> records = new ArrayList<>();
+    List<RecordCartas> records = new ArrayList<>();
     TextView puntuaciones;
     Button salir;
 
@@ -25,10 +27,10 @@ public class RecordFragment extends Fragment {
     public RecordFragment() {
         // Required empty public constructor
     }
-    public static RecordFragment getInstance(ArrayList<RecordCartas> listar) {
+    public static RecordFragment getInstance(List<RecordCartas> listar) {
         RecordFragment fragment = new RecordFragment();
         Bundle args = new Bundle();
-        args.putSerializable("record", listar);
+        args.putSerializable("record", (Serializable) listar);
         fragment.setArguments(args);
         return fragment;
     }

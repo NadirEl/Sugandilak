@@ -12,11 +12,15 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.sugandilak.EntidadesDB.PreguntaImagen;
+
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.List;
 
 public class FragmentPreguntaImagen extends Fragment implements View.OnClickListener{
 
-    ArrayList<PreguntaImagen> imagenes = new ArrayList<>();
+    List<PreguntaImagen> imagenes = new ArrayList<>();
 
     Button morado, azul, verde;
     ImageView imagen;
@@ -27,10 +31,10 @@ public class FragmentPreguntaImagen extends Fragment implements View.OnClickList
         // Required empty public constructor
     }
 
-    public static FragmentPreguntaImagen getInstance(ArrayList<PreguntaImagen> imagenes) {
+    public static FragmentPreguntaImagen getInstance(List<PreguntaImagen> imagenes) {
         FragmentPreguntaImagen fragment = new FragmentPreguntaImagen();
         Bundle args = new Bundle();
-        args.putSerializable("imagenes", imagenes);
+        args.putSerializable("imagenes", (Serializable) imagenes);
         fragment.setArguments(args);
         return fragment;
     }

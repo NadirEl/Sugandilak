@@ -123,7 +123,7 @@ public class PrimerFragment extends Fragment {
                 //al llegar a8 aciertos se ha ganado el juego
 
                 if(aciertos==8){
-                    RecordCartas r = new RecordCartas(4, 1, usuario, puntuacion);
+                    RecordCartas r = new RecordCartas(4,usuario, puntuacion);
 
 
                     getActivity().getSupportFragmentManager().beginTransaction().remove(PrimerFragment.this).commit();

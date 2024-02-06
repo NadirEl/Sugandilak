@@ -2,23 +2,21 @@ package com.example.sugandilak.EntidadesDB;
 
 import android.content.Context;
 
-import androidx.annotation.NonNull;
 import androidx.room.Database;
-import androidx.room.DatabaseConfiguration;
-import androidx.room.InvalidationTracker;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
-import androidx.sqlite.db.SupportSQLiteOpenHelper;
 
-import com.example.sugandilak.EntidadesDB.Ubicacion;
-import com.example.sugandilak.EntidadesDB.UbicacionDAO;
-
-@Database(entities = {Ubicacion.class, Video.class}, version=1, exportSchema = false)
+@Database(entities = {Ubicacion.class, Video.class, AudioApp.class, Imagen.class, Pregunta.class, RecordCartas.class, Texto.class, PreguntaImagen.class}, version=1, exportSchema = false)
 public abstract class ElorrioDatabase extends RoomDatabase{
 
     public abstract UbicacionDAO ubicacionDAO();
-
+    public abstract AudioDAO audioDAO();
+    public abstract TextoDAO textoDAO();
     public abstract VideoDAO videoDAO();
+    public abstract ImagenDAO imagenDAO();
+    public abstract PreguntaImagenDAO preguntaImagenDAO();
+    public abstract PreguntaDAO preguntaDAO();
+    public abstract RecordCartasDAO recordCartasDAO();
 
     private static final String DATABASE_NAME = "elorrio-db";
 

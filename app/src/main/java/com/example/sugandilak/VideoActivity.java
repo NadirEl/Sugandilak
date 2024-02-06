@@ -11,9 +11,17 @@ import android.widget.Button;
 import android.widget.MediaController;
 import android.widget.VideoView;
 
-public class Video extends AppCompatActivity {
+import com.example.sugandilak.EntidadesDB.ElorrioDatabase;
+import com.example.sugandilak.EntidadesDB.Video;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class VideoActivity extends AppCompatActivity {
     VideoView videoView;
     Button btn;
+    ElorrioDatabase ddbb;
+    List<Video> videos = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +30,13 @@ public class Video extends AppCompatActivity {
 
         videoView = findViewById(R.id.videoView);
         btn = findViewById(R.id.bnt_v);
+        ddbb = ElorrioDatabase.getInstance(this);
+
+        videos = ddbb.videoDAO().conseguirVideo();
+
 
         // Ruta del video
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.video;
+        String path = "android.resource://" + getPackageName() + "/" + videos.get(0).getVideo();
 
         // Configuración del VideoView
         videoView.setVideoURI(Uri.parse(path));
@@ -48,7 +60,7 @@ public class Video extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Iniciar la siguiente actividad al hacer clic en el botón
-                Intent i = new Intent(Video.this, Laberinto.class);
+                Intent i = new Intent(VideoActivity.this, LaberintoActivity.class);
                 startActivity(i);
             }
         });
