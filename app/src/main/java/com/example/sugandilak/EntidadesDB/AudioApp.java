@@ -13,23 +13,28 @@ import java.io.Serializable;
                 childColumns = "id_ubicacion"))
 public class AudioApp implements Serializable {
 
-
+    //foreignkey de la tabla ubicación
     @ColumnInfo(name = "id_ubicacion")
     public int id_ubicacion;
+    //la primarykey del audio, autogenerado
     @PrimaryKey(autoGenerate = true)
     public int id_audio;
 
+    //el integer del audio, con lo que lo ejecutaremos
     @ColumnInfo(name = "audio")
     public int audio;
 
+    //constructor del audio
     public AudioApp(int id_ubicacion, int audio) {
         this.id_ubicacion = id_ubicacion;
         this.audio = audio;
     }
+    //constructor vacío
     public AudioApp() {
 
     }
 
+    //getters y setters de los atributos de los audios
     public int getId_ubicacion() {
         return id_ubicacion;
     }

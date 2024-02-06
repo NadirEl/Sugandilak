@@ -13,21 +13,26 @@ import java.io.Serializable;
                 childColumns = "id_ubicacion"))
 public class Texto implements Serializable {
 
-
+    //foreignkey del id de la ubicacion
     @ColumnInfo(name = "id_ubicacion")
     public int id_ubicacion;
+    //primarykey del id del texto, autogenerado
     @PrimaryKey(autoGenerate = true)
     public int id_texto;
+    //el string del texto
     @ColumnInfo(name = "texto")
     public String texto;
 
+    //constructor de la clase
     public Texto(int id_ubicacion, String texto) {
         this.id_ubicacion = id_ubicacion;
         this.texto = texto;
     }
+    //contructor vacío
     public Texto() {
 
     }
+    //getters y setters de la clase
     public int getId_ubicacion() {
         return id_ubicacion;
     }

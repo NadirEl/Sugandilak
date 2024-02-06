@@ -13,19 +13,27 @@ import java.io.Serializable;
                 childColumns = "id_ubicacion"))
 public class Video implements Serializable {
 
+    //foreignkey del id de ubicacion
     @ColumnInfo(name = "id_ubicacion")
     public int id_ubicacion;
+    //primarykey del video, autogenerado
     @PrimaryKey(autoGenerate = true)
     public int id_video;
-
+    //integer del video, con lo que lo mostramos
     @ColumnInfo(name = "video")
     public int video;
 
+    //constructor del video
     public Video(int id_ubicacion, int video) {
         this.id_ubicacion = id_ubicacion;
         this.video = video;
     }
+    //constructor vacio
+    public Video() {
 
+    }
+
+    //getters y setters de la clase
     public int getId_ubicacion() {
         return id_ubicacion;
     }
@@ -42,9 +50,6 @@ public class Video implements Serializable {
         this.id_video = id_video;
     }
 
-    public Video() {
-
-    }
     public int getVideo() {
         return video;
     }

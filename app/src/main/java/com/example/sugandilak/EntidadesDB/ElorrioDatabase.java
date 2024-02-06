@@ -9,6 +9,7 @@ import androidx.room.RoomDatabase;
 @Database(entities = {Ubicacion.class, Video.class, AudioApp.class, Imagen.class, Pregunta.class, RecordCartas.class, Texto.class, PreguntaImagen.class}, version=1, exportSchema = false)
 public abstract class ElorrioDatabase extends RoomDatabase{
 
+    //Los DAOs de la base de datos
     public abstract UbicacionDAO ubicacionDAO();
     public abstract AudioDAO audioDAO();
     public abstract TextoDAO textoDAO();
@@ -20,9 +21,11 @@ public abstract class ElorrioDatabase extends RoomDatabase{
 
     private static final String DATABASE_NAME = "elorrio-db";
 
+    //instancia volátil de la base de datos
     private static volatile ElorrioDatabase INSTANCE;
 
 
+    //método que crea o recoge la instancia de la base de datos
     public static ElorrioDatabase getInstance(final Context context) {
         if (INSTANCE == null) {
             synchronized (ElorrioDatabase.class) {
