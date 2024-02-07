@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.RadioButton;
 
 public class FragmentBienvenida extends Fragment implements View.OnClickListener{
+    //fragment que aparece la primera vez que instalamos el juego, que nos da una pequeña explicacion de en que consiste
     Button but;
     public FragmentBienvenida() {
         // Required empty public constructor

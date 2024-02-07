@@ -30,19 +30,28 @@ import pl.droidsonroids.gif.GifImageView;
 
 public class ExplicacionFragment extends Fragment {
 
+    //textView donde esta el texto
     TextView id_explicaciones;
+    //el componente del gif
     GifImageView id_gif;
+    //componente de la imagen de la muñeca sin hablar
     ImageView sinhablar, imgview;
+    //botones de inicar y saltar
     Button btn_iniciar, btn_skipp;
+    //Inicializar el handler
     Handler handler = new Handler();
+    //int para saber lo largo del texto
     int currentIndex = 0;
+    // int para guardar la duracion del audio
     int duration = 0;
     MediaPlayer mediaPlayer;
     MaterialCardView mc;
     int contador = 0;
+    //arrays del texto, las imagenes y los audios
     List<Texto> textos = new ArrayList<>();
     List<Imagen> img = new ArrayList<>();
     List<AudioApp> audios = new ArrayList<>();
+    //id que depende de la ubicacion
     int id;
 
 
@@ -50,6 +59,7 @@ public class ExplicacionFragment extends Fragment {
         // Required empty public constructor
     }
 
+    //recogemos las lista y el id
     public static ExplicacionFragment getInstance(List<Texto> textos, List<Imagen> img, List<AudioApp> audios, int id) {
         ExplicacionFragment fragment = new ExplicacionFragment();
         Bundle args = new Bundle();
@@ -61,6 +71,7 @@ public class ExplicacionFragment extends Fragment {
         return fragment;
     }
 
+    //setteamos los id y los listeners
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -78,14 +89,19 @@ public class ExplicacionFragment extends Fragment {
         btn_skipp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v2) {
+                //se para el audio
                 mediaPlayer.stop();
+                //comprueba si hay imagenes
                 if(img.size() == 0){
+                    //si no hay, sigue con los textos
                     id_explicaciones.setText(textos.get(contador).getTexto());
                     currentIndex=textos.get(contador).getTexto().length();
                     btn_iniciar.setVisibility(View.VISIBLE);
                     btn_skipp.setEnabled(false);
                 }else {
+                    //comprueba si sigue habiendo imagenes
                     if (img.get(contador).getImagen() != 0) {
+                        //si hay, la visualiza y para de hablar la muñeca
                         Drawable d = ContextCompat.getDrawable(getActivity().getApplicationContext(), img.get(contador).getImagen());
                         imgview.setImageDrawable(d);
                         mc.setVisibility(View.VISIBLE);
@@ -94,6 +110,7 @@ public class ExplicacionFragment extends Fragment {
                         sinhablar.setVisibility(View.VISIBLE);
                         btn_skipp.setEnabled(false);
                     } else {
+                        //si no, sumamos el contador y sigue tanto el audio como el texto
                         contador++;
                         mostrarTexto();
                         empezarAudio();
@@ -107,6 +124,7 @@ public class ExplicacionFragment extends Fragment {
         btn_iniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //Dependiendo del id, abre diferentes juegos
                 getActivity().getSupportFragmentManager().beginTransaction().remove(ExplicacionFragment.this).commit();
                 switch(id){
                     case 1: ((MainActivity2) getActivity()).abrirFragmentJuego1();
@@ -128,13 +146,17 @@ public class ExplicacionFragment extends Fragment {
             }
         });
 
+        //cuado haya imagen, tendran que clicarla
         mc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                //comprueba si sigue habiendo imagnes
                 if(contador == 9){
+                    //si no, aparece el boton inciar
                     btn_iniciar.setVisibility(View.VISIBLE);
                     btn_skipp.setEnabled(false);
                 }else {
+                    // si sigue habiendo, muestra el texto y el audio siguiente
                     contador++;
                     mc.setVisibility(View.INVISIBLE);
                     id_explicaciones.setVisibility(View.VISIBLE);
@@ -148,6 +170,7 @@ public class ExplicacionFragment extends Fragment {
         });
 
 
+        //en la ubicacion número 1, los textos se muestran normal
         if(id == 1){
             mostrarTexto();
         }else{
@@ -174,25 +197,30 @@ public class ExplicacionFragment extends Fragment {
     }
 
 
-
+    //función que muestra el texto entero, cuando le damos al boton saltar
     void mostrarTexto(){
         id_explicaciones.setText("");
         id_explicaciones.setText(textos.get(contador).getTexto());
     }
 
+    //función con la que empieza el audio
     void empezarAudio(){
+        //conseguimos el audio
         mediaPlayer = MediaPlayer.create(getActivity(), audios.get(contador).getAudio());
         mediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
             public void onPrepared(MediaPlayer mp) {
+                //conseguimos la duración del audio, para saber la velocidad que tiene que ir al mostrar el texto
                 duration = mp.getDuration();
 
             }
         });
 
+        // cuando se completa el audio
         mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
+                //comprueba lo mismo que se diesemos al boton saltar
                 if(img.size() == 0){
                     btn_iniciar.setVisibility(View.VISIBLE);
                     btn_skipp.setEnabled(false);
@@ -217,6 +245,7 @@ public class ExplicacionFragment extends Fragment {
         mediaPlayer.start();
     }
 
+    //función que muestra el texto como una maquina de escribir
     void mostrarTextoPorLetras() {
 
         String texto = textos.get(contador).getTexto();

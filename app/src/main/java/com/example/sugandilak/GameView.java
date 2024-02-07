@@ -17,19 +17,27 @@ import java.util.Stack;
 
 public class GameView extends View {
 
+    //enum de las direcciones que puede tomar el jugador en el laberinto
     public enum Direction{
         UP, DOWN, LEFT, RIGHT, OTRAVEZ
     }
 
+    //las celdas son cada cuadradito del laberinto
     public Cell[][] cells;
+    // los cuadraditos del jugador y la casilla de meta
     public Cell player, exit;
+    //las columnas y las filas de laberinto
     private static final int COLS = 14, ROWS = 12;
+    //la anchura de las paredes del laberinto
     private static final float WALL_THICKNESS = 4;
+    //el tamaño y los margenes de cada casilla
     private float cellSize, hMargin, vMargin;
+    //los colores de las paredes, el jugador y la casilla de salida
     private Paint wallPaint, playerPaint, exitPaint;
     private Random random;
     public GameView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        //se settea los colores
         wallPaint = new Paint();
         wallPaint.setColor(Color.BLACK);
         wallPaint.setStrokeWidth(WALL_THICKNESS);
@@ -40,9 +48,11 @@ public class GameView extends View {
         exitPaint = new Paint();
         exitPaint.setColor(Color.rgb(255, 128, 151));
 
+        //ejecutamos la función
         createMaze();
     }
 
+    //función que crea el el camino del laberinto
     private Cell getNeighbour(Cell cell){
         ArrayList<Cell> neighbours = new ArrayList<>();
 
@@ -80,6 +90,7 @@ public class GameView extends View {
 
     }
 
+    //funcion que settea los boleanos de cada casilla, para construir sus paredes
     private void removeWall(Cell current, Cell next){
         if(current.col == next.col && current.row == next.row+1){
             current.topWall = false;
@@ -102,6 +113,7 @@ public class GameView extends View {
         }
     }
 
+    //función que crea el espacio del laberinto con sus casillas
     private void createMaze(){
         Stack<Cell> stack = new Stack<Cell>();
         Cell current, next;
@@ -133,6 +145,7 @@ public class GameView extends View {
         }while(!stack.isEmpty());
     }
 
+    //función que dibuja el laberinto
     @Override
     protected void onDraw(@NonNull Canvas canvas) {
         canvas.drawColor(Color.rgb(119,221,119));
@@ -214,6 +227,7 @@ public class GameView extends View {
 
     }
 
+    //función que comprueba el movimiento del jugador
     public void movePlayer(Direction direction){
         switch(direction){
             case UP:
@@ -245,6 +259,7 @@ public class GameView extends View {
 
 
 
+    //la clase de la celda o casilla, casa casilla tiene 4 booleanos, que comprueban si tienen o no paredes
     public class Cell{
         boolean
             topWall = true,

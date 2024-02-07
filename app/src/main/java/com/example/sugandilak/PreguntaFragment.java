@@ -14,6 +14,7 @@ import androidx.fragment.app.Fragment;
 import com.example.sugandilak.EntidadesDB.Pregunta;
 
 public class PreguntaFragment extends Fragment implements View.OnClickListener{
+    //la pregunta que se recoge
     private Pregunta pregunta;
     RadioGroup grupo;
     TextView tv;
@@ -24,6 +25,7 @@ public class PreguntaFragment extends Fragment implements View.OnClickListener{
     public PreguntaFragment() {
         // Required empty public constructor
     }
+    // se recoge la pregunta a responder
     public static PreguntaFragment getInstance(Pregunta pregunta) {
         PreguntaFragment fragment = new PreguntaFragment();
         Bundle args = new Bundle();
@@ -43,6 +45,7 @@ public class PreguntaFragment extends Fragment implements View.OnClickListener{
 
     }
 
+    //seteamos los ids y los listeners
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -63,14 +66,18 @@ public class PreguntaFragment extends Fragment implements View.OnClickListener{
     }
 
 
+    //cuando se da al boton
     @Override
     public void onClick(View v) {
         boolean acertar = false;
+        //comprueba si se ha clickado o no
         if(grupo.getCheckedRadioButtonId() !=-1){
+            //si ha clicado, comprueba la respuesta de la pregunta con el texto del radiobutton seleccionado
             RadioButton select = getView().findViewById(grupo.getCheckedRadioButtonId());
             if(select.getText().equals(this.pregunta.getRespuesta())){
                 acertar = true;
             }
+            //y vuelve al laberinto, tanto si esta bien, como si esta mal
             getActivity().getSupportFragmentManager().beginTransaction().remove(PreguntaFragment.this).commit();
             ((LaberintoActivity) getActivity()).preguntaAcertada(acertar, this.pregunta.getId_pregunta());
         }

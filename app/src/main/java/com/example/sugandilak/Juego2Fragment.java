@@ -27,14 +27,21 @@ import com.google.android.material.card.MaterialCardView;
 
 
 public class Juego2Fragment extends Fragment implements View.OnLongClickListener{
+    // las cartas que se arrastran
     private MaterialCardView card1, card2, card3, card4, card5, card6, card7, card8, card9;
+    //las imagenes que tienen las cartas
     private ImageView img1, img2, img3, img4, img5, img6, img7, img8, img9;
+    // la carta que se recoge
     private MaterialCardView recogida;
+    // el mediaplayer del audio
     private MediaPlayer audioVidaBerriotxoa;
+    //componente de la duración del audio
     private SeekBar seekBar;
     private Handler handler = new Handler();
+    //botones del reproductor del audio
     private ImageButton play, next10, back10;
     TextView minPrin, minFinal;
+    //contador que comprueba cuando ha terminado el juego
     int contador = 0;
 
     public Juego2Fragment() {
@@ -56,12 +63,14 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
         }
     }
 
+    //se settea los ids
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_juego2, container, false);
 
+        //se settea el audio
         audioVidaBerriotxoa = MediaPlayer.create(getActivity(), R.raw.berriotxoa);
         seekBar = v.findViewById(R.id.seekBar);
         play = v.findViewById(R.id.idButPlay);
@@ -71,6 +80,7 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
         minPrin = v.findViewById(R.id.idTvPrin);
         minFinal = v.findViewById(R.id.idTvFin);
 
+        //se settea al duración del reproductor
         setupSeekBar();
 
         card1 = v.findViewById(R.id.idCardOp1);
@@ -115,6 +125,7 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
         img9.setOnDragListener(drag);
 
 
+        //función que al completarse el audio se cambia la imagen del boton play
         audioVidaBerriotxoa.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
             @Override
             public void onCompletion(MediaPlayer mp) {
@@ -122,14 +133,17 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
                 play.setImageDrawable(d);
             }
         });
+        //listener del boton play
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // si esta en marcha el audio, se para y el se cambia la imagen del boton play
                 if (audioVidaBerriotxoa.isPlaying()) {
                     audioVidaBerriotxoa.pause();
                     Drawable d = ContextCompat.getDrawable(getActivity().getApplicationContext(),R.drawable.play);
                     play.setImageDrawable(d);
                 } else {
+                    // si no, se sigue el audio, y se cambia la imagen del boton play
                     audioVidaBerriotxoa.start();
                     Drawable d = ContextCompat.getDrawable(getActivity().getApplicationContext(),R.drawable.pause);
                     play.setImageDrawable(d);
@@ -138,6 +152,8 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
             }
         });
 
+
+        //funcion 10 segundos para adelante
         next10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -145,7 +161,7 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
                 updateSeekBar();
             }
         });
-
+        //funcion 10 segundos para atrás
         back10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -157,6 +173,7 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
         return v;
     }
 
+    ///funcion que setea la duración del reproductor de audio
     private void setupSeekBar() {
         seekBar.setMax(audioVidaBerriotxoa.getDuration());
 
@@ -196,6 +213,7 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
     }
 
 
+    //convierte el tiempo de milisegundos a string
     String convertTime(int duration) {
         String cadena = "";
         int minutos = duration / 60000;
@@ -216,7 +234,7 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
         }
     };
 
-
+    //actualiza el seejbar
     private void updateSeekBar() {
         minPrin.setText(String.valueOf(convertTime(audioVidaBerriotxoa.getCurrentPosition())));
         seekBar.setProgress(audioVidaBerriotxoa.getCurrentPosition());
@@ -232,6 +250,7 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
     }
 
 
+    //función que recoge la imagen que estamos arrastrando
     @Override
     public boolean onLongClick(View v) {
         recogida = (MaterialCardView) v;
@@ -249,13 +268,16 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
         return true;
     }
 
-
+    //funcion quue comprueba que al soltar la imagen en los huecos, esté correcta
     View.OnDragListener drag = (v, event) -> {
 
         int dragEvent = event.getAction();
         switch (dragEvent) {
+            //solo lo comprueba al soltar
             case DragEvent.ACTION_DROP:
+                //comprueba sus ids, tiene que ser iguales
                 if (v.getId() == R.id.idImgCam1 && recogida.getId() == R.id.idCardOp1) {
+                    //si está bien, ponela imagen el carta donde se ha soltado, pone el borde en verde, y se pone en invisible la carta que hemos arrastrado
                     ImageView imagenSoltar = getActivity().findViewById(R.id.idImgOp1);
                     ImageView imgCamino = (ImageView) v;
                     imgCamino.setImageDrawable(imagenSoltar.getDrawable());
@@ -353,6 +375,7 @@ public class Juego2Fragment extends Fragment implements View.OnLongClickListener
         return true;
     };
 
+    //comprueba si ha terminado el juego, si si ha terminado, sale y vuelve al mapa
     void comprobar(){
         if(contador == 9){
             audioVidaBerriotxoa.stop();

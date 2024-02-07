@@ -34,14 +34,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
-
+    //la view del mapa
     MapView mapa;
+    //boton para centrar el mapa
     FloatingActionButton but;
+    //array de los puntos de ubicacion
     ArrayList<OverlayItem> puntos = new ArrayList<>();
     IMapController mapController;
     int datos = 0;
     boolean primeravez = true;
-
+    //base de datos
     ElorrioDatabase ddbb;
 
 
@@ -52,12 +54,14 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Bundle b = getIntent().getExtras();
-
+        //instanciamos la base de datos
         ddbb = ElorrioDatabase.getInstance(this);
         if (b != null) {
+            //si hay id, no es la primera vez y lo recogemos
             datos = b.getInt("id");
             primeravez = false;
         }else{
+            //si es la primera vez, aparece el fragment de bienvenida y se carga la base de datos
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.add(R.id.fragmentBienvenida, FragmentBienvenida.newInstance());
@@ -68,14 +72,16 @@ public class MainActivity extends AppCompatActivity {
         but = findViewById(R.id.button);
         mapa = findViewById(R.id.mapaView);
 
-
+        //seteamos el control del mapa
         mapa.setMultiTouchControls(true);
+        //centramos el mapa
         GeoPoint centro = new GeoPoint(43.135, -2.5391);
 
         mapController = mapa.getController();
         mapController.setCenter(centro);
         mapController.setZoom(16.0);
 
+        //boton que centra en el sitio de las ubicaciones, en caso de perdernos en el mapa
         but.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,11 +91,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-
+        //añadimos los puntos, y ponemos los colores correspondientes
         añadirPuntos();
         eliminarPuntos(datos);
 
-
+        //si clicka la ubicación, sale el nombre de la ubicación
         ItemizedOverlayWithFocus<OverlayItem> overlays = new ItemizedOverlayWithFocus<OverlayItem>(getApplicationContext(), puntos, new ItemizedIconOverlay.OnItemGestureListener<OverlayItem>() {
             @Override
             public boolean onItemSingleTapUp(int index, OverlayItem item) {
@@ -98,8 +104,10 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public boolean onItemLongPress(int index, OverlayItem item) {
+                //si se mantiene, se comprueba que se va en orden
                 int id = index+1;
                 if(index == datos){
+                    //y se va al activity del juego corresppondiente
                     Intent i = new Intent(MainActivity.this, MainActivity2.class);
                     i.putExtra("id", id);
                     startActivity(i);
@@ -108,36 +116,43 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //se colocan los puntos
         overlays.setFocusItemsOnTap(true);
         mapa.getOverlays().add(overlays);
 
 
     }
 
+    //funcion que dependiendo de donde estemos, los puntos aparecem em rojo o en verde
     void eliminarPuntos(int datoss) {
         Drawable d = getDrawable(R.drawable.location);
         Drawable d2 = getDrawable(R.drawable.location2);
         if (primeravez) {
+            // si es la primera vez, todos en rojo
             for (int i = 0; i < puntos.size(); i++) {
                 puntos.get(i).setMarker(d);
             }
         } else {
+            //primero pone todos en rojo
             for (int i = 0; i < puntos.size(); i++) {
                 puntos.get(i).setMarker(d);
             }
-
+            // y despues dependiendo del id, se ponen algunos en verde
             for (int i = 0; i < (puntos.size()-(puntos.size() - datoss)); i++) {
                puntos.get(i).setMarker(d2);
             }
         }
     }
 
+    //función que añade los puntos, que se recogen de la base de datos
     void añadirPuntos(){
 
         List<Ubicacion> lista = ddbb.ubicacionDAO().conseguirTodasUbicaciones();
 
         for(int i = 0; i<lista.size(); i++){
+            //se crea el punto de geolocalizacion, con la latitud y longitud
             GeoPoint geo1 = new GeoPoint(lista.get(i).getLatitud(), lista.get(i).longitud);
+            //se crea el punto en el mapa y se añade a la lista
             OverlayItem punto1 = new OverlayItem(lista.get(i).getNombre_ubicacion(), "Número "+lista.get(i).getId_ubicacion(), geo1);
             puntos.add(punto1);
         }
@@ -155,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
         mapa.onResume();
     }
 
+    //función que carga la base de datos
     void cargarBBDD(){
-
 
 
         ddbb.textoDAO().deleteAllTexto();
